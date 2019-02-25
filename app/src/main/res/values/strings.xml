@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TICSeguro</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="hint_nickname">Nickname</string>
 </resources>
