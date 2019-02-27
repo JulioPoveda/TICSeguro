@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TICSeguro</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="hint_nickname">Nickname</string>
+    <string name="text_button_login">Login</string>
+    <string name="logo_text">TICSeguro Logo. A shield and inside it there are two hands holding a lock</string>
+</resources>
