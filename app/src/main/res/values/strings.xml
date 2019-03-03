@@ -2,6 +2,7 @@
     <string name="app_name">TICSeguro</string>
     <string name="title_activity_referencia">ReferenciaActivity</string>
     <string name="hint_nickname">Apodo</string>
+    <string name="hint_password">Contraseña</string>
     <string name="text_button_login">Login</string>
     <string name="logo_text">TICSeguro Logo. Un escudo y adentro de él hay dos manos sosteniendo un candado</string>
 </resources>
