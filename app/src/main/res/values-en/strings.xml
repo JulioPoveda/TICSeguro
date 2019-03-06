@@ -6,4 +6,6 @@
     <string name="hint_password">Password</string>
     <string name="text_button_login">Login</string>
     <string name="logo_text">TICSeguro Logo. A shield and inside it there are two hands holding a lock</string>
+    <string name="dont_have_account">Do not have an account?</string>
+    <string name="create_here">Register here</string>
 </resources>

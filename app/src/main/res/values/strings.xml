@@ -5,4 +5,6 @@
     <string name="hint_password">Contraseña</string>
     <string name="text_button_login">Login</string>
     <string name="logo_text">TICSeguro Logo. Un escudo y adentro de él hay dos manos sosteniendo un candado</string>
+    <string name="dont_have_account">¿No estás registrado?</string>
+    <string name="create_here">Regístrate aquí</string>
 </resources>
