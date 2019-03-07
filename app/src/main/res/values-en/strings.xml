@@ -8,4 +8,9 @@
     <string name="logo_text">TICSeguro Logo. A shield and inside it there are two hands holding a lock</string>
     <string name="dont_have_account">Do not have an account?</string>
     <string name="create_here">Register here</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_user">User</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="text_button_createaccount">Register</string>
 </resources>

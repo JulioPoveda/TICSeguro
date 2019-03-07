@@ -7,4 +7,9 @@
     <string name="logo_text">TICSeguro Logo. Un escudo y adentro de él hay dos manos sosteniendo un candado</string>
     <string name="dont_have_account">¿No estás registrado?</string>
     <string name="create_here">Regístrate aquí</string>
+    <string name="hint_email">Correo</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_confirm_password">Confirmar Contraseña</string>
+    <string name="text_button_createaccount">Regístrate</string>
 </resources>
