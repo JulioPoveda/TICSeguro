@@ -12,8 +12,15 @@
         <activity
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".view.CreateAccountActivity" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.CreateAccountActivity"
+            android:parentActivityName=".LoginActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"
+                />
+        </activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.japg.ticseguro.view.CreateAccountActivity;
+
+import android.content.Intent;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -13,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goCreateAccount(View view) {
-
+        Intent intent = new Intent(this, CreateAccountActivity.class);
+        startActivity(intent);
     }
 }
