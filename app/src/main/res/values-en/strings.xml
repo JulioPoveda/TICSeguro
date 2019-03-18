@@ -14,4 +14,5 @@
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="text_button_createaccount">Register</string>
     <string name="toolbar_title_createaccount">Register</string>
+    <string name="image_1_content_description">Someone is going to click a button that says Security</string>
 </resources>

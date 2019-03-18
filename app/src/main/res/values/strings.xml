@@ -13,4 +13,5 @@
     <string name="hint_confirm_password">Confirmar Contraseña</string>
     <string name="text_button_createaccount">Regístrate</string>
     <string name="toolbar_title_createaccount">Registro</string>
+    <string name="image_1_content_description">Alguien va a darle click a un botón que dice Seguridad</string>
 </resources>
