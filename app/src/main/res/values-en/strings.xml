@@ -19,4 +19,7 @@
     <string name="firstword_card">Opened</string>
     <string name="timecard_card">5 days ago</string>
     <string name="favoritenumbercard">Favorites</string>
+    <string name="buscar">Search</string>
+    <string name="inicio">Home</string>
+    <string name="perfil">Profile</string>
 </resources>
