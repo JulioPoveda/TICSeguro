@@ -14,4 +14,8 @@
     <string name="text_button_createaccount">Regístrate</string>
     <string name="toolbar_title_createaccount">Registro</string>
     <string name="image_1_content_description">Alguien va a darle click a un botón que dice Seguridad</string>
+    <string name="topic_card">Phishing</string>
+    <string name="firstword_card">Abierto hace</string>
+    <string name="timecard_card">5 días</string>
+    <string name="favoritenumbercard">Favoritos</string>
 </resources>

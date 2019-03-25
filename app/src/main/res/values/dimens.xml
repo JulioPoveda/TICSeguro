@@ -6,4 +6,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="height_cardview">200dp</dimen>
     <dimen name="cornerradius_cardview">4dp</dimen>
+    <dimen name="textsize_topic_card">25sp</dimen>
+    <dimen name="firstword_textsize_card">15sp</dimen>
+    <dimen name="timecard_marginleft_card">5dp</dimen>
+    <dimen name="like_margintop_card">10dp</dimen>
 </resources>
