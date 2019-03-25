@@ -101,6 +101,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/text_button_createaccount"
                     android:theme="@style/RaisedButtonDark"
+                    android:onClick="goHome"
 
                     />
 
