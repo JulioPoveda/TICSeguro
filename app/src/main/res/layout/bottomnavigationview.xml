@@ -10,5 +10,5 @@
     android:layout_gravity="bottom|end"
     android:background="@color/colorPrimary"
     app:itemIconTint="@android:color/white"
-    app:menu="@xml/bottomnavigationview_menu"
+    design:menu="@menu/menu_navigation"
     />
