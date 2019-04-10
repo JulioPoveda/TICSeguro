@@ -6,4 +6,5 @@
     <string name="title_tips">Tips</string>
     <string name="title_mi_perfil">Mi Perfil</string>
     <string name="hint_apodo">Apodo</string>
+    <string name="instruccion_registro">Ingresa un apodo para continuar:</string>
 </resources>
