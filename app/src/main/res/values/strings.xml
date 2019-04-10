@@ -1,24 +1,9 @@
 <resources>
     <string name="app_name">TICSeguro</string>
-    <string name="title_activity_referencia">ReferenciaActivity</string>
-    <string name="hint_nickname">Apodo</string>
-    <string name="hint_password">Contraseña</string>
-    <string name="text_button_login">Login</string>
     <string name="logo_text">TICSeguro Logo. Un escudo y adentro de él hay dos manos sosteniendo un candado</string>
-    <string name="dont_have_account">¿No estás registrado?</string>
-    <string name="create_here">Regístrate aquí</string>
-    <string name="hint_email">Correo</string>
-    <string name="hint_name">Nombre</string>
-    <string name="hint_user">Usuario</string>
-    <string name="hint_confirm_password">Confirmar Contraseña</string>
     <string name="text_button_createaccount">Regístrate</string>
-    <string name="toolbar_title_createaccount">Registro</string>
-    <string name="image_1_content_description">Alguien va a darle click a un botón que dice Seguridad</string>
-    <string name="topic_card">Phishing</string>
-    <string name="firstword_card">Abierto hace</string>
-    <string name="timecard_card">5 días</string>
-    <string name="favoritenumbercard">Favoritos</string>
-    <string name="buscar">Buscar</string>
-    <string name="inicio">Inicio</string>
-    <string name="perfil">Perfil</string>
+    <string name="title_inicio">Inicio</string>
+    <string name="title_tips">Tips</string>
+    <string name="title_mi_perfil">Mi Perfil</string>
+    <string name="hint_apodo">Apodo</string>
 </resources>
