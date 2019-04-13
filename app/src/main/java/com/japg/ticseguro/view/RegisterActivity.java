@@ -17,7 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void goHome(View view) {
-        Intent intent = new Intent(this, MainMenuActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, MainMenuActivity.class);
+        //startActivity(intent);
     }
 }

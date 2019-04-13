@@ -7,5 +7,4 @@
     <string name="title_mi_perfil">Mi Perfil</string>
     <string name="hint_apodo">Apodo</string>
     <string name="instruccion_registro">Ingresa un apodo para continuar:</string>
-    <string name="saludo">Bienvenido</string>
 </resources>

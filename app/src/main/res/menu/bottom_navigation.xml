@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/nav_tips"
+        android:icon="@drawable/ic_announcement_black_24dp"
+        android:title="Tips" />
+
+    <item
+        android:id="@+id/nav_perfil"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        android:title="Mi Perfil" />
+
+</menu>
