@@ -26,9 +26,4 @@ public class SplashScreenActivity extends AppCompatActivity {
             }
         }, SPLASH_TIME_OUT);
     }
-
-    public void goCreateAccount(View view) {
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
-    }
 }

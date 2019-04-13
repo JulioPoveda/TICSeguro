@@ -23,8 +23,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/instruccion_registro"
-                android:textSize="20dp"
-                android:textColor="@color/colorPrimary"/>
+                android:textSize="20sp"
+                android:textColor="@color/editTextColorBlack"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                     android:id="@+id/joinUs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="goHome"
+                    android:onClick="registrateClick"
                     android:text="@string/text_button_createaccount"
                     android:theme="@style/RaisedButtonDark" />
 

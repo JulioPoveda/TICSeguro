@@ -16,8 +16,10 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
 
-    public void goHome(View view) {
-        //Intent intent = new Intent(this, MainMenuActivity.class);
-        //startActivity(intent);
+    public void registrateClick(View view) {
+        System.out.println("Someone clicked");
+        Intent mainMenuIntent = new Intent(RegisterActivity.this, MainMenuActivity.class);
+        System.out.println("Intent created");
+        startActivity(mainMenuIntent);
     }
 }

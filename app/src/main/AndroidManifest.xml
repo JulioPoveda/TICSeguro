@@ -19,6 +19,9 @@
         <activity
             android:name=".view.RegisterActivity">
         </activity>
+        <activity
+            android:name=".view.MainMenuActivity">
+        </activity>
     </application>
 
 </manifest>
