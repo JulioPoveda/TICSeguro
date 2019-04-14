@@ -63,9 +63,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mImageNames.size();
     }
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -80,5 +79,4 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }
     }
-    
 }
