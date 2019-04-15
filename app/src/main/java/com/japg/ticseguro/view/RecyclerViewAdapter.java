@@ -1,6 +1,7 @@
 package com.japg.ticseguro.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -9,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.japg.ticseguro.R;
@@ -56,7 +56,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on: " + mImageNames.get(position));
 
-                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+                String nextActivity = mImageNames.get(position);
+
+                Class nextClass = null;
+
+                if (nextActivity.equals("Phishing"))
+                {
+                    nextClass = PhishingActivity.class;
+                }
+                else if (nextActivity.equals("Redes Sociales"))
+                {
+                    nextClass = SocialNetworksActivity.class;
+                }
+                else
+                {
+                    nextClass = InternetActivity.class;
+                }
+
+                Intent mainMenuIntent = new Intent(mContext, nextClass);
+                mContext.startActivity(mainMenuIntent);
             }
         });
     }

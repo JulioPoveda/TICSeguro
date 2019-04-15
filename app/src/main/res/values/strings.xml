@@ -7,4 +7,7 @@
     <string name="title_mi_perfil">Mi Perfil</string>
     <string name="hint_apodo">Apodo</string>
     <string name="instruccion_registro">Ingresa un apodo para continuar:</string>
+    <string name="title_activity_phishing">PhishingActivity</string>
+    <string name="title_activity_social_networks">SocialNetworksActivity</string>
+    <string name="title_activity_internet">InternetActivity</string>
 </resources>

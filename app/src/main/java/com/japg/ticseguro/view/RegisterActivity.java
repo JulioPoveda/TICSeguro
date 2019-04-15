@@ -17,9 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void registrateClick(View view) {
-        System.out.println("Someone clicked");
         Intent mainMenuIntent = new Intent(RegisterActivity.this, MainMenuActivity.class);
-        System.out.println("Intent created");
         startActivity(mainMenuIntent);
     }
 }
