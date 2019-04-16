@@ -55,6 +55,8 @@ public class RegisterActivity extends AppCompatActivity {
     };
 
     public void registrateClick(View view) {
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("userRegistered", true).commit();
         Intent mainMenuIntent = new Intent(RegisterActivity.this, MainMenuActivity.class);
         startActivity(mainMenuIntent);
     }

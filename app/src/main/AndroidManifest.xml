@@ -11,22 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".view.RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".view.InternetActivity"
-            android:label="@string/title_activity_internet"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.SocialNetworksActivity"
-            android:label="@string/title_activity_social_networks"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.PhishingActivity"
-            android:label="@string/title_activity_phishing"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +18,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".view.MainMenuActivity" />
+        <activity
+            android:name=".view.PhishingActivity"
+            android:label="@string/title_activity_phishing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.SocialNetworksActivity"
+            android:label="@string/title_activity_social_networks"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.InternetActivity"
+            android:label="@string/title_activity_internet"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
