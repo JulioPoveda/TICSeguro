@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">TICSeguro</string>
     <string name="logo_text">TICSeguro Logo. Un escudo y adentro de él hay dos manos sosteniendo un candado</string>
-    <string name="text_button_createaccount">Regístrate</string>
+    <string name="text_button_createaccount">Registrarse</string>
     <string name="title_inicio">Inicio</string>
     <string name="title_tips">Tips</string>
     <string name="title_mi_perfil">Mi Perfil</string>
     <string name="hint_apodo">Apodo</string>
-    <string name="instruccion_registro">Ingresa un apodo para continuar:</string>
-    <string name="title_activity_phishing">PhishingActivity</string>
-    <string name="title_activity_social_networks">SocialNetworksActivity</string>
-    <string name="title_activity_internet">InternetActivity</string>
+    <string name="instruccion_registro">Para comenzar, ingresa un apodo:</string>
+    <string name="title_activity_phishing">Phishing</string>
+    <string name="title_activity_social_networks">Redes Sociales</string>
+    <string name="title_activity_internet">Internet</string>
+    <string name="title_activity_register">TICSeguro</string>
+    <string name="bienvenida">¡Bienvenido a TICSeguro!</string>
 </resources>

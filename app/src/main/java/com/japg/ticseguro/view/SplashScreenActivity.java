@@ -3,7 +3,6 @@ package com.japg.ticseguro.view;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.japg.ticseguro.R;
 
@@ -20,8 +19,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(SplashScreenActivity.this, RegisterActivity.class);
-                startActivity(homeIntent);
+                Intent intent = new Intent(SplashScreenActivity.this, RegisterActivity.class);
+                startActivity(intent);
                 finish();
             }
         }, SPLASH_TIME_OUT);
