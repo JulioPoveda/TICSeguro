@@ -37,4 +37,6 @@ dependencies {
 
     // Circle Image View
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
 }
