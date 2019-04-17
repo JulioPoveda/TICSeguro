@@ -26,15 +26,30 @@
         <activity
             android:name=".view.PhishingActivity"
             android:label="@string/title_activity_phishing"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".view.MainMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainMenuActivity" />
+        </activity>
         <activity
             android:name=".view.SocialNetworksActivity"
             android:label="@string/title_activity_social_networks"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".view.MainMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainMenuActivity" />
+        </activity>
         <activity
             android:name=".view.InternetActivity"
             android:label="@string/title_activity_internet"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".view.MainMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainMenuActivity" />
+        </activity>
     </application>
 
 </manifest>

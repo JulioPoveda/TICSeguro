@@ -6,10 +6,15 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
 public class MainMenuActivity extends AppCompatActivity {
+
+    String userName;
+
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +25,20 @@ public class MainMenuActivity extends AppCompatActivity {
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
+
+        userName =  getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                .getString("userName", "usuario");
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        textView = findViewById(R.id.saludoTextView);
+
+        textView.setText("Bienvenido " + userName);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {

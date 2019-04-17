@@ -2,8 +2,6 @@ package com.japg.ticseguro.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -57,6 +55,12 @@ public class RegisterActivity extends AppCompatActivity {
     public void registrateClick(View view) {
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                 .putBoolean("userRegistered", true).commit();
+
+        String userName = apodoEditText.getText().toString();
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putString("userName", userName).commit();
+
         Intent mainMenuIntent = new Intent(RegisterActivity.this, MainMenuActivity.class);
         startActivity(mainMenuIntent);
     }
