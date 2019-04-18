@@ -1,13 +1,12 @@
 package com.japg.ticseguro.view;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.japg.ticseguro.R;
@@ -39,6 +38,10 @@ public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTi
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
 
+        holder.tipName.setText(tipsNames.get(position));
+        holder.tipCategory.setText(tipsCategories.get(position));
+        holder.tipContent.setText(tipsContent.get(position));
+
         System.out.println("Clicked " + tipsNames.get(position));
 
     }
@@ -54,14 +57,14 @@ public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTi
         TextView tipCategory;
         TextView tipContent;
 
-        RelativeLayout parentLayout;
+        LinearLayout parentLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tipName = itemView.findViewById(R.id.tipName);
-            tipCategory = itemView.findViewById(R.id.tipCategory);
-            tipContent = itemView.findViewById(R.id.tipContent);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
+            tipName = itemView.findViewById(R.id.tip_name);
+            tipCategory = itemView.findViewById(R.id.tip_category);
+            tipContent = itemView.findViewById(R.id.tip_content);
+            parentLayout = itemView.findViewById(R.id.parent_layout_tips);
         }
     }
 }

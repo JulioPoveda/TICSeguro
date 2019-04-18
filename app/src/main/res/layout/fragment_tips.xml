@@ -9,8 +9,9 @@
         android:layout_height="match_parent"
         android:text="Tips"
         android:textAlignment="center"
-        android:textSize="25sp"
-        android:textColor="@color/editTextColorBlack"/>
+        android:textSize="30sp"
+        android:textColor="@color/editTextColorBlack"
+        android:textStyle="bold"/>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
