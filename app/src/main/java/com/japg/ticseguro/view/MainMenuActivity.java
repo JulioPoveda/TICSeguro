@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.japg.ticseguro.R;
 
@@ -26,7 +27,6 @@ public class MainMenuActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
-
         userName =  getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getString("userName", "usuario");
 
@@ -36,9 +36,10 @@ public class MainMenuActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        textView = findViewById(R.id.saludoTextView);
-
-        textView.setText("Bienvenido " + userName);
+        CharSequence text = "¡Bienvenido " + userName + "!";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(getApplicationContext(), text, duration);
+        toast.show();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
