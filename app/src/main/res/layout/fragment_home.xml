@@ -21,7 +21,8 @@
         android:text="Módulos"
         android:textAlignment="center"
         android:textSize="25sp"
-        android:textColor="@color/editTextColorBlack"/>
+        android:textColor="@color/editTextColorBlack"
+        android:textStyle="bold"/>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
