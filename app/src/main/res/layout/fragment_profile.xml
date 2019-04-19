@@ -1,17 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
 
-    <TextView
-        android:id="@+id/username"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Nombre Usuario"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textColor="@color/editTextColorBlack"
-        android:textStyle="bold"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
-    
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Nombre Usuario"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/editTextColorBlack"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/activity_vertical_margin"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_user_default_avatar"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Este es tu progreso:"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:id="@+id/phishing_module"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Módulo 1 - Phishing"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/phishing_module_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Aún no haz empezado este módulo."
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:id="@+id/social_networks_module"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Módulo 2 - Redes Sociales"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/social_networks_module_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Aún no haz empezado este módulo."
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:id="@+id/internet_module"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Módulo 3 - Internet"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/internet_module_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Aún no haz empezado este módulo."
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/editTextColorBlack"
+            android:paddingTop="@dimen/activity_vertical_margin"/>
+
+    </LinearLayout>
+
+</ScrollView>
