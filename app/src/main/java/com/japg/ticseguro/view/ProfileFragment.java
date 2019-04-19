@@ -3,15 +3,18 @@ package com.japg.ticseguro.view;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +41,11 @@ public class ProfileFragment extends Fragment {
     ImageView userAvatar;
     Uri selectedImageUri;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,6 +55,16 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+
+        userAvatar = getView().findViewById(R.id.user_avatar);
+
+        SharedPreferences preferences = getActivity().getPreferences(MODE_PRIVATE);
+        String imageS = preferences.getString("userAvatar", "");
+        Bitmap imageB;
+        if(!imageS.equals("")) {
+            imageB = decodeToBase64(imageS);
+            userAvatar.setImageBitmap(imageB);
+        }
 
         userAvatar.setOnClickListener(new View.OnClickListener() {
 
@@ -70,9 +88,6 @@ public class ProfileFragment extends Fragment {
 
         userNameTextView = getView().findViewById(R.id.username);
         userNameTextView.setText(user);
-
-        userAvatar = getView().findViewById(R.id.user_avatar);
-
     }
 
     @Override
@@ -86,6 +101,13 @@ public class ProfileFragment extends Fragment {
             {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), selectedImageUri);
                 userAvatar.setImageBitmap(bitmap);
+
+                SharedPreferences preferences = getActivity().getPreferences(MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("userAvatar", encodeToBase64(bitmap));
+                //editor.putBoolean("userAvatarChanged", true);
+                editor.commit();
+
             }
             catch (FileNotFoundException e)
             {
@@ -95,5 +117,20 @@ public class ProfileFragment extends Fragment {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static String encodeToBase64(Bitmap image) {
+        Bitmap immage = image;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        immage.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+        String imageEncoded = Base64.encodeToString(b, Base64.DEFAULT);
+
+        return imageEncoded;
+    }
+
+    public static Bitmap decodeToBase64(String input) {
+        byte[] decodedByte = Base64.decode(input, 0);
+        return BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
     }
 }
