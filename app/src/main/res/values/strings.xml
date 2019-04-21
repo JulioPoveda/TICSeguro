@@ -12,4 +12,6 @@
     <string name="title_activity_internet">Internet</string>
     <string name="title_activity_register">TICSeguro</string>
     <string name="bienvenida">¡Bienvenido a TICSeguro!</string>
+    <string name="instruccion_phishing">Para comenzar, mira el siguiente vídeo:</string>
+    <string name="titulo_phishing">¡Bienvenido a la lección Phishing!</string>
 </resources>
