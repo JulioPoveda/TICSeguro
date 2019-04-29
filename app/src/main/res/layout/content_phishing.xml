@@ -50,6 +50,16 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"/>
 
+    <Button
+        android:id="@+id/aprende_mas_sobre_phishing_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aprende más sobre Phishing" />
 
+    <Button
+        android:id="@+id/prueba_tus_conocimientos_phishing_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Prueba tus conocimientos!" />
 
 </LinearLayout>

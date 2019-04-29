@@ -21,13 +21,13 @@
         <activity
             android:name=".view.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.MainMenuActivity" />
         <activity
             android:name=".view.PhishingActivity"
             android:label="@string/title_activity_phishing"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".view.MainMenuActivity">
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
@@ -35,8 +35,8 @@
         <activity
             android:name=".view.SocialNetworksActivity"
             android:label="@string/title_activity_social_networks"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".view.MainMenuActivity">
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
@@ -44,8 +44,8 @@
         <activity
             android:name=".view.InternetActivity"
             android:label="@string/title_activity_internet"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".view.MainMenuActivity">
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
