@@ -1,9 +1,11 @@
 package com.japg.ticseguro.view;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -28,4 +30,17 @@ public class PhishingActivity extends AppCompatActivity {
         mediaController.setAnchorView(videoView);
     }
 
+    public void aprendeMasSobrePhishingClick(View view)
+    {
+        System.out.println("CLICKED APRENDE MAS");
+        Intent mainMenuIntent = new Intent(PhishingActivity.this, AprendeMasPhishingActivity.class);
+        startActivity(mainMenuIntent);
+    }
+
+    public void pruebaTusConocimientosPhishingClick(View view)
+    {
+        System.out.println("CLICKED PRUEBA TUS CONOCIMIENTOS");
+        Intent mainMenuIntent = new Intent(PhishingActivity.this, PruebaTusConocimientosPhishingActivity.class);
+        startActivity(mainMenuIntent);
+    }
 }

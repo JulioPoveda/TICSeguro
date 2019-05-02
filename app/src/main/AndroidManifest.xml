@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +33,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
         </activity>
+        <activity
+            android:name=".view.PruebaTusConocimientosPhishingActivity"
+            android:label="@string/title_activity_prueba_tus_conocimientos_phishing"
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".view.AprendeMasPhishingActivity"
+            android:label="@string/title_activity_aprende_mas_phishing"
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.SocialNetworksActivity"
             android:label="@string/title_activity_social_networks"

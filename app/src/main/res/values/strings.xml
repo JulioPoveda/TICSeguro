@@ -15,4 +15,11 @@
     <string name="instruccion_phishing">Para comenzar, mira el siguiente vídeo:</string>
     <string name="titulo_phishing">¡Bienvenido a la lección Phishing!</string>
     <string name="title_activity_phishing_quiz">PhishingQuizActivity</string>
+    <string name="title_activity_aprende_mas_phishing">AprendeMasPhishingActivity</string>
+    <string name="title_activity_prueba_tus_conocimientos_phishing">
+        PruebaTusConocimientosPhishingActivity
+    </string>
+    <string name="phishing_explanatory_paragraph">Como viste en el vídeo, no seguir buenas prácticas puede poner en riesgo tu información.</string>
+    <string name="learn_more_about_phishing_button">Aprende más sobre Phishing</string>
+    <string name="test_your_phishing_knowledge">¡Prueba tus conocimientos!</string>
 </resources>
