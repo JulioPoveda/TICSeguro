@@ -3,6 +3,7 @@ package com.japg.ticseguro.view;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -28,19 +29,31 @@ public class PhishingActivity extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
+
+        // my_child_toolbar is defined in the layout file
+        Toolbar myChildToolbar =
+                (Toolbar) findViewById(R.id.phishing_toolbar);
+        setSupportActionBar(myChildToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 
-    public void aprendeMasSobrePhishingClick(View view)
-    {
-        System.out.println("CLICKED APRENDE MAS");
-        Intent mainMenuIntent = new Intent(PhishingActivity.this, AprendeMasPhishingActivity.class);
-        startActivity(mainMenuIntent);
+    public void aprendeMasSobrePhishing(View view) {
+
+        Intent aprendeMasSobrePhishingIntent = new Intent(PhishingActivity.this, AprendeMasPhishingActivity.class);
+        startActivity(aprendeMasSobrePhishingIntent);
+
     }
 
-    public void pruebaTusConocimientosPhishingClick(View view)
-    {
-        System.out.println("CLICKED PRUEBA TUS CONOCIMIENTOS");
+
+    public void pruebaTusConocimientosSobrePhishing(View view) {
+
         Intent mainMenuIntent = new Intent(PhishingActivity.this, PruebaTusConocimientosPhishingActivity.class);
         startActivity(mainMenuIntent);
+
     }
 }

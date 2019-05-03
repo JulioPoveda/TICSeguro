@@ -1,79 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.PhishingActivity"
-    tools:showIn="@layout/activity_phishing">
+    tools:showIn="@layout/activity_phishing"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="80dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="@string/titulo_phishing"
+        android:textAlignment="center"
+        android:textColor="@color/editTextColorBlack"
+        android:textSize="25sp" />
 
-        <TextView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="@string/instruccion_phishing"
+        android:textAlignment="center"
+        android:textColor="@color/editTextColorBlack"
+        android:textSize="25sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <VideoView
+            android:id="@+id/video_view_phishing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/titulo_phishing"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textColor="@color/editTextColorBlack"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"/>
+            android:orientation="vertical" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/instruccion_phishing"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textColor="@color/editTextColorBlack"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:text="@string/phishing_explanatory_paragraph"
+                android:textAlignment="center"
+                android:textColor="@color/editTextColorBlack"
+                android:textSize="25sp" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/aprende_mas_sobre_phishing_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="aprendeMasSobrePhishing"
+                android:layout_gravity="center"
+                android:text="@string/learn_more_about_phishing_button"
+                android:theme="@style/RaisedButtonDark" />
 
-            <VideoView
-                android:id="@+id/video_view_phishing"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/prueba_tus_conocimientos_phishing_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pruebaTusConocimientosSobrePhishing"
+                android:layout_gravity="center"
+                android:text="@string/test_your_phishing_knowledge"
+                android:theme="@style/RaisedButtonDark" />
+        </LinearLayout>
+    </ScrollView>
 
-        </FrameLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/phishing_explanatory_paragraph"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textColor="@color/editTextColorBlack"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"/>
-
-        <Button
-            android:id="@+id/aprende_mas_sobre_phishing_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="aprendeMasSobrePhishingClick"
-            android:text="@string/learn_more_about_phishing_button"
-            android:theme="@style/RaisedButtonDark"
-            android:enabled="false"
-            android:layout_gravity="center" />
-
-        <Button
-            android:id="@+id/prueba_tus_conocimientos_phishing_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="pruebaTusConocimientosPhishingClick"
-            android:text="@string/test_your_phishing_knowledge"
-            android:theme="@style/RaisedButtonDark"
-            android:enabled="false"
-            android:layout_gravity="center" />
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

@@ -2,11 +2,11 @@ package com.japg.ticseguro.view;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.japg.ticseguro.R;
@@ -57,7 +57,7 @@ public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTi
         TextView tipCategory;
         TextView tipContent;
 
-        LinearLayout parentLayout;
+        CardView parentLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
