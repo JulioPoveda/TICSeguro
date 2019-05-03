@@ -1,3 +1,3 @@
 # TICSeguro
 
-An Android Mobile Application
+TICSeguro is an Android mobile application to help everyone learn about Information Security.
