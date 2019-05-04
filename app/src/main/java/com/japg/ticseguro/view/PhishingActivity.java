@@ -22,7 +22,7 @@ public class PhishingActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         VideoView videoView = findViewById(R.id.video_view_phishing);
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.video;
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.phishing;
         Uri uri = Uri.parse(videoPath);
         videoView.setVideoURI(uri);
 
