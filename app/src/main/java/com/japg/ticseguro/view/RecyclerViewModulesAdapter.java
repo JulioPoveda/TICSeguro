@@ -3,6 +3,7 @@ package com.japg.ticseguro.view;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,7 +84,7 @@ public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerVie
 
         CircleImageView image;
         TextView imageName;
-        RelativeLayout parentLayout;
+        CardView parentLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
