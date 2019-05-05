@@ -7,13 +7,13 @@
     android:padding="15dp"
     android:id="@+id/parent_layout"
     android:layout_margin="5dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
     card_view:cardBackgroundColor="@color/colorTarjetaModuloAprendizaje"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
-    card_view:contentPadding="4dp"
-    android:foreground="?selectableItemBackground"
-    android:clickable="true"
-    android:focusable="true">
+    card_view:contentPadding="4dp">
 
     <LinearLayout
         android:layout_width="402dp"
@@ -34,7 +34,8 @@
             android:layout_marginStart="13dp"
             android:text="@string/nombre_leccion"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 

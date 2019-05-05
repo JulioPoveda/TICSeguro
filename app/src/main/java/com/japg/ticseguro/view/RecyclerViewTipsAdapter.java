@@ -42,8 +42,6 @@ public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTi
         holder.tipCategory.setText(tipsCategories.get(position));
         holder.tipContent.setText(tipsContent.get(position));
 
-        System.out.println("Clicked " + tipsNames.get(position));
-
     }
 
     @Override

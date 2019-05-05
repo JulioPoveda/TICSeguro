@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:fillViewport="false"
+    android:id="@+id/tips_scroll_view">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="80dp"
+            android:paddingTop="60dp"
             android:text="Tips"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
