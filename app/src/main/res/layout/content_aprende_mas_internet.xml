@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".view.RedesSocialesActivity"
-    tools:showIn="@layout/activity_social_networks">
+    tools:context=".view.AprendeMasInternetActivity"
+    tools:showIn="@layout/activity_aprende_mas_internet">
 
 </android.support.constraint.ConstraintLayout>

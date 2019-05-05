@@ -26,4 +26,17 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_aprende_mas_redes_sociales">AprendeMasRedesSocialesActivity
+    </string>
+    <string name="title_activity_prueba_tus_conocimientos_redes_sociales">
+        PruebaTusConocimientosRedesSocialesActivity
+    </string>
+    <string name="title_activity_aprende_mas_internet">AprendeMasInternetActivity</string>
+    <string name="title_activity_aprende_mas_contrasenas">AprendeMasContrasenasActivity</string>
+    <string name="title_activity_prueba_tus_conocimientos_internet">
+        PruebaTusConocimientosInternetActivity
+    </string>
+    <string name="title_activity_prueba_tus_conocimientos_contrasenas">
+        PruebaTusConocimientosContrasenasActivity
+    </string>
 </resources>

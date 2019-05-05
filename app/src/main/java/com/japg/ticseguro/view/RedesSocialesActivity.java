@@ -10,12 +10,12 @@ import android.view.View;
 
 import com.japg.ticseguro.R;
 
-public class InternetActivity extends AppCompatActivity {
+public class RedesSocialesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_internet);
+        setContentView(R.layout.activity_social_networks);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

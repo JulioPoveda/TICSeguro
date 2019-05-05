@@ -9,14 +9,23 @@ import android.view.View;
 
 import com.japg.ticseguro.R;
 
-public class SocialNetworksActivity extends AppCompatActivity {
+public class PruebaTusConocimientosContrasenasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_social_networks);
+        setContentView(R.layout.activity_prueba_tus_conocimientos_contrasenas);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
 
 }

@@ -11,6 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.PruebaTusConocimientosContrasenasActivity"
+            android:label="@string/title_activity_prueba_tus_conocimientos_contrasenas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".view.PruebaTusConocimientosInternetActivity"
+            android:label="@string/title_activity_prueba_tus_conocimientos_internet"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +30,7 @@
             android:name=".view.RegisterActivity"
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.MainMenuActivity"
-            />
+        <activity android:name=".view.MainMenuActivity" />
         <activity
             android:name=".view.PhishingActivity"
             android:label="@string/title_activity_phishing"
@@ -40,7 +46,7 @@
             android:name=".view.AprendeMasPhishingActivity"
             android:label="@string/title_activity_aprende_mas_phishing"
             android:parentActivityName=".view.PhishingActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -51,7 +57,7 @@
             android:name=".view.PruebaTusConocimientosPhishingActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_phishing"
             android:parentActivityName=".view.PhishingActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -59,7 +65,7 @@
                 android:value=".view.PhishingActivity" />
         </activity>
         <activity
-            android:name=".view.SocialNetworksActivity"
+            android:name=".view.RedesSocialesActivity"
             android:label="@string/title_activity_social_networks"
             android:parentActivityName=".view.MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -68,6 +74,28 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".view.AprendeMasRedesSocialesActivity"
+            android:label="@string/title_activity_aprende_mas_redes_sociales"
+            android:parentActivityName=".view.RedesSocialesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.RedesSocialesActivity" />
+        </activity>
+        <activity
+            android:name=".view.PruebaTusConocimientosRedesSocialesActivity"
+            android:label="@string/title_activity_prueba_tus_conocimientos_redes_sociales"
+            android:parentActivityName=".view.RedesSocialesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.RedesSocialesActivity" />
         </activity>
         <activity
             android:name=".view.InternetActivity"
@@ -80,6 +108,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
         </activity>
+        <activity
+            android:name=".view.AprendeMasInternetActivity"
+            android:label="@string/title_activity_aprende_mas_internet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.AprendeMasContrasenasActivity"
+            android:label="@string/title_activity_aprende_mas_contrasenas"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
