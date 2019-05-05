@@ -7,7 +7,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.MediaController;
+import android.widget.ScrollView;
 import android.widget.VideoView;
 
 import com.japg.ticseguro.R;
@@ -18,6 +20,10 @@ public class PhishingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phishing);
+
+        ScrollView scrollView = (ScrollView) findViewById(R.id.phishing_scroll_view);
+        scrollView.setFocusableInTouchMode(true);
+        scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
 
         Toolbar toolbar =
                 (Toolbar) findViewById(R.id.phishing_toolbar);
@@ -42,7 +48,6 @@ public class PhishingActivity extends AppCompatActivity {
         startActivity(aprendeMasSobrePhishingIntent);
 
     }
-
 
     public void pruebaTusConocimientosSobrePhishing(View view) {
 

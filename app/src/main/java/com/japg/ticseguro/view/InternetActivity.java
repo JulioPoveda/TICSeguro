@@ -7,6 +7,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import com.japg.ticseguro.R;
 
@@ -24,6 +26,15 @@ public class InternetActivity extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        ScrollView scrollView = (ScrollView) findViewById(R.id.internet_scroll_view);
+        scrollView.setFocusableInTouchMode(true);
+        scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
     }
 
 }

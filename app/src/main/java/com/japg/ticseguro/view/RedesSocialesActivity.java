@@ -21,10 +21,6 @@ public class RedesSocialesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redes_sociales);
 
-        ScrollView scrollView = (ScrollView) findViewById(R.id.redes_sociales_scrollview);
-        scrollView.setFocusableInTouchMode(true);
-        scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
-
         Toolbar toolbar =
                 (Toolbar) findViewById(R.id.redes_sociales_toolbar);
         setSupportActionBar(toolbar);
@@ -41,6 +37,10 @@ public class RedesSocialesActivity extends AppCompatActivity {
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
 
+        ScrollView scrollView = (ScrollView) findViewById(R.id.redes_sociales_scroll_view);
+        scrollView.setFocusableInTouchMode(true);
+        scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
+
     }
 
     public void aprendeMasSobreRedesSociales(View view) {
@@ -49,7 +49,6 @@ public class RedesSocialesActivity extends AppCompatActivity {
         startActivity(aprendeMasIntent);
 
     }
-
 
     public void pruebaTusConocimientosSobreRedesSociales(View view) {
 
