@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.SplashScreenActivity">
+        <activity
+            android:name=".view.SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,13 +23,17 @@
         <activity
             android:name=".view.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.MainMenuActivity" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.MainMenuActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".view.PhishingActivity"
             android:label="@string/title_activity_phishing"
             android:parentActivityName=".view.MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -38,7 +44,8 @@
             android:name=".view.AprendeMasPhishingActivity"
             android:label="@string/title_activity_aprende_mas_phishing"
             android:parentActivityName=".view.PhishingActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -49,7 +56,8 @@
             android:name=".view.PruebaTusConocimientosPhishingActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_phishing"
             android:parentActivityName=".view.PhishingActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -60,7 +68,8 @@
             android:name=".view.RedesSocialesActivity"
             android:label="@string/title_activity_social_networks"
             android:parentActivityName=".view.MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -71,7 +80,8 @@
             android:name=".view.AprendeMasRedesSocialesActivity"
             android:label="@string/title_activity_aprende_mas_redes_sociales"
             android:parentActivityName=".view.RedesSocialesActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -82,7 +92,8 @@
             android:name=".view.PruebaTusConocimientosRedesSocialesActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_redes_sociales"
             android:parentActivityName=".view.RedesSocialesActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -93,7 +104,8 @@
             android:name=".view.InternetActivity"
             android:label="@string/title_activity_internet"
             android:parentActivityName=".view.MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -103,7 +115,8 @@
         <activity
             android:name=".view.AprendeMasInternetActivity"
             android:label="@string/title_activity_aprende_mas_internet"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -113,7 +126,8 @@
         <activity
             android:name=".view.PruebaTusConocimientosInternetActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_internet"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -123,7 +137,8 @@
         <activity
             android:name=".view.ContrasenasActivity"
             android:label="@string/title_activity_contrasenas"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -133,7 +148,8 @@
         <activity
             android:name=".view.AprendeMasContrasenasActivity"
             android:label="@string/title_activity_aprende_mas_contrasenas"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -143,7 +159,8 @@
         <activity
             android:name=".view.PruebaTusConocimientosContrasenasActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_contrasenas"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
