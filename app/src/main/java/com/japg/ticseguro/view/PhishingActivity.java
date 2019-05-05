@@ -18,8 +18,13 @@ public class PhishingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phishing);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        Toolbar toolbar =
+                (Toolbar) findViewById(R.id.phishing_toolbar);
         setSupportActionBar(toolbar);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
         VideoView videoView = findViewById(R.id.video_view_phishing);
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.phishing;
@@ -29,17 +34,6 @@ public class PhishingActivity extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
-
-        // my_child_toolbar is defined in the layout file
-        Toolbar myChildToolbar =
-                (Toolbar) findViewById(R.id.phishing_toolbar);
-        setSupportActionBar(myChildToolbar);
-
-        // Get a support ActionBar corresponding to this toolbar
-        ActionBar ab = getSupportActionBar();
-
-        // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true);
     }
 
     public void aprendeMasSobrePhishing(View view) {

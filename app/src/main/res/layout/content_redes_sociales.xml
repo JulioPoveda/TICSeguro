@@ -2,14 +2,16 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/redes_sociales_scrollview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.PhishingActivity"
-    tools:showIn="@layout/activity_phishing" >
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.RedesSocialesActivity"
+    tools:showIn="@layout/activity_redes_sociales">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -17,7 +19,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="80dp"
             android:paddingBottom="@dimen/activity_vertical_margin"
-            android:text="@string/titulo_phishing"
+            android:text="@string/titulo_redes_sociales"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
             android:textSize="25sp" />
@@ -27,17 +29,17 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/activity_vertical_margin"
-            android:text="@string/instruccion_phishing"
+            android:text="@string/instruccion_redes_sociales"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
             android:textSize="25sp" />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <VideoView
-                android:id="@+id/video_view_phishing"
+                android:id="@+id/video_view_redes_sociales"
                 android:layout_width="match_parent"
                 android:layout_height="516dp" />
 
@@ -48,7 +50,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/activity_vertical_margin"
-            android:text="@string/phishing_explanatory_paragraph"
+            android:text="@string/parrafo_explanatorio_redes_sociales"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
             android:textSize="25sp" />
@@ -58,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:onClick="aprendeMasSobrePhishing"
+            android:onClick="aprendeMasSobreRedesSociales"
             android:text="@string/learn_more_about_phishing_button"
             android:theme="@style/RaisedButtonDark" />
 
@@ -66,8 +68,8 @@
             android:id="@+id/prueba_tus_conocimientos_phishing_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="pruebaTusConocimientosSobrePhishing"
             android:layout_gravity="center"
+            android:onClick="pruebaTusConocimientosSobreRedesSociales"
             android:text="@string/test_your_phishing_knowledge"
             android:theme="@style/RaisedButtonDark" />
 

@@ -1,58 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="15dp"
     android:id="@+id/parent_layout_tips"
-    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    android:padding="15dp"
     card_view:cardBackgroundColor="@color/colorTarjetaTips"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
-    card_view:contentPadding="4dp"
-    android:foreground="?selectableItemBackground"
-    android:clickable="true" >
+    card_view:contentPadding="4dp">
 
-        <LinearLayout
-            android:layout_width="402dp"
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tip_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
+            android:layout_marginStart="20dp"
+            android:text="@string/nombre_tip"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tip_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:text="Tip 1"
-                    android:textColor="@color/editTextColorBlack"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tip_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/categoria_tip"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tip_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:text="Categoría Tip 1"
-                    android:textColor="@color/editTextColorBlack"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/contenido_tip"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="25sp" />
 
-                <TextView
-                    android:id="@+id/tip_content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:text="El tip 1"
-                    android:textColor="@color/editTextColorBlack"
-                    android:textSize="25sp" />
-
-        </LinearLayout>
+    </LinearLayout>
 
 </android.support.v7.widget.CardView>

@@ -39,4 +39,11 @@
     <string name="title_activity_prueba_tus_conocimientos_contrasenas">
         PruebaTusConocimientosContrasenasActivity
     </string>
+    <string name="titulo_redes_sociales">¡Bienvenido a la lección sobre Redes Sociales!</string>
+    <string name="parrafo_explanatorio_redes_sociales">Las redes sociales nos proveen muchas funcionalidades. Sin embargo, hay que tener cuidado con lo que publicamos en ellas.</string>
+    <string name="instruccion_redes_sociales">¿Sabes qué significa usar responsablemente las redes sociales? Te invitamos a ver el siguiente vídeo:</string>
+    <string name="contenido_tip">Contenido tip 1</string>
+    <string name="categoria_tip">Categoría tip 1</string>
+    <string name="nombre_tip">Tip 1</string>
+    <string name="nombre_leccion">Phishing</string>
 </resources>
