@@ -46,4 +46,5 @@
     <string name="categoria_tip">Categoría tip 1</string>
     <string name="nombre_tip">Tip 1</string>
     <string name="nombre_leccion">Phishing</string>
+    <string name="title_activity_contrasenas">ContrasenasActivity</string>
 </resources>
