@@ -47,4 +47,9 @@
     <string name="nombre_tip">Tip 1</string>
     <string name="nombre_leccion">Phishing</string>
     <string name="title_activity_contrasenas">ContrasenasActivity</string>
+    <string name="boton_aprende_mas_sobre_redes_sociales">Aprende más</string>
+    <string name="boton_prueba_tus_conocimientos_sobre_redes_sociales">¡Prueba tus conocimientos!</string>
+    <string name="titulo_internet">¡Bienvenido a la lección sobre Internet!</string>
+    <string name="instruccion_internet">En esta sección, aprenderás a navegar de manera más segura en Internet:</string>
+    <string name="parrafo_explicacion_internet">A veces, no nos fijamos si aparece un candado verde en la parte superior de tu navegador. ¡Esto tiene que cambiar!</string>
 </resources>

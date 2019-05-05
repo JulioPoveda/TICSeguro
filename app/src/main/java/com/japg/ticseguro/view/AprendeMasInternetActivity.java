@@ -16,7 +16,7 @@ public class AprendeMasInternetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aprende_mas_internet);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.aprende_mas_sobre_internet_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();

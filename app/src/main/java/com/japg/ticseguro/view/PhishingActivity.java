@@ -51,8 +51,8 @@ public class PhishingActivity extends AppCompatActivity {
 
     public void pruebaTusConocimientosSobrePhishing(View view) {
 
-        Intent mainMenuIntent = new Intent(PhishingActivity.this, PruebaTusConocimientosPhishingActivity.class);
-        startActivity(mainMenuIntent);
+        Intent pruebaTusConocimientosSobrePhishingIntent = new Intent(PhishingActivity.this, PruebaTusConocimientosPhishingActivity.class);
+        startActivity(pruebaTusConocimientosSobrePhishingIntent);
 
     }
 }
