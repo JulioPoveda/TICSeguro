@@ -14,30 +14,29 @@
     <string name="bienvenida">¡Bienvenido a TICSeguro!</string>
     <string name="instruccion_phishing">Para comenzar, mira el siguiente vídeo:</string>
     <string name="titulo_phishing">¡Bienvenido a la lección Phishing!</string>
-    <string name="title_activity_phishing_quiz">PhishingQuizActivity</string>
-    <string name="title_activity_aprende_mas_phishing">AprendeMasPhishingActivity</string>
+    <string name="title_activity_phishing_quiz">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_aprende_mas_phishing">Más sobre Phishing</string>
     <string name="title_activity_prueba_tus_conocimientos_phishing">
-        PruebaTusConocimientosPhishingActivity
+        ¿Qué tanto aprendiste?
     </string>
     <string name="phishing_explanatory_paragraph">Como viste en el vídeo, no seguir buenas prácticas puede poner en riesgo tu información.</string>
-    <string name="learn_more_about_phishing_button">Aprende más sobre Phishing</string>
+    <string name="boton_aprende_mas_sobre_phishing">Aprende más sobre Phishing</string>
     <string name="test_your_phishing_knowledge">¡Prueba tus conocimientos!</string>
-    <string name="title_activity_example">ExampleActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_activity_aprende_mas_redes_sociales">AprendeMasRedesSocialesActivity
+    <string name="title_activity_aprende_mas_redes_sociales">Más sobre Redes Sociales
     </string>
     <string name="title_activity_prueba_tus_conocimientos_redes_sociales">
-        PruebaTusConocimientosRedesSocialesActivity
+        ¿Qué tanto aprendizte?
     </string>
-    <string name="title_activity_aprende_mas_internet">AprendeMasInternetActivity</string>
-    <string name="title_activity_aprende_mas_contrasenas">AprendeMasContrasenasActivity</string>
+    <string name="title_activity_aprende_mas_internet">Más sobre Internet</string>
+    <string name="title_activity_aprende_mas_contrasenas">Más sobre Contraseñas</string>
     <string name="title_activity_prueba_tus_conocimientos_internet">
-        PruebaTusConocimientosInternetActivity
+        ¿Qué tanto aprendiste?
     </string>
     <string name="title_activity_prueba_tus_conocimientos_contrasenas">
-        PruebaTusConocimientosContrasenasActivity
+        ¿Qué tanto aprendiste?
     </string>
     <string name="titulo_redes_sociales">¡Bienvenido a la lección sobre Redes Sociales!</string>
     <string name="parrafo_explanatorio_redes_sociales">Las redes sociales nos proveen muchas funcionalidades. Sin embargo, hay que tener cuidado con lo que publicamos en ellas.</string>
@@ -47,7 +46,7 @@
     <string name="nombre_tip">Tip 1</string>
     <string name="nombre_leccion">Phishing</string>
     <string name="title_activity_contrasenas">ContrasenasActivity</string>
-    <string name="boton_aprende_mas_sobre_redes_sociales">Aprende más</string>
+    <string name="boton_aprende_mas_sobre_redes_sociales">Aprende más sobre Redes Sociales</string>
     <string name="boton_prueba_tus_conocimientos_sobre_redes_sociales">¡Prueba tus conocimientos!</string>
     <string name="titulo_internet">¡Bienvenido a la lección sobre Internet!</string>
     <string name="instruccion_internet">En esta sección, aprenderás a navegar de manera más segura en Internet:</string>
@@ -61,4 +60,6 @@
     <string name="titulo_leccion_redes_sociales">Lección 2 - Redes Sociales</string>
     <string name="titulo_leccion_internet">Lección 3 - Internet</string>
     <string name="titulo_leccion_contrasenas">Lección 4 - Contraseñas</string>
+    <string name="boton_aprende_mas_sobre_internet">Aprende más sobre Internet</string>
+    <string name="boton_aprende_mas_sobre_contrasenas">Aprende más sobre contraseñas</string>
 </resources>

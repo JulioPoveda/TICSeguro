@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="aprendeMasSobreInternet"
-            android:text="@string/boton_aprende_mas_sobre_redes_sociales"
+            android:text="@string/boton_aprende_mas_sobre_internet"
             android:theme="@style/RaisedButtonDark" />
 
         <Button

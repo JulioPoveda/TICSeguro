@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="aprendeMasSobreContrasenas"
-            android:text="@string/learn_more_about_phishing_button"
+            android:text="@string/boton_aprende_mas_sobre_contrasenas"
             android:theme="@style/RaisedButtonDark" />
 
         <Button
