@@ -52,4 +52,13 @@
     <string name="titulo_internet">¡Bienvenido a la lección sobre Internet!</string>
     <string name="instruccion_internet">En esta sección, aprenderás a navegar de manera más segura en Internet:</string>
     <string name="parrafo_explicacion_internet">A veces, no nos fijamos si aparece un candado verde en la parte superior de tu navegador. ¡Esto tiene que cambiar!</string>
+    <string name="titulo_contrasenas">¡Bienvenido a la lección Contraseñas!</string>
+    <string name="instruccion_contrasenas">¿Sabes cuáles son las principales recomendaciones para tener contraseñas seguras?</string>
+    <string name="nombre_usuario">Nombre Usuario</string>
+    <string name="instruccion_avatar">Puedes cambiar el avatar dándole click encima.</string>
+    <string name="texto_progreso">Este es tu progreso:</string>
+    <string name="titulo_leccion_phishing">Lección 1 - Phishing</string>
+    <string name="titulo_leccion_redes_sociales">Lección 2 - Redes Sociales</string>
+    <string name="titulo_leccion_internet">Lección 3 - Internet</string>
+    <string name="titulo_leccion_contrasenas">Lección 4 - Contraseñas</string>
 </resources>

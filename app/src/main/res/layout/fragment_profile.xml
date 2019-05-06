@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="60dp"
-            android:text="Nombre Usuario"
+            android:text="@string/nombre_usuario"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
             android:textSize="30sp"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Puedes cambiar el avatar dándole click encima."
+            android:text="@string/instruccion_avatar"
             android:textAlignment="center"
             android:textSize="25sp"
             android:textColor="@color/editTextColorBlack"
@@ -44,7 +44,7 @@
             android:id="@+id/progress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Este es tu progreso:"
+            android:text="@string/texto_progreso"
             android:textAlignment="center"
             android:textSize="25sp"
             android:textColor="@color/editTextColorBlack"
@@ -52,66 +52,91 @@
 
         <TextView
             android:id="@+id/phishing_module"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Módulo 1 - Phishing"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textColor="@color/editTextColorBlack"
             android:paddingTop="@dimen/activity_vertical_margin"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/phishing_module_progress"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Aún no haz empezado este módulo."
+            android:text="@string/titulo_leccion_phishing"
             android:textAlignment="center"
-            android:textSize="25sp"
+            android:layout_gravity="center"
             android:textColor="@color/editTextColorBlack"
-            android:paddingTop="@dimen/activity_vertical_margin"/>
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/determinateBarPhishing"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:progress="10"
+            android:layout_gravity="center"
+            android:progressBackgroundTint="@color/colorTarjetaTips"
+            android:progressTint="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/social_networks_module"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Módulo 2 - Redes Sociales"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textColor="@color/editTextColorBlack"
             android:paddingTop="@dimen/activity_vertical_margin"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/social_networks_module_progress"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Aún no haz empezado este módulo."
+            android:text="@string/titulo_leccion_redes_sociales"
             android:textAlignment="center"
-            android:textSize="25sp"
+            android:layout_gravity="center"
             android:textColor="@color/editTextColorBlack"
-            android:paddingTop="@dimen/activity_vertical_margin"/>
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/determinateBarRedesSociales"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:progress="10"
+            android:layout_gravity="center"
+            android:progressBackgroundTint="@color/colorTarjetaTips"
+            android:progressTint="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/internet_module"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Módulo 3 - Internet"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textColor="@color/editTextColorBlack"
             android:paddingTop="@dimen/activity_vertical_margin"
-            android:textStyle="bold"/>
+            android:text="@string/titulo_leccion_internet"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/determinateBarInternet"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:layout_gravity="center"
+            android:progressBackgroundTint="@color/colorTarjetaTips"
+            android:progressTint="@color/colorPrimary"/>
 
         <TextView
-            android:id="@+id/internet_module_progress"
-            android:layout_width="match_parent"
+            android:id="@+id/leccion_contrasenas"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Aún no haz empezado este módulo."
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:text="@string/titulo_leccion_contrasenas"
             android:textAlignment="center"
-            android:textSize="25sp"
+            android:layout_gravity="center"
             android:textColor="@color/editTextColorBlack"
-            android:paddingTop="@dimen/activity_vertical_margin"/>
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/determinateBarContrasenas"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:layout_gravity="center"
+            android:progressBackgroundTint="@color/colorTarjetaTips"
+            android:progressTint="@color/colorPrimary"/>
 
     </LinearLayout>
 

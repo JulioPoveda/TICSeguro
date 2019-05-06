@@ -19,6 +19,7 @@ public class HomeFragment extends Fragment {
 
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
+    private int[] images = {R.drawable.phishing, R.drawable.redes_sociales, R.drawable.internet, R.drawable.contrasenas};
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        RecyclerViewModulesAdapter adapter = new RecyclerViewModulesAdapter(view.getContext(), mNames, mImageUrls);
+        RecyclerViewModulesAdapter adapter = new RecyclerViewModulesAdapter(view.getContext(), mNames, mImageUrls, images);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
@@ -55,5 +56,8 @@ public class HomeFragment extends Fragment {
 
         mImageUrls.add("https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         mNames.add("Internet");
+
+        mImageUrls.add("https://images.pexels.com/photos/34203/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        mNames.add("Contraseñas");
     }
 }

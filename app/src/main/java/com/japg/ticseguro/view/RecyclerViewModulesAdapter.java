@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -22,11 +23,13 @@ public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerVie
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
+    private int[] images = {};
 
-    public RecyclerViewModulesAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages) {
+    public RecyclerViewModulesAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages, int[] images) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mContext = mContext;
+        this.images = images;
     }
 
     @Override
@@ -63,9 +66,13 @@ public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerVie
                 {
                     nextClass = RedesSocialesActivity.class;
                 }
-                else
+                else if (nextActivity.equals("Internet"))
                 {
                     nextClass = InternetActivity.class;
+                }
+                else
+                {
+                    nextClass = ContrasenasActivity.class;
                 }
 
                 Intent mainMenuIntent = new Intent(mContext, nextClass);
@@ -81,7 +88,7 @@ public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerVie
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        CircleImageView image;
+        ImageView image;
         TextView imageName;
         CardView parentLayout;
 
