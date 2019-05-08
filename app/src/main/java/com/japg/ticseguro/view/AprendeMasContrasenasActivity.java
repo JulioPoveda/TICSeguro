@@ -7,6 +7,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
@@ -24,6 +26,12 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+        TextView linkContrasenas1 = (TextView) findViewById(R.id.link_contrasenas_1);
+        linkContrasenas1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkContrasenas2 = (TextView) findViewById(R.id.link_contrasenas_2);
+        linkContrasenas2.setMovementMethod(LinkMovementMethod.getInstance());
 
         checkConnection();
     }

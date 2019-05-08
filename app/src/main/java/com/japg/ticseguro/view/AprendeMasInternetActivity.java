@@ -9,7 +9,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
@@ -26,6 +28,9 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+        TextView linkInternet1 = (TextView) findViewById(R.id.link_internet_1);
+        linkInternet1.setMovementMethod(LinkMovementMethod.getInstance());
 
         checkConnection();
 

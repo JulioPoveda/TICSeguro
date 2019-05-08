@@ -9,7 +9,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
@@ -26,6 +28,30 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+        TextView linkRedesSociales1 = (TextView) findViewById(R.id.link_redes_sociales_1);
+        linkRedesSociales1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales2 = (TextView) findViewById(R.id.link_redes_sociales_2);
+        linkRedesSociales2.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales3 = (TextView) findViewById(R.id.link_redes_sociales_3);
+        linkRedesSociales3.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales4 = (TextView) findViewById(R.id.link_redes_sociales_4);
+        linkRedesSociales4.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales5 = (TextView) findViewById(R.id.link_redes_sociales_5);
+        linkRedesSociales5.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales6 = (TextView) findViewById(R.id.link_redes_sociales_6);
+        linkRedesSociales6.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales7 = (TextView) findViewById(R.id.link_redes_sociales_7);
+        linkRedesSociales7.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkRedesSociales8 = (TextView) findViewById(R.id.link_redes_sociales_8);
+        linkRedesSociales8.setMovementMethod(LinkMovementMethod.getInstance());
 
         checkConnection();
 
