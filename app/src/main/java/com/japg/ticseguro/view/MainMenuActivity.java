@@ -1,22 +1,22 @@
 package com.japg.ticseguro.view;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.japg.ticseguro.R;
 
-public class MainMenuActivity extends AppCompatActivity {
+public class MainMenuActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     String userName;
-
-    TextView textView;
+    boolean alreadyVisitedActivity = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,8 @@ public class MainMenuActivity extends AppCompatActivity {
 
         userName =  getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getString("userName", "usuario");
+
+        checkConnection();
 
     }
 
@@ -67,4 +69,74 @@ public class MainMenuActivity extends AppCompatActivity {
             return true;
         }
     };
+
+    public void buildDialog(Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("No tienes conexión a Internet");
+        builder.setMessage("Algunas de las funcionalidades de la app pueden estar desactivadas. Por favor, conéctate lo más pronto a Internet.");
+
+        builder.setPositiveButton("Entendido", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+
+            }
+        }).show();
+
+    }
+
+    public void buildDialogInternetRestablished(Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("¡Ya tienes conexión a Internet!");
+        builder.setMessage("Disfruta de TICSeguro.");
+
+        builder.setPositiveButton("Entendido", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+
+            }
+        }).show();
+
+    }
+
+    private void checkConnection() {
+        boolean isConnected = ConnectivityReceiver.isConnected();
+        showInternetConnectionMessage(isConnected);
+    }
+
+    private void showInternetConnectionMessage(boolean isConnected) {
+
+        if (isConnected)
+        {
+            if (alreadyVisitedActivity)
+            {
+                buildDialogInternetRestablished(MainMenuActivity.this);
+            }
+
+            alreadyVisitedActivity = true;
+        }
+        else
+        {
+            // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
+            alreadyVisitedActivity = true;
+            buildDialog(MainMenuActivity.this);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    @Override
+    public void onNetworkConnectionChanged(boolean isConnected) {
+        showInternetConnectionMessage(isConnected);
+    }
 }

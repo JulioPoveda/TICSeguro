@@ -62,4 +62,11 @@
     <string name="titulo_leccion_contrasenas">Lección 4 - Contraseñas</string>
     <string name="boton_aprende_mas_sobre_internet">Aprende más sobre Internet</string>
     <string name="boton_aprende_mas_sobre_contrasenas">Aprende más sobre contraseñas</string>
+    <string name="pregunta_aprende_mas_phishing">¿Te gustaría aprender más sobre Phishing?</string>
+    <string name="instruccion_aprende_mas_phishing">Te recomendamos visitar las siguientes páginas web para aprender más sobre Phishing:</string>
+    <string name="pagina_web_recomendada_phishing_1"><a href="https://www.youtube.com/watch?v=UtGZqltfBEs">1. [Vídeo] Phishing: Qué es Phishing y cómo evitar ser víctima. Por Dell Soporte.</a></string>
+    <string name="pagina_web_recomendada_phishing_2"><a href="https://www.grupobancolombia.com/wps/portal/personas/aprender-es-facil/seguridad/internet/phishing/video">2. [Vídeo] Phishing-Uso Responsable de tu Información. Por Grupo Bancolombia.</a></string>
+    <string name="pagina_web_recomendada_phishing_3"><a href="https://www.blog.andaluciaesdigital.es/claves-para-detectar-el-phishing/">3. [Artículo] 7 claves para detectar el Phishing ¡No piques¡ Por Andalucía es digital.</a></string>
+    <string name="pagina_web_recomendada_contrasenas_1"><a href="https://www.youtube.com/watch?v=w3Sh4ooBc6s">1. [Vídeo] Cómo Crear una Contraseña Segura y Difícil. Por Dell Soporte.</a></string>
+    <string name="pagina_web_recomendada_internet_1"><a href="https://www.youtube.com/watch?v=Feea-oDtQiQ">1. [Vídeo] Precauciones al conectarse a una red inalámbrica WiFi pública. Por Dell Soporte.</a></string>
 </resources>

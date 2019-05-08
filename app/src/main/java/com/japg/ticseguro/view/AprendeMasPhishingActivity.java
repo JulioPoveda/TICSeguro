@@ -1,12 +1,11 @@
 package com.japg.ticseguro.view;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
@@ -21,6 +20,12 @@ public class AprendeMasPhishingActivity extends AppCompatActivity {
 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+        TextView linkPhishing1 = (TextView) findViewById(R.id.link_phishing_1);
+        linkPhishing1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView linkPhishing2 = (TextView) findViewById(R.id.link_phishing_2);
+        linkPhishing2.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 }
