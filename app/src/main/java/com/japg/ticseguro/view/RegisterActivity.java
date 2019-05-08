@@ -1,7 +1,10 @@
 package com.japg.ticseguro.view;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -12,7 +15,9 @@ import android.widget.EditText;
 
 import com.japg.ticseguro.R;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
+
+    boolean alreadyVisitedActivity = false;
 
     private EditText apodoEditText;
     private Button registrarseButton;
@@ -30,6 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        checkConnection();
+
     }
 
     private TextWatcher registerTextWatcher = new TextWatcher() {
@@ -63,6 +71,77 @@ public class RegisterActivity extends AppCompatActivity {
 
         Intent mainMenuIntent = new Intent(RegisterActivity.this, MainMenuActivity.class);
         startActivity(mainMenuIntent);
+    }
+
+    public void buildDialog(Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("No tienes conexión a Internet");
+        builder.setMessage("Algunas de las funcionalidades de la app pueden estar desactivadas. Por favor, conéctate lo más pronto a Internet.");
+
+        builder.setPositiveButton("Entendido", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+
+            }
+        }).show();
+
+    }
+
+    public void buildDialogInternetRestablished(Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("¡Ya tienes conexión a Internet!");
+        builder.setMessage("Disfruta de TICSeguro.");
+
+        builder.setPositiveButton("Entendido", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+
+            }
+        }).show();
+
+    }
+
+    private void checkConnection() {
+        boolean isConnected = ConnectivityReceiver.isConnected();
+        showInternetConnectionMessage(isConnected);
+    }
+
+    private void showInternetConnectionMessage(boolean isConnected) {
+
+        if (isConnected)
+        {
+            if (alreadyVisitedActivity)
+            {
+                buildDialogInternetRestablished(RegisterActivity.this);
+            }
+
+            alreadyVisitedActivity = true;
+        }
+        else
+        {
+            // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
+            alreadyVisitedActivity = true;
+
+            buildDialog(RegisterActivity.this);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    @Override
+    public void onNetworkConnectionChanged(boolean isConnected) {
+        showInternetConnectionMessage(isConnected);
     }
 
 }

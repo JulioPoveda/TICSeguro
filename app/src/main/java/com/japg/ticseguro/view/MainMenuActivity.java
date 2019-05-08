@@ -124,6 +124,7 @@ public class MainMenuActivity extends AppCompatActivity implements ConnectivityR
         {
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
             alreadyVisitedActivity = true;
+
             buildDialog(MainMenuActivity.this);
         }
     }
