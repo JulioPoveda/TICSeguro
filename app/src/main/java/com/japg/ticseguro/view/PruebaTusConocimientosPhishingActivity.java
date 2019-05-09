@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
@@ -38,6 +39,9 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
 
     private float shake;
 
+    TextView tituloRespuesta;
+    TextView respuestaPregunta1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +65,9 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
         currentAcceleration = SensorManager.GRAVITY_EARTH;
         lastAcceleration = SensorManager.GRAVITY_EARTH;
         shake = 0.00f;
+
+        tituloRespuesta = findViewById(R.id.titulo_respuesta);
+        respuestaPregunta1 = findViewById(R.id.phishing_pregunta_1_respuesta);
 
     }
 
@@ -154,6 +161,9 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
             numeroDeVecesBoton1Presionado = 2;
         }
 
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+
     }
 
     public void seleccionarOpcion2(View view)
@@ -175,6 +185,8 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
             numeroDeVecesBoton2Presionado = 2;
         }
 
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
 
     }
 
@@ -196,6 +208,10 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             numeroDeVecesBoton3Presionado = 2;
         }
+
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+
     }
 
     public void seleccionarOpcion4(View view)
@@ -216,6 +232,10 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             numeroDeVecesBoton4Presionado = 2;
         }
+
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+
     }
 
     private final SensorEventListener sensorListener = new SensorEventListener()
@@ -239,6 +259,9 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
                 botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+
+                tituloRespuesta.setVisibility(View.VISIBLE);
+                respuestaPregunta1.setVisibility(View.VISIBLE);
             }
         }
 

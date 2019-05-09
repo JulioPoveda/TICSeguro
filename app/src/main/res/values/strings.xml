@@ -89,4 +89,11 @@
     <string name="phishing_pregunta_1_opcion_2">Darle click a los URL que tenga un correo.</string>
     <string name="phishing_pregunta_1_opcion_3">Desconfiar de los documentos adjuntos.</string>
     <string name="phishing_pregunta_1_opcion_4">Confiar en correos que piden actuar de inmediato.</string>
+    <string name="instruccion_mostrar_respuesta">Para ver la respuesta, agita tu celular.</string>
+    <string name="phishing_pregunta_1_respuesta">Los documentos adjuntos de un correo pueden contener software malicioso.</string>
+    <string name="titulo_inicio">Lecciones</string>
+    <string name="titulo_tips">Tips</string>
+    <string name="titulo_ayudas">Ayudas</string>
+    <string name="instruccion_tips">Protege tu información siguiendo estos tips:</string>
+    <string name="titulo_respuesta">Justificación</string>
 </resources>

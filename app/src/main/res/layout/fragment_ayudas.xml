@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="60dp"
-            android:text="Ayudas"
+            android:text="@string/titulo_ayudas"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
             android:textSize="30sp"
