@@ -12,6 +12,11 @@
         android:title="Tips" />
 
     <item
+        android:id="@+id/nav_ayudas"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="Ayudas" />
+
+    <item
         android:id="@+id/nav_perfil"
         android:icon="@drawable/ic_account_box_black_24dp"
         android:title="Mi Perfil" />

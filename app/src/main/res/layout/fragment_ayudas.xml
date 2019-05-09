@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/home_scroll_view"
+    android:id="@+id/ayudas_scroll_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="60dp"
-            android:text="Temas"
+            android:text="Ayudas"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
             android:textSize="30sp"
@@ -24,20 +24,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Selecciona un tema para aprender sobre él:"
+            android:text="Hay muchas instituciones que pueden ayudarte:"
             android:textAlignment="center"
             android:textSize="25sp"
             android:textColor="@color/editTextColorBlack"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/activity_vertical_margin"/>
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/recycler_view">
-
-        </android.support.v7.widget.RecyclerView>
-
     </LinearLayout>
-    
+
 </ScrollView>

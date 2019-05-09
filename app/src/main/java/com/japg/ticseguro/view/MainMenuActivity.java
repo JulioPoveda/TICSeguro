@@ -59,6 +59,10 @@ public class MainMenuActivity extends AppCompatActivity implements ConnectivityR
                     selectedFragment = new TipsFragment();
                     break;
 
+                case R.id.nav_ayudas:
+                    selectedFragment = new AyudasFragment();
+                    break;
+
                 case R.id.nav_perfil:
                     selectedFragment = new ProfileFragment();
                     break;
