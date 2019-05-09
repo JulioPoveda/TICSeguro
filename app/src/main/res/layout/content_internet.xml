@@ -61,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:onClick="aprendeMasSobreInternet"
             android:text="@string/boton_aprende_mas_sobre_internet"
             android:theme="@style/RaisedButtonDark" />
@@ -70,6 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:onClick="pruebaTusConocimientosSobreInternet"
             android:text="@string/boton_prueba_tus_conocimientos_sobre_redes_sociales"
             android:theme="@style/RaisedButtonDark" />

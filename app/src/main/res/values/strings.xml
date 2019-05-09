@@ -84,4 +84,9 @@
     <string name="instruccion_aprende_mas_contrasenas">Te recomendamos visitar las siguientes páginas web:</string>
     <string name="pagina_web_recomendada_contrasenas_1"><a href="https://www.youtube.com/watch?v=Ee_FJ1mNwqM">1. [Vídeo] ¿Cuánto tardarían en averiguar mis contraseñas? Por OSIseguridad.</a></string>
     <string name="pagina_web_recomendada_contrasenas_2"><a href="https://www.youtube.com/watch?v=w3Sh4ooBc6s">2. [Vídeo] Cómo Crear una Contraseña Segura y Difícil. Por Dell Soporte.</a></string>
+    <string name="phishing_pregunta_1">Pregunta 1 - ¿Cuál de las siguientes afirmaciones es una recomendación para no ser víctima de Phishing?</string>
+    <string name="phishing_pregunta_1_opcion_1">No revisar el emisor del correo.</string>
+    <string name="phishing_pregunta_1_opcion_2">Darle click a los URL que tenga un correo.</string>
+    <string name="phishing_pregunta_1_opcion_3">Desconfiar de los documentos adjuntos.</string>
+    <string name="phishing_pregunta_1_opcion_4">Confiar en correos que piden actuar de inmediato.</string>
 </resources>
