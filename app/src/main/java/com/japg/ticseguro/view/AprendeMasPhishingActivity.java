@@ -32,9 +32,6 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
         TextView linkPhishing2 = (TextView) findViewById(R.id.link_phishing_2);
         linkPhishing2.setMovementMethod(LinkMovementMethod.getInstance());
 
-        TextView linkPhishing3 = (TextView) findViewById(R.id.link_phishing_3);
-        linkPhishing3.setMovementMethod(LinkMovementMethod.getInstance());
-
         checkConnection();
 
     }
