@@ -7,5 +7,6 @@
     <color name="editTextColorBlack">#000000</color>
     <color name="colorTarjetaModuloAprendizaje">#C4C0C0</color>
     <color name="colorTarjetaTips">#C4C0C0</color>
+    <color name="colorTarjetaAyudas">#C4C0C0</color>
     <color name="colorOpcionCorrecta">#4CAF50</color>
 </resources>

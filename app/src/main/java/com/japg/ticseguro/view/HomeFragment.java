@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        RecyclerViewModulesAdapter adapter = new RecyclerViewModulesAdapter(view.getContext(), mNames, mImageUrls, images);
+        RecyclerViewLeccionesAdapter adapter = new RecyclerViewLeccionesAdapter(view.getContext(), mNames, mImageUrls, images);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 

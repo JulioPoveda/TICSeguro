@@ -16,25 +16,24 @@ import com.japg.ticseguro.R;
 
 import java.util.ArrayList;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
-public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerViewModulesAdapter.ViewHolder> {
+public class RecyclerViewAyudasAdapter extends RecyclerView.Adapter<RecyclerViewAyudasAdapter.ViewHolder> {
 
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
     private int[] images = {};
 
-    public RecyclerViewModulesAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages, int[] images) {
+    public RecyclerViewAyudasAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages, int[] images) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mContext = mContext;
         this.images = images;
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item, parent, false);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item_ayudas, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -46,8 +45,6 @@ public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerVie
                 .asBitmap()
                 .load(mImages.get(position))
                 .into(holder.image);
-
-        holder.imageName.setText(mImageNames.get(position));
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
 
@@ -89,14 +86,13 @@ public class RecyclerViewModulesAdapter extends RecyclerView.Adapter<RecyclerVie
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView image;
-        TextView imageName;
         CardView parentLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.image);
-            imageName = itemView.findViewById(R.id.image_name);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
+            image = itemView.findViewById(R.id.imagen_ayuda);
+            parentLayout = itemView.findViewById(R.id.parent_layout_ayudas);
         }
     }
+
 }
