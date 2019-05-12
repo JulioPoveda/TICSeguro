@@ -6,16 +6,19 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -34,6 +37,10 @@ public class ProfileFragment extends Fragment {
     TextView userNameTextView;
     ImageView userAvatar;
     Uri selectedImageUri;
+    ProgressBar leccionPhishingProgressBar;
+    ProgressBar leccionRedesSocialesProgressBar;
+    ProgressBar leccionInternetProgressBar;
+    ProgressBar leccionContrasenasProgressBar;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,6 +78,22 @@ public class ProfileFragment extends Fragment {
             }
 
         });
+
+        int progresoLeccionPhishing = preferences.getInt("progresoLeccionPhishing", 0);
+        int progresoLeccionRedesSociales = preferences.getInt("progresoLeccionRedesSociales", 0);
+        int progresoLeccionInternet = preferences.getInt("progresoLeccionInternet", 0);
+        int progresoLeccionContrasenas = preferences.getInt("progresoLeccionContrasenas", 0);
+
+        leccionPhishingProgressBar = getActivity().findViewById(R.id.determinateBarPhishing);
+        leccionRedesSocialesProgressBar = getActivity().findViewById(R.id.determinateBarRedesSociales);
+        leccionInternetProgressBar = getActivity().findViewById(R.id.determinateBarInternet);
+        leccionContrasenasProgressBar = getActivity().findViewById(R.id.determinateBarContrasenas);
+
+        leccionPhishingProgressBar.setProgress(progresoLeccionPhishing);
+        leccionRedesSocialesProgressBar.setProgress(progresoLeccionRedesSociales);
+        leccionInternetProgressBar.setProgress(progresoLeccionInternet);
+        leccionContrasenasProgressBar.setProgress(progresoLeccionContrasenas);
+
     }
 
     @Override

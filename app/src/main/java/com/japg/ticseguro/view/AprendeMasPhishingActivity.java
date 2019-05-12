@@ -2,12 +2,15 @@ package com.japg.ticseguro.view;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
+import android.view.View;
 import android.widget.TextView;
 
 import com.japg.ticseguro.R;
@@ -15,6 +18,11 @@ import com.japg.ticseguro.R;
 public class AprendeMasPhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
+
+    TextView linkPhishing1;
+    TextView linkPhishing2;
+    int clicksLinkPhishing1 = 0;
+    int getClicksLinkPhishing2 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +34,8 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
-        TextView linkPhishing1 = (TextView) findViewById(R.id.link_phishing_1);
-        linkPhishing1.setMovementMethod(LinkMovementMethod.getInstance());
-
-        TextView linkPhishing2 = (TextView) findViewById(R.id.link_phishing_2);
-        linkPhishing2.setMovementMethod(LinkMovementMethod.getInstance());
+        linkPhishing1 = (TextView) findViewById(R.id.link_phishing_1);
+        linkPhishing2 = (TextView) findViewById(R.id.link_phishing_2);
 
         checkConnection();
 
@@ -105,6 +110,34 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    public void irALinkPhishing1(View view)
+    {
+        clicksLinkPhishing1 = clicksLinkPhishing1 + 1;
+
+        if (clicksLinkPhishing1 == 1)
+        {
+            // Aumentar progreso
+        }
+
+        Uri uri = Uri.parse(getResources().getString(R.string.link_phishing_1));
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void irALinkPhishing2(View view)
+    {
+        clicksLinkPhishing1 = clicksLinkPhishing1 + 1;
+
+        if (clicksLinkPhishing1 == 1)
+        {
+            // Aumentar progreso
+        }
+
+        Uri uri = Uri.parse(getResources().getString(R.string.link_phishing_2));
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
 }
