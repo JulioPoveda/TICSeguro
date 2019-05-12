@@ -32,7 +32,7 @@
             android:text="@string/instruccion_aprende_mas_redes_sociales"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_1"
@@ -43,7 +43,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_1"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_2"
@@ -54,7 +54,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_2"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_3"
@@ -65,7 +65,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_3"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_4"
@@ -76,7 +76,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_4"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_5"
@@ -87,7 +87,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_5"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_6"
@@ -98,7 +98,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_6"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_7"
@@ -109,7 +109,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_7"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/link_redes_sociales_8"
@@ -120,7 +120,7 @@
             android:text="@string/pagina_web_recomendada_redes_sociales_8"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 

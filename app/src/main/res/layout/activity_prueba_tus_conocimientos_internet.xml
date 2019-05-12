@@ -20,6 +20,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_prueba_tus_conocimientos_internet" />
+    <include layout="@layout/content_pregunta1_internet" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -28,7 +28,7 @@
             android:layout_marginStart="20dp"
             android:text="@string/nombre_tip"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_marginStart="20dp"
             android:text="@string/categoria_tip"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_marginStart="20dp"
             android:text="@string/contenido_tip"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 

@@ -93,7 +93,7 @@
     <string name="titulo_inicio">Lecciones</string>
     <string name="titulo_tips">Tips</string>
     <string name="titulo_ayudas">Ayudas</string>
-    <string name="instruccion_tips">Protege tu información siguiendo estos tips:</string>
+    <string name="instruccion_fragment_tips">Protege tu información siguiendo estos tips:</string>
     <string name="titulo_respuesta">Justificación</string>
     <string name="title_activity_pregunta2_phishing">Pregunta2PhishingActivity</string>
     <string name="title_activity_pregunta3_phishing">Pregunta3PhishingActivity</string>
@@ -113,10 +113,15 @@
     <string name="title_activity_reporte_preguntas_contrasenas">
         ReportePreguntasContrasenasActivity
     </string>
-    <string name="title_activity_centro_cibernetico_policial">CentroCiberneticoPolicialActivity
+    <string name="title_activity_centro_cibernetico_policial">Centro Cibernético Policial
     </string>
     <string name="title_activity_superintendencia_industria_comercio">
         SuperintendenciaIndustriaComercioActivity
     </string>
     <string name="title_activity_min_tic">MinTICActivity</string>
+    <string name="titulo_centro_cibernetico_policial">Centro Cibernético Policial</string>
+    <string name="descripcion_centro_cibernetico_policial">Iniciativa de la Policía Nacional de Colombia. Es una página web donde los ciudadanos pueden hacer una denuncia, reportar incidentes informáticos, contactar a un CAI virtual, aprender sobre ciberseguridad entre otras funcionalidades.</string>
+    <string name="link_centro_cibernetico_policial">Para acceder al Centro Cibernético Policial, haz click <a href="https://caivirtual.policia.gov.co">aquí.</a></string>
+    <string name="instruccion_fragment_ayudas">Hay muchas instituciones que pueden ayudarte:</string>
+    <string name="instruccion_fragment_home">Selecciona un tema para aprender sobre él:</string>
 </resources>

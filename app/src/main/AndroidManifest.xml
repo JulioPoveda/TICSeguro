@@ -27,10 +27,6 @@
             android:label="@string/title_activity_superintendencia_industria_comercio"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".view.CentroCiberneticoPolicialActivity"
-            android:label="@string/title_activity_centro_cibernetico_policial"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".view.ReportePreguntasContrasenasActivity"
             android:label="@string/title_activity_reporte_preguntas_contrasenas"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -233,6 +229,16 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.ContrasenasActivity" />
+        </activity>
+        <activity
+            android:name=".view.CentroCiberneticoPolicialActivity"
+            android:label="@string/title_activity_centro_cibernetico_policial"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainMenuActivity" />
         </activity>
 
         <receiver

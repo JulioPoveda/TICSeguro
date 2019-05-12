@@ -33,7 +33,7 @@
             android:text="@string/instruccion_redes_sociales"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             android:text="@string/parrafo_explanatorio_redes_sociales"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/aprende_mas_sobre_phishing_button"

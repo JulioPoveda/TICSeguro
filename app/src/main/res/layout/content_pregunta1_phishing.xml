@@ -24,7 +24,7 @@
             android:foreground="?selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardBackgroundColor="@color/colorTarjetaModuloAprendizaje"
             card_view:cardElevation="3dp"
             card_view:contentPadding="4dp"
             card_view:cardCornerRadius="4dp">
@@ -88,7 +88,7 @@
             android:text="@string/instruccion_mostrar_respuesta"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/titulo_respuesta"
@@ -98,7 +98,7 @@
             android:text="@string/titulo_respuesta"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="invisible"/>
 
@@ -110,7 +110,7 @@
             android:text="@string/phishing_pregunta_1_respuesta"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:visibility="invisible"/>
 
     </LinearLayout>

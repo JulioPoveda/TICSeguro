@@ -23,9 +23,9 @@
 
         <ImageView
             android:id="@+id/imagen_ayuda"
-            android:layout_width="374dp"
+            android:layout_width="299dp"
             android:layout_height="116dp"
-            android:adjustViewBounds="true"
+            android:layout_gravity="left"
             android:src="@drawable/centro_cibernetico_policial" />
 
     </LinearLayout>

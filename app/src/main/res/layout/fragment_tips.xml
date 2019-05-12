@@ -26,10 +26,10 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingBottom="@dimen/activity_vertical_margin"
-            android:text="@string/instruccion_tips"
+            android:text="@string/instruccion_fragment_tips"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"

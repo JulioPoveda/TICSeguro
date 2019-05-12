@@ -55,21 +55,17 @@ public class RecyclerViewAyudasAdapter extends RecyclerView.Adapter<RecyclerView
 
                 Class nextClass = null;
 
-                if (nextActivity.equals("Phishing"))
+                if (nextActivity.equals("Centro Cibernético Policial"))
                 {
-                    nextClass = PhishingActivity.class;
+                    nextClass = CentroCiberneticoPolicialActivity.class;
                 }
-                else if (nextActivity.equals("Redes Sociales"))
+                else if (nextActivity.equals("Superintendencia de Industria y Comercio"))
                 {
-                    nextClass = RedesSocialesActivity.class;
-                }
-                else if (nextActivity.equals("Internet"))
-                {
-                    nextClass = InternetActivity.class;
+                    nextClass = SuperintendenciaIndustriaComercioActivity.class;
                 }
                 else
                 {
-                    nextClass = ContrasenasActivity.class;
+                    nextClass = MinTICActivity.class;
                 }
 
                 Intent mainMenuIntent = new Intent(mContext, nextClass);
