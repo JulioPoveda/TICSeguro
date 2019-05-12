@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".view.Pregunta1RedesSocialesActivity"
-    tools:showIn="@layout/activity_prueba_tus_conocimientos_redes_sociales">
+    tools:context=".view.SuperintendenciaIndustriaComercioActivity"
+    tools:showIn="@layout/activity_superintendencia_industria_comercio">
 
 </android.support.constraint.ConstraintLayout>

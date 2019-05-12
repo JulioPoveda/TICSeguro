@@ -95,4 +95,28 @@
     <string name="titulo_ayudas">Ayudas</string>
     <string name="instruccion_tips">Protege tu información siguiendo estos tips:</string>
     <string name="titulo_respuesta">Justificación</string>
+    <string name="title_activity_pregunta2_phishing">Pregunta2PhishingActivity</string>
+    <string name="title_activity_pregunta3_phishing">Pregunta3PhishingActivity</string>
+    <string name="title_activity_pregunta2_redes_sociales">Pregunta2RedesSocialesActivity</string>
+    <string name="title_activity_pregunta3_redes_sociales">Pregunta3RedesSocialesActivity</string>
+    <string name="title_activity_pregunta2_internet">Pregunta2InternetActivity</string>
+    <string name="title_activity_pregunta3_internet">Pregunta3InternetActivity</string>
+    <string name="title_activity_pregunta2_contrasenas">Pregunta2ContrasenasActivity</string>
+    <string name="title_activity_pregunta3_contrasenas">Pregunta3ContrasenasActivity</string>
+    <string name="title_activity_reporte_preguntas_phishing">ReportePreguntasPhishingActivity
+    </string>
+    <string name="title_activity_reporte_preguntas_redes_sociales">
+        ReportePreguntasRedesSocialesActivity
+    </string>
+    <string name="title_activity_reporte_preguntas_internet">ReportePreguntasInternetActivity
+    </string>
+    <string name="title_activity_reporte_preguntas_contrasenas">
+        ReportePreguntasContrasenasActivity
+    </string>
+    <string name="title_activity_centro_cibernetico_policial">CentroCiberneticoPolicialActivity
+    </string>
+    <string name="title_activity_superintendencia_industria_comercio">
+        SuperintendenciaIndustriaComercioActivity
+    </string>
+    <string name="title_activity_min_tic">MinTICActivity</string>
 </resources>

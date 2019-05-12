@@ -3,25 +3,22 @@ package com.japg.ticseguro.view;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.japg.ticseguro.R;
 
-public class PruebaTusConocimientosRedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
+public class Pregunta1InternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_redes_sociales);
-        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_redes_sociales_toolbar);
+        setContentView(R.layout.activity_prueba_tus_conocimientos_internet);
+        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_internet_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
@@ -75,7 +72,7 @@ public class PruebaTusConocimientosRedesSocialesActivity extends AppCompatActivi
         {
             if (alreadyVisitedActivity)
             {
-                buildDialogInternetRestablished(PruebaTusConocimientosRedesSocialesActivity.this);
+                buildDialogInternetRestablished(Pregunta1InternetActivity.this);
             }
 
             alreadyVisitedActivity = true;
@@ -85,7 +82,7 @@ public class PruebaTusConocimientosRedesSocialesActivity extends AppCompatActivi
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
             alreadyVisitedActivity = true;
 
-            buildDialog(PruebaTusConocimientosRedesSocialesActivity.this);
+            buildDialog(Pregunta1InternetActivity.this);
         }
     }
 

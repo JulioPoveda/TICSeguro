@@ -3,32 +3,28 @@ package com.japg.ticseguro.view;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.japg.ticseguro.R;
 
-public class PruebaTusConocimientosContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
+public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_contrasenas);
-        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_contrasenas_toolbar);
+        setContentView(R.layout.activity_prueba_tus_conocimientos_redes_sociales);
+        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_redes_sociales_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
         checkConnection();
-
     }
 
     public void buildDialog(Context c) {
@@ -76,7 +72,7 @@ public class PruebaTusConocimientosContrasenasActivity extends AppCompatActivity
         {
             if (alreadyVisitedActivity)
             {
-                buildDialogInternetRestablished(PruebaTusConocimientosContrasenasActivity.this);
+                buildDialogInternetRestablished(Pregunta1RedesSocialesActivity.this);
             }
 
             alreadyVisitedActivity = true;
@@ -86,7 +82,7 @@ public class PruebaTusConocimientosContrasenasActivity extends AppCompatActivity
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
             alreadyVisitedActivity = true;
 
-            buildDialog(PruebaTusConocimientosContrasenasActivity.this);
+            buildDialog(Pregunta1RedesSocialesActivity.this);
         }
     }
 

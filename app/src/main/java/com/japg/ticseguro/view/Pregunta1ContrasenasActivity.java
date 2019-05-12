@@ -3,31 +3,29 @@ package com.japg.ticseguro.view;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.japg.ticseguro.R;
 
-public class PruebaTusConocimientosInternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
+public class Pregunta1ContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_internet);
-        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_internet_toolbar);
+        setContentView(R.layout.activity_prueba_tus_conocimientos_contrasenas);
+        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_contrasenas_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
         checkConnection();
+
     }
 
     public void buildDialog(Context c) {
@@ -75,7 +73,7 @@ public class PruebaTusConocimientosInternetActivity extends AppCompatActivity im
         {
             if (alreadyVisitedActivity)
             {
-                buildDialogInternetRestablished(PruebaTusConocimientosInternetActivity.this);
+                buildDialogInternetRestablished(Pregunta1ContrasenasActivity.this);
             }
 
             alreadyVisitedActivity = true;
@@ -85,7 +83,7 @@ public class PruebaTusConocimientosInternetActivity extends AppCompatActivity im
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
             alreadyVisitedActivity = true;
 
-            buildDialog(PruebaTusConocimientosInternetActivity.this);
+            buildDialog(Pregunta1ContrasenasActivity.this);
         }
     }
 

@@ -5,8 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -69,7 +67,7 @@ public class ContrasenasActivity extends AppCompatActivity implements Connectivi
 
     public void pruebaTusConocimientosSobreContrasenas(View view) {
 
-        Intent pruebaTusConocimientosSobreContrasenasIntent = new Intent(ContrasenasActivity.this, PruebaTusConocimientosContrasenasActivity.class);
+        Intent pruebaTusConocimientosSobreContrasenasIntent = new Intent(ContrasenasActivity.this, Pregunta1ContrasenasActivity.class);
         startActivity(pruebaTusConocimientosSobreContrasenasIntent);
 
     }

@@ -59,7 +59,7 @@ public class PhishingActivity extends AppCompatActivity implements ConnectivityR
 
     public void pruebaTusConocimientosSobrePhishing(View view) {
 
-        Intent pruebaTusConocimientosSobrePhishingIntent = new Intent(PhishingActivity.this, PruebaTusConocimientosPhishingActivity.class);
+        Intent pruebaTusConocimientosSobrePhishingIntent = new Intent(PhishingActivity.this, Pregunta1PhishingActivity.class);
         startActivity(pruebaTusConocimientosSobrePhishingIntent);
 
     }

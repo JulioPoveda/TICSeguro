@@ -59,7 +59,7 @@ public class RedesSocialesActivity extends AppCompatActivity implements Connecti
 
     public void pruebaTusConocimientosSobreRedesSociales(View view) {
 
-        Intent pruebaTusConocimientosIntent = new Intent(RedesSocialesActivity.this, PruebaTusConocimientosRedesSocialesActivity.class);
+        Intent pruebaTusConocimientosIntent = new Intent(RedesSocialesActivity.this, Pregunta1RedesSocialesActivity.class);
         startActivity(pruebaTusConocimientosIntent);
 
     }

@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
-public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
+public class Pregunta1PhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
 
@@ -116,7 +116,7 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
         {
             if (alreadyVisitedActivity)
             {
-                buildDialogInternetRestablished(PruebaTusConocimientosPhishingActivity.this);
+                buildDialogInternetRestablished(Pregunta1PhishingActivity.this);
             }
 
             alreadyVisitedActivity = true;
@@ -126,7 +126,7 @@ public class PruebaTusConocimientosPhishingActivity extends AppCompatActivity im
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
             alreadyVisitedActivity = true;
 
-            buildDialog(PruebaTusConocimientosPhishingActivity.this);
+            buildDialog(Pregunta1PhishingActivity.this);
         }
     }
 
