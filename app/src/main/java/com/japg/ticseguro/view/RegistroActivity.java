@@ -15,7 +15,7 @@ import android.widget.EditText;
 
 import com.japg.ticseguro.R;
 
-public class RegisterActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
+public class RegistroActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
 
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity implements ConnectivityR
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                 .putString("userName", userName).commit();
 
-        Intent mainMenuIntent = new Intent(RegisterActivity.this, MainMenuActivity.class);
+        Intent mainMenuIntent = new Intent(RegistroActivity.this, MainMenuActivity.class);
         startActivity(mainMenuIntent);
     }
 
@@ -118,7 +118,7 @@ public class RegisterActivity extends AppCompatActivity implements ConnectivityR
         {
             if (alreadyVisitedActivity)
             {
-                buildDialogInternetRestablished(RegisterActivity.this);
+                buildDialogInternetRestablished(RegistroActivity.this);
             }
 
             alreadyVisitedActivity = true;
@@ -128,7 +128,7 @@ public class RegisterActivity extends AppCompatActivity implements ConnectivityR
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
             alreadyVisitedActivity = true;
 
-            buildDialog(RegisterActivity.this);
+            buildDialog(RegistroActivity.this);
         }
     }
 

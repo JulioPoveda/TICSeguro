@@ -59,7 +59,7 @@ public class ProfileFragment extends Fragment {
 
         userAvatar = getView().findViewById(R.id.user_avatar);
 
-        SharedPreferences preferences = getActivity().getPreferences(MODE_PRIVATE);
+        SharedPreferences preferences = getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE);
         String imageS = preferences.getString("userAvatar", "");
         Bitmap imageB;
         if(!imageS.equals("")) {
@@ -79,10 +79,12 @@ public class ProfileFragment extends Fragment {
 
         });
 
-        int progresoLeccionPhishing = preferences.getInt("progresoLeccionPhishing", 0);
+        int progresoLeccionPhishing = this.getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("progresoLeccionPhishing", 0);
         int progresoLeccionRedesSociales = preferences.getInt("progresoLeccionRedesSociales", 0);
         int progresoLeccionInternet = preferences.getInt("progresoLeccionInternet", 0);
         int progresoLeccionContrasenas = preferences.getInt("progresoLeccionContrasenas", 0);
+
+        System.out.println("PROGRESO " + progresoLeccionPhishing);
 
         leccionPhishingProgressBar = getActivity().findViewById(R.id.determinateBarPhishing);
         leccionRedesSocialesProgressBar = getActivity().findViewById(R.id.determinateBarRedesSociales);

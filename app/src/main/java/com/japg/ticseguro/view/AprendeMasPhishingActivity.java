@@ -3,6 +3,7 @@ package com.japg.ticseguro.view;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -18,11 +19,13 @@ import com.japg.ticseguro.R;
 public class AprendeMasPhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
+    boolean elBotonSiguientePreguntaYaFuePresionado;
 
     TextView linkPhishing1;
     TextView linkPhishing2;
-    int clicksLinkPhishing1 = 0;
-    int getClicksLinkPhishing2 = 0;
+
+    boolean linkPhishing1YaFueAbierto;
+    boolean linkPhishing2YaFueAbierto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,9 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
 
         linkPhishing1 = (TextView) findViewById(R.id.link_phishing_1);
         linkPhishing2 = (TextView) findViewById(R.id.link_phishing_2);
+
+        linkPhishing1YaFueAbierto = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("linkPhishing1YaFueAbierto", false);
+        linkPhishing2YaFueAbierto = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("linkPhishing2YaFueAbierto", false);
 
         checkConnection();
 
@@ -114,11 +120,28 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
 
     public void irALinkPhishing1(View view)
     {
-        clicksLinkPhishing1 = clicksLinkPhishing1 + 1;
+        System.out.println("PROGRESO CLICK LINK 1");
 
-        if (clicksLinkPhishing1 == 1)
+        SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        System.out.println("PROGRESO En Aprende link 1 el progreso anterior es " + preferences.getInt("progresoLeccionPhishing", 0));
+
+        System.out.println("PROGRESO En Aprende link 1 linkPhishing1YaFueVisitado es " + linkPhishing1YaFueAbierto);
+
+        if (!linkPhishing1YaFueAbierto)
         {
+            preferences.edit().putBoolean("linkPhishing1YaFueAbierto", true).commit();
+
+            System.out.println("Primera vez link 1 visitado");
+
+            int progresoLeccionPhishingHastaElMomento = preferences.getInt("progresoLeccionPhishing", 0);
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+
             // Aumentar progreso
+            preferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
+
+            System.out.println("En Aprende Link 1 el progreso ahora es " + preferences.getInt("progresoLeccionPhishing", 0));
+
         }
 
         Uri uri = Uri.parse(getResources().getString(R.string.link_phishing_1));
@@ -128,11 +151,26 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
 
     public void irALinkPhishing2(View view)
     {
-        clicksLinkPhishing1 = clicksLinkPhishing1 + 1;
+        System.out.println("CLICK LINK 2");
 
-        if (clicksLinkPhishing1 == 1)
+        SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        System.out.println("PROGRESO En Aprende link 2 linkphishing2YaFueVisitado es " + linkPhishing2YaFueAbierto);
+
+        if (!linkPhishing2YaFueAbierto)
         {
+            preferences.edit().putBoolean("linkPhishing2YaFueAbierto", true).commit();
+
+            System.out.println("Primera vez link 2 visitado");
+
+            int progresoLeccionPhishingHastaElMomento = preferences.getInt("progresoLeccionPhishing", 0);
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+
             // Aumentar progreso
+            preferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
+
+            System.out.println("En Aprende Link 2 el progreso ahora es " + preferences.getInt("progresoLeccionPhishing", 0));
+
         }
 
         Uri uri = Uri.parse(getResources().getString(R.string.link_phishing_2));

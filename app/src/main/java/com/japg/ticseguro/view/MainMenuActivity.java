@@ -39,7 +39,7 @@ public class MainMenuActivity extends AppCompatActivity implements ConnectivityR
     protected void onStart() {
         super.onStart();
 
-        CharSequence text = "¡Bienvenido " + userName + "!";
+        CharSequence text = "¡Bienvenido/a " + userName + "!";
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(getApplicationContext(), text, duration);
         toast.show();

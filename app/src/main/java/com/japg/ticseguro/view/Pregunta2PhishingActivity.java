@@ -3,6 +3,7 @@ package com.japg.ticseguro.view;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -23,6 +24,7 @@ import com.japg.ticseguro.R;
 public class Pregunta2PhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
+    boolean elBotonSiguientePreguntaYaFuePresionado;
 
     Button botonOpcion1;
     Button botonOpcion2;
@@ -64,6 +66,9 @@ public class Pregunta2PhishingActivity extends AppCompatActivity implements Conn
         tituloRespuesta = findViewById(R.id.titulo_respuesta);
         respuestaPregunta2 = findViewById(R.id.phishing_pregunta_1_respuesta);
         botonContinuar = findViewById(R.id.boton_pregunta_1_continuar);
+
+        elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("pregunta2BotonSiguientePreguntaYaFuePresionado", false);
+
     }
 
     public void buildDialog(Context c) {
@@ -213,6 +218,19 @@ public class Pregunta2PhishingActivity extends AppCompatActivity implements Conn
 
     public void continuar(View view)
     {
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!elBotonSiguientePreguntaYaFuePresionado)
+        {
+            sharedPreferences.edit().putBoolean("pregunta2BotonSiguientePreguntaYaFuePresionado", true).commit();
+
+            int progresoLeccionPhishingHastaElMomento = sharedPreferences.getInt("progresoLeccionPhishing", 0);
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+
+            // Aumentar progreso
+            sharedPreferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
+        }
+
         Intent pregunta3PhishingIntent = new Intent(Pregunta2PhishingActivity.this, Pregunta3PhishingActivity.class);
         startActivity(pregunta3PhishingIntent);
     }
