@@ -19,14 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.MinTICActivity"
-            android:label="@string/title_activity_min_tic"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".view.SuperintendenciaIndustriaComercioActivity"
-            android:label="@string/title_activity_superintendencia_industria_comercio"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".view.ReportePreguntasContrasenasActivity"
             android:label="@string/title_activity_reporte_preguntas_contrasenas"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -178,6 +170,7 @@
         <activity
             android:name=".view.AprendeMasInternetActivity"
             android:label="@string/title_activity_aprende_mas_internet"
+            android:parentActivityName=".view.InternetActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -189,6 +182,7 @@
         <activity
             android:name=".view.Pregunta1InternetActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_internet"
+            android:parentActivityName=".view.InternetActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -200,6 +194,7 @@
         <activity
             android:name=".view.ContrasenasActivity"
             android:label="@string/title_activity_contrasenas"
+            android:parentActivityName=".view.MainMenuActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -211,6 +206,7 @@
         <activity
             android:name=".view.AprendeMasContrasenasActivity"
             android:label="@string/title_activity_aprende_mas_contrasenas"
+            android:parentActivityName=".view.ContrasenasActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -222,6 +218,7 @@
         <activity
             android:name=".view.Pregunta1ContrasenasActivity"
             android:label="@string/title_activity_prueba_tus_conocimientos_contrasenas"
+            android:parentActivityName=".view.ContrasenasActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -233,7 +230,30 @@
         <activity
             android:name=".view.CentroCiberneticoPolicialActivity"
             android:label="@string/title_activity_centro_cibernetico_policial"
+            android:parentActivityName=".view.MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".view.SuperintendenciaIndustriaComercioActivity"
+            android:label="@string/title_activity_superintendencia_industria_comercio"
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".view.MinTICActivity"
+            android:label="@string/title_activity_min_tic"
+            android:parentActivityName=".view.MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data

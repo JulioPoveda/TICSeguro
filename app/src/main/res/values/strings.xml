@@ -116,12 +116,18 @@
     <string name="title_activity_centro_cibernetico_policial">Centro Cibernético Policial
     </string>
     <string name="title_activity_superintendencia_industria_comercio">
-        SuperintendenciaIndustriaComercioActivity
+        Superintendencia de Industria y Comercio
     </string>
-    <string name="title_activity_min_tic">MinTICActivity</string>
+    <string name="title_activity_min_tic">MinTIC</string>
     <string name="titulo_centro_cibernetico_policial">Centro Cibernético Policial</string>
     <string name="descripcion_centro_cibernetico_policial">Iniciativa de la Policía Nacional de Colombia. Es una página web donde los ciudadanos pueden hacer una denuncia, reportar incidentes informáticos, contactar a un CAI virtual, aprender sobre ciberseguridad entre otras funcionalidades.</string>
     <string name="link_centro_cibernetico_policial">Para acceder al Centro Cibernético Policial, haz click <a href="https://caivirtual.policia.gov.co">aquí.</a></string>
     <string name="instruccion_fragment_ayudas">Hay muchas instituciones que pueden ayudarte:</string>
     <string name="instruccion_fragment_home">Selecciona un tema para aprender sobre él:</string>
+    <string name="titulo_superintendencia_industria_comercio">Superintendencia de Industria y Comercio - Delegatura de Protección de Datos Personales</string>
+    <string name="descripcion_superintendencia_industria_comercio">La Superintendencia de Industria y Comercio tiene una delegatura que se llama Protección de Datos Personales. Esta es una autoridad que vigila y garantiza que entidades públicas y privadas cumplan el reglamiento de tratamiento de datos personales.</string>
+    <string name="link_superintendencia_industria_comercio">Para visitar la página de Protección de Datos Personales de la Superintendencia de Industria y Comercio, haz click <a href="http://www.sic.gov.co/proteccion-de-datos-personales">aquí.</a></string>
+    <string name="titulo_min_tic">MinTIC</string>
+    <string name="descripcion_mintic">El Ministerio de Tecnologías de la Información y las Comunicaciones es una entidad que planea y promueve políticas, programas y proyectos del sector TIC.</string>
+    <string name="link_min_tic">Para conocer sobre todas las iniciativas del MinTIC, haz click <a href="https://www.mintic.gov.co/portal/604/w3-channel.html">aquí.</a></string>
 </resources>
