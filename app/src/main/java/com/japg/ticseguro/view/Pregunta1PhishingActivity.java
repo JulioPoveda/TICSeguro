@@ -2,6 +2,7 @@ package com.japg.ticseguro.view;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -41,12 +42,13 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
     TextView tituloRespuesta;
     TextView respuestaPregunta1;
+    Button botonContinuar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_phishing);
-        Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_phishing_toolbar);
+        setContentView(R.layout.activity_pregunta1_phishing);
+        Toolbar toolbar = findViewById(R.id.pregunta1_phishing_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
@@ -68,6 +70,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta = findViewById(R.id.titulo_respuesta);
         respuestaPregunta1 = findViewById(R.id.phishing_pregunta_1_respuesta);
+        botonContinuar = findViewById(R.id.boton_pregunta_1_continuar);
 
     }
 
@@ -163,6 +166,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta.setVisibility(View.INVISIBLE);
         respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
 
     }
 
@@ -187,6 +191,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta.setVisibility(View.INVISIBLE);
         respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
 
     }
 
@@ -211,6 +216,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta.setVisibility(View.INVISIBLE);
         respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
 
     }
 
@@ -235,6 +241,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta.setVisibility(View.INVISIBLE);
         respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
 
     }
 
@@ -262,6 +269,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
                 tituloRespuesta.setVisibility(View.VISIBLE);
                 respuestaPregunta1.setVisibility(View.VISIBLE);
+                botonContinuar.setVisibility(View.VISIBLE);
             }
         }
 
@@ -270,5 +278,11 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         }
     };
+
+    public void continuar(View view)
+    {
+        Intent pregunta2PhishingIntent = new Intent(Pregunta1PhishingActivity.this, Pregunta2PhishingActivity.class);
+        startActivity(pregunta2PhishingIntent);
+    }
 
 }

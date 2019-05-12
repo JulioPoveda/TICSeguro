@@ -17,7 +17,7 @@ public class Pregunta1InternetActivity extends AppCompatActivity implements Conn
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_internet);
+        setContentView(R.layout.activity_pregunta1_internet);
         Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_internet_toolbar);
         setSupportActionBar(toolbar);
 

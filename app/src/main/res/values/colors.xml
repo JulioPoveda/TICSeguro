@@ -9,4 +9,5 @@
     <color name="colorTarjetaTips">#C4C0C0</color>
     <color name="colorTarjetaAyudas">#C4C0C0</color>
     <color name="colorOpcionCorrecta">#4CAF50</color>
+    <color name="colorTarjetaPregunta">#D32F2F</color>
 </resources>

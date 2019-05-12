@@ -19,7 +19,7 @@ public class HomeFragment extends Fragment {
 
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
-    private int[] images = {R.drawable.phishing, R.drawable.redes_sociales, R.drawable.internet, R.drawable.contrasenas_1};
+    private int[] images = {R.drawable.phishing, R.drawable.redes_sociales, R.drawable.internet, R.drawable.contrasenas};
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
 
     private void initImageBitmaps() {
 
-        mImageUrls.add("https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        mImageUrls.add("https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         mNames.add("Phishing");
 
         mImageUrls.add("https://images.pexels.com/photos/533446/pexels-photo-533446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -57,7 +57,7 @@ public class HomeFragment extends Fragment {
         mImageUrls.add("https://images.pexels.com/photos/1549003/pexels-photo-1549003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         mNames.add("Internet");
 
-        mImageUrls.add("https://images.pexels.com/photos/34203/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        mImageUrls.add("https://images.pexels.com/photos/1419924/pexels-photo-1419924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         mNames.add("Contraseñas");
     }
 }

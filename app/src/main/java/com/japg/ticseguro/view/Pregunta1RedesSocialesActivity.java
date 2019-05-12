@@ -17,7 +17,7 @@ public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_redes_sociales);
+        setContentView(R.layout.activity_pregunta1_redes_sociales);
         Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_redes_sociales_toolbar);
         setSupportActionBar(toolbar);
 

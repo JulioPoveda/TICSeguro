@@ -20,7 +20,7 @@ public class AyudasFragment extends Fragment {
 
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
-    private int[] images = {R.drawable.phishing, R.drawable.redes_sociales, R.drawable.internet, R.drawable.contrasenas_1};
+    private int[] images = {R.drawable.phishing, R.drawable.redes_sociales, R.drawable.internet, R.drawable.contrasenas};
 
     @Nullable
     @Override
@@ -56,7 +56,7 @@ public class AyudasFragment extends Fragment {
         mImageUrls.add("http://www.sic.gov.co/sites/all/themes/SIC2016/logo.png");
         mNames.add("Superintendencia de Industria y Comercio");
 
-        mImageUrls.add("https://www.mintic.gov.co/portal/604/channels-507_logo_nuevo.png");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/c/c2/MinTIC_%28Colombia%29_logo.png");
         mNames.add("MinTIC");
     }
 }

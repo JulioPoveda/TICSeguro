@@ -17,7 +17,7 @@ public class Pregunta1ContrasenasActivity extends AppCompatActivity implements C
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba_tus_conocimientos_contrasenas);
+        setContentView(R.layout.activity_pregunta1_contrasenas);
         Toolbar toolbar = findViewById(R.id.prueba_tus_conocimientos_sobre_contrasenas_toolbar);
         setSupportActionBar(toolbar);
 

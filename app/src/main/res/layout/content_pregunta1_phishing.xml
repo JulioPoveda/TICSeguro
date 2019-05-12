@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.Pregunta1PhishingActivity"
-    tools:showIn="@layout/activity_prueba_tus_conocimientos_phishing">
+    tools:showIn="@layout/activity_pregunta1_phishing">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:foreground="?selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            card_view:cardBackgroundColor="@color/colorTarjetaModuloAprendizaje"
+            card_view:cardBackgroundColor="@color/colorTarjetaPregunta"
             card_view:cardElevation="3dp"
             card_view:contentPadding="4dp"
             card_view:cardCornerRadius="4dp">
@@ -49,7 +49,8 @@
             android:background="@color/colorTarjetaModuloAprendizaje"
             android:onClick="seleccionarOpcion1"
             android:text="@string/phishing_pregunta_1_opcion_1"
-            android:theme="@style/RaisedButtonDark" />
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
 
         <Button
             android:id="@+id/phishing_pregunta_1_opcion_2"
@@ -59,7 +60,8 @@
             android:background="@color/colorTarjetaModuloAprendizaje"
             android:onClick="seleccionarOpcion2"
             android:text="@string/phishing_pregunta_1_opcion_2"
-            android:theme="@style/RaisedButtonDark" />
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
 
         <Button
             android:id="@+id/phishing_pregunta_1_opcion_3"
@@ -69,7 +71,8 @@
             android:background="@color/colorTarjetaModuloAprendizaje"
             android:onClick="seleccionarOpcion3"
             android:text="@string/phishing_pregunta_1_opcion_3"
-            android:theme="@style/RaisedButtonDark" />
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
 
         <Button
             android:id="@+id/phishing_pregunta_1_opcion_4"
@@ -79,7 +82,8 @@
             android:background="@color/colorTarjetaModuloAprendizaje"
             android:onClick="seleccionarOpcion4"
             android:text="@string/phishing_pregunta_1_opcion_4"
-            android:theme="@style/RaisedButtonDark" />
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -112,6 +116,19 @@
             android:textColor="@color/editTextColorBlack"
             android:textSize="20sp"
             android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/boton_pregunta_1_continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
+            android:onClick="continuar"
+            android:text="@string/boton_pregunta_continuar"
+            android:theme="@style/RaisedButtonDark"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
