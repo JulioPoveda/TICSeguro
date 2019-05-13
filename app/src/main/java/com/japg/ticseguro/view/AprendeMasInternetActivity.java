@@ -2,6 +2,9 @@ package com.japg.ticseguro.view;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +22,10 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
 
     boolean alreadyVisitedActivity = false;
 
+    TextView linkInternet1;
+
+    boolean linkInternet1YaFueAbierto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +36,9 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
-        TextView linkInternet1 = (TextView) findViewById(R.id.link_internet_1);
-        linkInternet1.setMovementMethod(LinkMovementMethod.getInstance());
+        linkInternet1 = (TextView) findViewById(R.id.link_internet_1);
+
+        linkInternet1YaFueAbierto = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("linkInternet1YaFueAbierto", false);
 
         checkConnection();
 
@@ -105,6 +113,27 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    public void irALinkInternet1(View view)
+    {
+        SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!linkInternet1YaFueAbierto)
+        {
+            preferences.edit().putBoolean("linkInternet1YaFueAbierto", true).commit();
+
+            int progresoLeccionInternetHastaElMomento = preferences.getInt("progresoLeccionInternet", 0);
+            int nuevoProgresoLeccionInternet = progresoLeccionInternetHastaElMomento + 25;
+
+            // Aumentar progreso
+            preferences.edit().putInt("progresoLeccionInternet", nuevoProgresoLeccionInternet).commit();
+
+        }
+
+        Uri uri = Uri.parse(getResources().getString(R.string.link_internet_1));
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
 }

@@ -49,7 +49,8 @@
             android:text="@string/pagina_web_recomendada_contrasenas_1"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="irALinkContrasenas1"/>
 
         <TextView
             android:id="@+id/link_contrasenas_2"
@@ -62,7 +63,8 @@
             android:text="@string/pagina_web_recomendada_contrasenas_2"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="irALinkContrasenas2"/>
 
     </LinearLayout>
 

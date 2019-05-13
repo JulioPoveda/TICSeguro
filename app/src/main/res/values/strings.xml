@@ -71,20 +71,31 @@
     <string name="pregunta_aprende_mas_redes_sociales">¿Te gustaría aprender más sobre un uso adecuado de Redes Sociales?</string>
     <string name="instruccion_aprende_mas_redes_sociales">Te recomendamos visitar las siguientes páginas web para aprender cómo proteger tu información en redes sociales:</string>
     <string name="pagina_web_recomendada_redes_sociales_1"><a href="https://www.youtube.com/watch?v=WMEk-bua9vA">1. [Vídeo] ¿Hacemos buen uso de las redes sociales? Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_1">https://www.youtube.com/watch?v=WMEk-bua9vA</string>
     <string name="pagina_web_recomendada_redes_sociales_2"><a href="https://www.osi.es/sites/default/files/images/concienciacion/c4_pdf_rp_muevete_seguro_rrss.pdf">2. [PDF] Muévete seguro por las redes sociales. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_2">https://www.osi.es/sites/default/files/images/concienciacion/c4_pdf_rp_muevete_seguro_rrss.pdf</string>
     <string name="pagina_web_recomendada_redes_sociales_3"><a href="https://www.youtube.com/watch?v=xItJJCR7DBw&amp;feature=youtu.be">3. [Vídeo] Privacidad y seguridad en Facebook. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_3">https://www.youtube.com/watch?v=xItJJCR7DBw&amp;feature=youtu.be</string>
     <string name="pagina_web_recomendada_redes_sociales_4"><a href="https://www.youtube.com/watch?v=NKHGRIfgamU&amp;feature=youtu.be">4. [Vídeo] Privacidad y seguridad en Twitter. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_4">https://www.youtube.com/watch?v=NKHGRIfgamU&amp;feature=youtu.be</string>
     <string name="pagina_web_recomendada_redes_sociales_5"><a href="https://www.youtube.com/watch?v=cIAD2vv72TM&amp;feature=youtu.be">5. [Vídeo] Privacidad y seguridad en Instagram. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_5">https://www.youtube.com/watch?v=cIAD2vv72TM&amp;feature=youtu.be</string>
     <string name="pagina_web_recomendada_redes_sociales_6"><a href="https://www.youtube.com/watch?v=fgnJokNOqSw&amp;feature=youtu.be">6. [Vídeo] Privacidad y seguridad en YouTube. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_6">https://www.youtube.com/watch?v=fgnJokNOqSw&amp;feature=youtu.be</string>
     <string name="pagina_web_recomendada_redes_sociales_7"><a href="https://www.youtube.com/watch?v=RpwRtQN9iv0&amp;feature=youtu.be">7. [Vídeo] Privacidad y seguridad en Whatsapp. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_7">https://www.youtube.com/watch?v=RpwRtQN9iv0&amp;feature=youtu.be</string>
     <string name="pagina_web_recomendada_redes_sociales_8"><a href="https://www.youtube.com/watch?v=H8D7BDnDL9E&amp;feature=youtu.be">8. [Vídeo] Privacidad y seguridad en Snapchat. Por OSIseguridad.</a></string>
+    <string name="link_redes_sociales_8">https://www.youtube.com/watch?v=H8D7BDnDL9E&amp;feature=youtu.be</string>
     <string name="pregunta_aprende_mas_internet">¿Estás listo para aprender más sobre cómo navegar seguro en Internet?</string>
     <string name="instruccion_aprende_mas_internet">Te recomendamos visitar las siguientes páginas web:</string>
     <string name="pagina_web_recomendada_internet_1"><a href="https://www.youtube.com/watch?v=Feea-oDtQiQ">1. [Vídeo] Precauciones al conectarse a una red inalámbrica WiFi pública. Por Dell Soporte.</a></string>
+    <string name="link_internet_1">https://www.youtube.com/watch?v=Feea-oDtQiQ</string>
     <string name="pregunta_aprende_mas_contrasenas">¿Quieres seguir aprendiendo sobre cómo fortalecer tus contraseñas?</string>
     <string name="instruccion_aprende_mas_contrasenas">Te recomendamos visitar las siguientes páginas web:</string>
     <string name="pagina_web_recomendada_contrasenas_1"><a href="https://www.youtube.com/watch?v=Ee_FJ1mNwqM">1. [Vídeo] ¿Cuánto tardarían en averiguar mis contraseñas? Por OSIseguridad.</a></string>
+    <string name="link_contrasenas_1">https://www.youtube.com/watch?v=Ee_FJ1mNwqM</string>
     <string name="pagina_web_recomendada_contrasenas_2"><a href="https://www.youtube.com/watch?v=w3Sh4ooBc6s">2. [Vídeo] Cómo Crear una Contraseña Segura y Difícil. Por Dell Soporte.</a></string>
+    <string name="link_contrasenas_2">https://www.youtube.com/watch?v=w3Sh4ooBc6s</string>
     <string name="phishing_pregunta_1">Pregunta 1 - ¿Cuál de las siguientes afirmaciones es una recomendación para no ser víctima de Phishing?</string>
     <string name="phishing_pregunta_1_opcion_1">No revisar el emisor del correo.</string>
     <string name="phishing_pregunta_1_opcion_2">Darle click a los URL que tenga un correo.</string>
@@ -142,4 +153,54 @@
     <string name="phishing_pregunta_3_opcion_3">Desconfiar de los documentos adjuntos.</string>
     <string name="phishing_pregunta_3_opcion_4">Confiar en correos que piden actuar de inmediato.</string>
     <string name="boton_ultima_pregunta_continuar">Continuar</string>
+    <string name="redes_sociales_pregunta_2">Pregunta 2 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_2_opcion_1">Verdadero</string>
+    <string name="redes_sociales_pregunta_2_opcion_2">Falso</string>
+    <string name="redes_sociales_pregunta_2_respuesta">Explicación respuesta</string>
+    <string name="phishing_pregunta_2_respuesta">Explicación respuesta</string>
+    <string name="phishing_pregunta_3_respuesta">Explicación respuesta</string>
+    <string name="redes_sociales_pregunta_3">Pregunta 3 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_1">Pregunta 1 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_1_opcion_1">Opción 1</string>
+    <string name="redes_sociales_pregunta_1_opcion_3">Opción 3</string>
+    <string name="redes_sociales_pregunta_1_opcion_2">Pregunta 1 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_1_opcion_4">Pregunta 4 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_1_respuesta">Explicación respuesta</string>
+    <string name="redes_sociales_pregunta_3_opcion_1">Opción 1</string>
+    <string name="redes_sociales_pregunta_3_opcion_2">Opción 2</string>
+    <string name="redes_sociales_pregunta_3_opcion_3">Opción 3</string>
+    <string name="redes_sociales_pregunta_3_opcion_4">Opción 4</string>
+    <string name="redes_sociales_pregunta_3_respuesta">Explicación Pregunta 3 Redes Sociales</string>
+    <string name="internet_pregunta_1">Pregunta 1 - Internet</string>
+    <string name="internet_pregunta_1_opcion_1">Opción 1</string>
+    <string name="internet_pregunta_1_opcion_2">Opción 2</string>
+    <string name="internet_pregunta_1_opcion_3">Opción 3</string>
+    <string name="internet_pregunta_1_opcion_4">Opción 4</string>
+    <string name="internet_pregunta_1_respuesta">Explicación respuesta</string>
+    <string name="internet_pregunta_2">Pregunta 2 - Internet</string>
+    <string name="internet_pregunta_2_opcion_1">Opción 1</string>
+    <string name="internet_pregunta_2_opcion_2">Opción 2</string>
+    <string name="internet_pregunta_2_respuesta">Explicación respuesta</string>
+    <string name="internet_pregunta_3">Pregunta 3 - Internet</string>
+    <string name="internet_pregunta_3_opcion_1">Opción 1</string>
+    <string name="internet_pregunta_3_opcion_2">Opción 2</string>
+    <string name="internet_pregunta_3_opcion_3">Opción 3</string>
+    <string name="internet_pregunta_3_opcion_4">Opción 4</string>
+    <string name="internet_pregunta_3_respuesta">Explicación respuesta</string>
+    <string name="contrasenas_pregunta_1">Pregunta 1 - Contrasenas</string>
+    <string name="contrasenas_pregunta_1_opcion_1">Opción 1</string>
+    <string name="contrasenas_pregunta_1_opcion_2">Opción 2</string>
+    <string name="contrasenas_pregunta_1_opcion_3">Opción 3</string>
+    <string name="contrasenas_pregunta_1_opcion_4">Opción 4</string>
+    <string name="contrasenas_pregunta_1_respuesta">Explicación respuesta</string>
+    <string name="contrasenas_pregunta_2">Pregunta 2 - Contrasenas</string>
+    <string name="contrasenas_pregunta_2_opcion_1">Opción 1</string>
+    <string name="contrasenas_pregunta_2_opcion_2">Opción 2</string>
+    <string name="contrasenas_pregunta_2_respuesta">Explicación respuesta</string>
+    <string name="contrasenas_pregunta_3">Pregunta 3 - Contrasenas</string>
+    <string name="contrasenas_pregunta_3_opcion_1">Opción 1</string>
+    <string name="contrasenas_pregunta_3_opcion_2">Opción 2</string>
+    <string name="contrasenas_pregunta_3_opcion_3">Opción 3</string>
+    <string name="contrasenas_pregunta_3_opcion_4">Opción 4</string>
+    <string name="contrasenas_pregunta_3_respuesta">Explicación respuesta</string>
 </resources>

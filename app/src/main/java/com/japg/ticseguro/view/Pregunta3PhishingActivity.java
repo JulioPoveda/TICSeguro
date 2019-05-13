@@ -36,11 +36,8 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
     int numeroDeVecesBoton4Presionado = 2;
 
     private SensorManager sm;
-
     private float currentAcceleration;
-
     private float lastAcceleration;
-
     private float shake;
 
     TextView tituloRespuesta;
@@ -70,9 +67,9 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta = findViewById(R.id.titulo_respuesta);
         respuestaPregunta3 = findViewById(R.id.phishing_pregunta_3_respuesta);
-        botonContinuar = findViewById(R.id.boton_pregunta_3_continuar);
+        botonContinuar = findViewById(R.id.boton_pregunta_3_continuar_phishing);
 
-        elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("pregunta3BotonSiguientePreguntaYaFuePresionado", false);
+        elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("phishingPregunta3BotonSiguientePreguntaYaFuePresionado", false);
 
     }
 
@@ -151,7 +148,7 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton1Presionado % 2 == 0)
         {
-            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -176,7 +173,7 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton2Presionado % 2 == 0)
         {
-            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -201,7 +198,7 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton3Presionado % 2 == 0)
         {
-            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -226,7 +223,7 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton4Presionado % 2 == 0)
         {
-            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -287,7 +284,7 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
 
         if (!elBotonSiguientePreguntaYaFuePresionado)
         {
-            sharedPreferences.edit().putBoolean("pregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
+            sharedPreferences.edit().putBoolean("phishingPregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
 
             int progresoLeccionPhishingHastaElMomento = sharedPreferences.getInt("progresoLeccionPhishing", 0);
             int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;

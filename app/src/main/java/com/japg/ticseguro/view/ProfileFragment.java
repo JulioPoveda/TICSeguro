@@ -80,9 +80,9 @@ public class ProfileFragment extends Fragment {
         });
 
         int progresoLeccionPhishing = this.getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("progresoLeccionPhishing", 0);
-        int progresoLeccionRedesSociales = preferences.getInt("progresoLeccionRedesSociales", 0);
-        int progresoLeccionInternet = preferences.getInt("progresoLeccionInternet", 0);
-        int progresoLeccionContrasenas = preferences.getInt("progresoLeccionContrasenas", 0);
+        int progresoLeccionRedesSociales = this.getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("progresoLeccionRedesSociales", 0);
+        int progresoLeccionInternet = this.getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("progresoLeccionInternet", 0);
+        int progresoLeccionContrasenas = this.getActivity().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("progresoLeccionContrasenas", 0);
 
         System.out.println("PROGRESO " + progresoLeccionPhishing);
 

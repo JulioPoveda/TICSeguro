@@ -35,11 +35,8 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     int numeroDeVecesBoton4Presionado = 2;
 
     private SensorManager sm;
-
     private float currentAcceleration;
-
     private float lastAcceleration;
-
     private float shake;
 
     TextView tituloRespuesta;
@@ -56,12 +53,12 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
+        checkConnection();
+
         botonOpcion1 = findViewById(R.id.phishing_pregunta_1_opcion_1);
         botonOpcion2 = findViewById(R.id.phishing_pregunta_1_opcion_2);
         botonOpcion3 = findViewById(R.id.phishing_pregunta_1_opcion_3);
         botonOpcion4 = findViewById(R.id.phishing_pregunta_1_opcion_4);
-
-        checkConnection();
 
         sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sm.registerListener(sensorListener, sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
@@ -72,9 +69,9 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         tituloRespuesta = findViewById(R.id.titulo_respuesta);
         respuestaPregunta1 = findViewById(R.id.phishing_pregunta_1_respuesta);
-        botonContinuar = findViewById(R.id.boton_pregunta_1_continuar);
+        botonContinuar = findViewById(R.id.boton_pregunta_1_continuar_phishing);
 
-        elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("pregunta1BotonSiguientePreguntaYaFuePresionado", false);
+        elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("phishingPregunta1BotonSiguientePreguntaYaFuePresionado", false);
 
     }
 
@@ -153,7 +150,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton1Presionado % 2 == 0)
         {
-            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -178,7 +175,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton2Presionado % 2 == 0)
         {
-            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -203,7 +200,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton3Presionado % 2 == 0)
         {
-            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -228,7 +225,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     {
         if (numeroDeVecesBoton4Presionado % 2 == 0)
         {
-            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
             botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -289,7 +286,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         if (!elBotonSiguientePreguntaYaFuePresionado)
         {
-            sharedPreferences.edit().putBoolean("pregunta1BotonSiguientePreguntaYaFuePresionado", true).commit();
+            sharedPreferences.edit().putBoolean("phishingPregunta1BotonSiguientePreguntaYaFuePresionado", true).commit();
 
             int progresoLeccionPhishingHastaElMomento = sharedPreferences.getInt("progresoLeccionPhishing", 0);
             int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;

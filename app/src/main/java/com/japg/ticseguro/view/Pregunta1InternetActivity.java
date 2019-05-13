@@ -2,17 +2,46 @@ package com.japg.ticseguro.view;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
 public class Pregunta1InternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
+    boolean elBotonSiguientePreguntaYaFuePresionado;
+
+    Button botonOpcion1;
+    Button botonOpcion2;
+    Button botonOpcion3;
+    Button botonOpcion4;
+
+    int numeroDeVecesBoton1Presionado = 2;
+    int numeroDeVecesBoton2Presionado = 2;
+    int numeroDeVecesBoton3Presionado = 2;
+    int numeroDeVecesBoton4Presionado = 2;
+
+    private SensorManager sm;
+    private float currentAcceleration;
+    private float lastAcceleration;
+    private float shake;
+
+    TextView tituloRespuesta;
+    TextView respuestaPregunta1;
+    Button botonContinuar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +54,25 @@ public class Pregunta1InternetActivity extends AppCompatActivity implements Conn
         ab.setDisplayHomeAsUpEnabled(true);
 
         checkConnection();
+
+        botonOpcion1 = findViewById(R.id.internet_pregunta_1_opcion_1);
+        botonOpcion2 = findViewById(R.id.internet_pregunta_1_opcion_2);
+        botonOpcion3 = findViewById(R.id.internet_pregunta_1_opcion_3);
+        botonOpcion4 = findViewById(R.id.internet_pregunta_1_opcion_4);
+
+        sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sm.registerListener(sensorListener, sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+
+        currentAcceleration = SensorManager.GRAVITY_EARTH;
+        lastAcceleration = SensorManager.GRAVITY_EARTH;
+        shake = 0.00f;
+
+        tituloRespuesta = findViewById(R.id.titulo_respuesta);
+        respuestaPregunta1 = findViewById(R.id.internet_pregunta_1_respuesta);
+        botonContinuar = findViewById(R.id.boton_pregunta_1_continuar_internet);
+
+        elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("internetPregunta1BotonSiguientePreguntaYaFuePresionado", false);
+
     }
 
     public void buildDialog(Context c) {
@@ -96,6 +144,159 @@ public class Pregunta1InternetActivity extends AppCompatActivity implements Conn
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    public void seleccionarOpcion1(View view)
+    {
+        if (numeroDeVecesBoton1Presionado % 2 == 0)
+        {
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton1Presionado = 3;
+            numeroDeVecesBoton2Presionado = 2;
+            numeroDeVecesBoton3Presionado = 2;
+            numeroDeVecesBoton4Presionado = 2;
+        }
+        else
+        {
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton1Presionado = 2;
+        }
+
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
+
+    }
+
+    public void seleccionarOpcion2(View view)
+    {
+        if (numeroDeVecesBoton2Presionado % 2 == 0)
+        {
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton2Presionado = 3;
+            numeroDeVecesBoton1Presionado = 2;
+            numeroDeVecesBoton3Presionado = 2;
+            numeroDeVecesBoton4Presionado = 2;
+        }
+        else
+        {
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton2Presionado = 2;
+        }
+
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
+
+    }
+
+    public void seleccionarOpcion3(View view)
+    {
+        if (numeroDeVecesBoton3Presionado % 2 == 0)
+        {
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton3Presionado = 3;
+            numeroDeVecesBoton1Presionado = 2;
+            numeroDeVecesBoton2Presionado = 2;
+            numeroDeVecesBoton4Presionado = 2;
+        }
+        else
+        {
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton3Presionado = 2;
+        }
+
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
+
+    }
+
+    public void seleccionarOpcion4(View view)
+    {
+        if (numeroDeVecesBoton4Presionado % 2 == 0)
+        {
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton4Presionado = 3;
+            numeroDeVecesBoton1Presionado = 2;
+            numeroDeVecesBoton2Presionado = 2;
+            numeroDeVecesBoton3Presionado = 2;
+        }
+        else
+        {
+            botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+            numeroDeVecesBoton4Presionado = 2;
+        }
+
+        tituloRespuesta.setVisibility(View.INVISIBLE);
+        respuestaPregunta1.setVisibility(View.INVISIBLE);
+        botonContinuar.setVisibility(View.INVISIBLE);
+
+    }
+
+    private final SensorEventListener sensorListener = new SensorEventListener()
+    {
+
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
+
+            lastAcceleration = currentAcceleration;
+            currentAcceleration = (float) Math.sqrt((double) (x*x + y*y + z*z));
+            float delta = currentAcceleration - lastAcceleration;
+            shake = shake * 0.9f + delta;
+
+            if (shake > 12)
+            {
+                botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
+                botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+                botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+                botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+
+                tituloRespuesta.setVisibility(View.VISIBLE);
+                respuestaPregunta1.setVisibility(View.VISIBLE);
+                botonContinuar.setVisibility(View.VISIBLE);
+            }
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+        }
+    };
+
+    public void continuar(View view)
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!elBotonSiguientePreguntaYaFuePresionado)
+        {
+            sharedPreferences.edit().putBoolean("internetPregunta1BotonSiguientePreguntaYaFuePresionado", true).commit();
+
+            int progresoLeccionInternetHastaElMomento = sharedPreferences.getInt("progresoLeccionInternet", 0);
+            int nuevoProgresoLeccionInternet = progresoLeccionInternetHastaElMomento + 25;
+
+            // Aumentar progreso
+            sharedPreferences.edit().putInt("progresoLeccionInternet", nuevoProgresoLeccionInternet).commit();
+        }
+
+        Intent pregunta2InternetIntent = new Intent(Pregunta1InternetActivity.this, Pregunta2InternetActivity.class);
+        startActivity(pregunta2InternetIntent);
     }
 
 }

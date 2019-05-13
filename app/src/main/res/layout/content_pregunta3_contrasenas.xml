@@ -1,11 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.Pregunta3ContrasenasActivity"
     tools:showIn="@layout/activity_pregunta3_contrasenas">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="5dp"
+            android:foreground="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardBackgroundColor="@color/colorTarjetaPregunta"
+            card_view:cardElevation="3dp"
+            card_view:contentPadding="4dp"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/contrasenas_pregunta_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/contrasenas_pregunta_3"
+                android:textColor="@color/editTextColorWhite"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/contrasenas_pregunta_3_opcion_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorTarjetaModuloAprendizaje"
+            android:onClick="seleccionarOpcion1"
+            android:text="@string/contrasenas_pregunta_3_opcion_1"
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
+
+        <Button
+            android:id="@+id/contrasenas_pregunta_3_opcion_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorTarjetaModuloAprendizaje"
+            android:onClick="seleccionarOpcion2"
+            android:text="@string/contrasenas_pregunta_3_opcion_2"
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
+
+        <Button
+            android:id="@+id/contrasenas_pregunta_3_opcion_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorTarjetaModuloAprendizaje"
+            android:onClick="seleccionarOpcion3"
+            android:text="@string/contrasenas_pregunta_3_opcion_3"
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
+
+        <Button
+            android:id="@+id/contrasenas_pregunta_3_opcion_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorTarjetaModuloAprendizaje"
+            android:onClick="seleccionarOpcion4"
+            android:text="@string/contrasenas_pregunta_3_opcion_4"
+            android:theme="@style/RaisedButtonDark"
+            android:textColor="@color/editTextColorBlack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/instruccion_mostrar_respuesta"
+            android:textAlignment="center"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/titulo_respuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/titulo_respuesta"
+            android:textAlignment="center"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/contrasenas_pregunta_3_respuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/contrasenas_pregunta_3_respuesta"
+            android:textAlignment="center"
+            android:textColor="@color/editTextColorBlack"
+            android:textSize="20sp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/boton_pregunta_3_continuar_contrasenas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
+            android:onClick="continuar"
+            android:text="@string/boton_ultima_pregunta_continuar"
+            android:theme="@style/RaisedButtonDark"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -2,20 +2,29 @@ package com.japg.ticseguro.view;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
+import android.view.View;
 import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
-public class AprendeMasContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener
-{
+public class AprendeMasContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;
+
+    TextView linkContrasenas1;
+    TextView linkContrasenas2;
+
+    boolean linkContrasenas1YaFueAbierto;
+    boolean linkContrasenas2YaFueAbierto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +36,14 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
-        TextView linkContrasenas1 = (TextView) findViewById(R.id.link_contrasenas_1);
-        linkContrasenas1.setMovementMethod(LinkMovementMethod.getInstance());
+        linkContrasenas1 = (TextView) findViewById(R.id.link_contrasenas_1);
+        linkContrasenas2 = (TextView) findViewById(R.id.link_contrasenas_2);
 
-        TextView linkContrasenas2 = (TextView) findViewById(R.id.link_contrasenas_2);
-        linkContrasenas2.setMovementMethod(LinkMovementMethod.getInstance());
+        linkContrasenas1YaFueAbierto = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("linkContrasenas1YaFueAbierto", false);
+        linkContrasenas2YaFueAbierto = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("linkContrasenas2YaFueAbierto", false);
 
         checkConnection();
+
     }
 
     public void buildDialog(Context c) {
@@ -105,6 +115,48 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    public void irALinkContrasenas1(View view)
+    {
+        SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!linkContrasenas1YaFueAbierto)
+        {
+            preferences.edit().putBoolean("linkContrasenas1YaFueAbierto", true).commit();
+
+            int progresoLeccionContrasenasHastaElMomento = preferences.getInt("progresoLeccionContrasenas", 0);
+            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + 20;
+
+            // Aumentar progreso
+            preferences.edit().putInt("progresoLeccionContrasenas", nuevoProgresoLeccionContrasenas).commit();
+
+        }
+
+        Uri uri = Uri.parse(getResources().getString(R.string.link_contrasenas_1));
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void irALinkContrasenas2(View view)
+    {
+        SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!linkContrasenas2YaFueAbierto)
+        {
+            preferences.edit().putBoolean("linkContrasenas2YaFueAbierto", true).commit();
+
+            int progresoLeccionContrasenasHastaElMomento = preferences.getInt("progresoLeccionContrasenas", 0);
+            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + 20;
+
+            // Aumentar progreso
+            preferences.edit().putInt("progresoLeccionContrasenas", nuevoProgresoLeccionContrasenas).commit();
+
+        }
+
+        Uri uri = Uri.parse(getResources().getString(R.string.link_contrasenas_2));
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
 }
