@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -21,7 +22,9 @@ import com.japg.ticseguro.R;
 
 public class Pregunta1PhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean alreadyVisitedActivity = false;
+    boolean yaVisitoActividad = false;
+    boolean preguntaCorrecta;
+    boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
 
     Button botonOpcion1;
@@ -33,6 +36,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     int numeroDeVecesBoton2Presionado = 2;
     int numeroDeVecesBoton3Presionado = 2;
     int numeroDeVecesBoton4Presionado = 2;
+    int puntos;
 
     private SensorManager sm;
     private float currentAcceleration;
@@ -72,6 +76,16 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
         botonContinuar = findViewById(R.id.boton_pregunta_1_continuar_phishing);
 
         elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("phishingPregunta1BotonSiguientePreguntaYaFuePresionado", false);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        puntos = 0;
+        preguntaCorrecta = false;
+        yaVioRespuesta = false;
 
     }
 
@@ -118,17 +132,17 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         if (isConnected)
         {
-            if (alreadyVisitedActivity)
+            if (yaVisitoActividad)
             {
                 buildDialogInternetRestablished(Pregunta1PhishingActivity.this);
             }
 
-            alreadyVisitedActivity = true;
+            yaVisitoActividad = true;
         }
         else
         {
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
-            alreadyVisitedActivity = true;
+            yaVisitoActividad = true;
 
             buildDialog(Pregunta1PhishingActivity.this);
         }
@@ -263,6 +277,15 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
             if (shake > 12)
             {
+                boolean condicion1 = numeroDeVecesBoton3Presionado == 3;
+
+                if (condicion1 && !yaVioRespuesta)
+                {
+                    yaVioRespuesta = true;
+                    preguntaCorrecta = true;
+                    puntos = puntos + 1;
+                }
+
                 botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
                 botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -296,6 +319,7 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
         }
 
         Intent pregunta2PhishingIntent = new Intent(Pregunta1PhishingActivity.this, Pregunta2PhishingActivity.class);
+        pregunta2PhishingIntent.putExtra("PUNTOS", puntos);
         startActivity(pregunta2PhishingIntent);
     }
 

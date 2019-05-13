@@ -116,15 +116,15 @@
     <string name="title_activity_pregunta3_internet">Pregunta3InternetActivity</string>
     <string name="title_activity_pregunta2_contrasenas">Pregunta2ContrasenasActivity</string>
     <string name="title_activity_pregunta3_contrasenas">Pregunta3ContrasenasActivity</string>
-    <string name="title_activity_reporte_preguntas_phishing">ReportePreguntasPhishingActivity
+    <string name="title_activity_reporte_preguntas_phishing">Tu Progreso
     </string>
     <string name="title_activity_reporte_preguntas_redes_sociales">
-        ReportePreguntasRedesSocialesActivity
+        Tu Progreso
     </string>
-    <string name="title_activity_reporte_preguntas_internet">ReportePreguntasInternetActivity
+    <string name="title_activity_reporte_preguntas_internet">Tu Progreso
     </string>
     <string name="title_activity_reporte_preguntas_contrasenas">
-        ReportePreguntasContrasenasActivity
+        Tu Progreso
     </string>
     <string name="title_activity_centro_cibernetico_policial">Centro Cibernético Policial
     </string>
@@ -144,26 +144,26 @@
     <string name="descripcion_mintic">El Ministerio de Tecnologías de la Información y las Comunicaciones es una entidad que planea y promueve políticas, programas y proyectos del sector TIC.</string>
     <string name="link_min_tic">Para conocer sobre todas las iniciativas del MinTIC, haz click <a href="https://www.mintic.gov.co/portal/604/w3-channel.html">aquí.</a></string>
     <string name="boton_pregunta_continuar">Siguiente pregunta</string>
-    <string name="phishing_pregunta_2">Pregunta 2 - ¿Porqué es recomendado no darle click a URLs que aparezcan en un correo?</string>
+    <string name="phishing_pregunta_2">Pregunta 2 - Pasar el cursor por encima de los links que tenga un correo (para verificar la página web a la que te llevará) es una buena práctica para evitar ser víctimas de Phishing</string>
     <string name="phishing_pregunta_2_opcion_1">Verdadero</string>
     <string name="phishing_pregunta_2_opcion_2">Falso</string>
     <string name="phishing_pregunta_3">Pregunta 3 - ¿Porqué muchas personas son víctimas de Phishing?</string>
-    <string name="phishing_pregunta_3_opcion_1">No revisar el emisor del correo.</string>
-    <string name="phishing_pregunta_3_opcion_2">Darle click a los URL que tenga un correo.</string>
-    <string name="phishing_pregunta_3_opcion_3">Desconfiar de los documentos adjuntos.</string>
-    <string name="phishing_pregunta_3_opcion_4">Confiar en correos que piden actuar de inmediato.</string>
+    <string name="phishing_pregunta_3_opcion_1">No revisan el emisor del correo.</string>
+    <string name="phishing_pregunta_3_opcion_2">Le dan click a los links que tienen los correos.</string>
+    <string name="phishing_pregunta_3_opcion_3">Descargan los documentos adjuntos sin revisar el emisor del correo.</string>
+    <string name="phishing_pregunta_3_opcion_4">Todas las anteriores.</string>
     <string name="boton_ultima_pregunta_continuar">Continuar</string>
     <string name="redes_sociales_pregunta_2">Pregunta 2 - Redes Sociales</string>
     <string name="redes_sociales_pregunta_2_opcion_1">Verdadero</string>
     <string name="redes_sociales_pregunta_2_opcion_2">Falso</string>
     <string name="redes_sociales_pregunta_2_respuesta">Explicación respuesta</string>
-    <string name="phishing_pregunta_2_respuesta">Explicación respuesta</string>
-    <string name="phishing_pregunta_3_respuesta">Explicación respuesta</string>
+    <string name="phishing_pregunta_2_respuesta">Pueden haber correos que te muestren una URL, pero que te redireccionan a otra.</string>
+    <string name="phishing_pregunta_3_respuesta">Para protegerse del Phishing, no es suficiente revisar el emisor del correo. Recuerda no darle clicks a los links que tienen los corrreos (es mejor que digites la URL tu mismo), desconfiar de los documentos adjuntos y de los correos que te piden actuar de inmediato.</string>
     <string name="redes_sociales_pregunta_3">Pregunta 3 - Redes Sociales</string>
     <string name="redes_sociales_pregunta_1">Pregunta 1 - Redes Sociales</string>
     <string name="redes_sociales_pregunta_1_opcion_1">Opción 1</string>
     <string name="redes_sociales_pregunta_1_opcion_3">Opción 3</string>
-    <string name="redes_sociales_pregunta_1_opcion_2">Pregunta 1 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_1_opcion_2">Pregunta 1 - ¿Cuál es una estrategia para usar las redes sociales responsablemente?</string>
     <string name="redes_sociales_pregunta_1_opcion_4">Pregunta 4 - Redes Sociales</string>
     <string name="redes_sociales_pregunta_1_respuesta">Explicación respuesta</string>
     <string name="redes_sociales_pregunta_3_opcion_1">Opción 1</string>
@@ -203,4 +203,8 @@
     <string name="contrasenas_pregunta_3_opcion_3">Opción 3</string>
     <string name="contrasenas_pregunta_3_opcion_4">Opción 4</string>
     <string name="contrasenas_pregunta_3_respuesta">Explicación respuesta</string>
+    <string name="titulo_reporte_preguntas_phishing">Título Reporte Preguntas Phishing</string>
+    <string name="descripcion_reporte_preguntas_phishing">Descripción Reporte Preguntas Phishing</string>
+    <string name="boton_volver_a_phishing_desde_reporte_phishing">Seguir Aprendiendo</string>
+    <string name="boton_volver_a_inicio_desde_reporte_phishing">Volver a Inicio</string>
 </resources>
