@@ -21,7 +21,9 @@ import com.japg.ticseguro.R;
 
 public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean alreadyVisitedActivity = false;
+    boolean yaVisitoActividad = false;
+    boolean preguntaCorrecta;
+    boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
 
     Button botonOpcion1;
@@ -33,6 +35,7 @@ public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements
     int numeroDeVecesBoton2Presionado = 2;
     int numeroDeVecesBoton3Presionado = 2;
     int numeroDeVecesBoton4Presionado = 2;
+    int puntos;
 
     private SensorManager sm;
     private float currentAcceleration;
@@ -72,6 +75,16 @@ public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements
         botonContinuar = findViewById(R.id.boton_pregunta_1_continuar_redes_sociales);
 
         elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("redesSocialesPregunta1BotonSiguientePreguntaYaFuePresionado", false);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        puntos = 0;
+        preguntaCorrecta = false;
+        yaVioRespuesta = false;
 
     }
 
@@ -118,17 +131,17 @@ public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements
 
         if (isConnected)
         {
-            if (alreadyVisitedActivity)
+            if (yaVisitoActividad)
             {
                 buildDialogInternetRestablished(Pregunta1RedesSocialesActivity.this);
             }
 
-            alreadyVisitedActivity = true;
+            yaVisitoActividad = true;
         }
         else
         {
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
-            alreadyVisitedActivity = true;
+            yaVisitoActividad = true;
 
             buildDialog(Pregunta1RedesSocialesActivity.this);
         }
@@ -263,6 +276,15 @@ public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements
 
             if (shake > 12)
             {
+                boolean condicion1 = numeroDeVecesBoton1Presionado == 3;
+
+                if (condicion1 && !yaVioRespuesta)
+                {
+                    yaVioRespuesta = true;
+                    preguntaCorrecta = true;
+                    puntos = puntos + 1;
+                }
+
                 botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
                 botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -296,6 +318,7 @@ public class Pregunta1RedesSocialesActivity extends AppCompatActivity implements
         }
 
         Intent pregunta2RedesSocialesIntent = new Intent(Pregunta1RedesSocialesActivity.this, Pregunta2RedesSocialesActivity.class);
+        pregunta2RedesSocialesIntent.putExtra("PUNTOS", puntos);
         startActivity(pregunta2RedesSocialesIntent);
     }
 

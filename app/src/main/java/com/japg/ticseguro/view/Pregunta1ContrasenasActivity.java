@@ -21,7 +21,9 @@ import com.japg.ticseguro.R;
 
 public class Pregunta1ContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean alreadyVisitedActivity = false;
+    boolean yaVisitoActividad = false;
+    boolean preguntaCorrecta;
+    boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
 
     Button botonOpcion1;
@@ -33,6 +35,7 @@ public class Pregunta1ContrasenasActivity extends AppCompatActivity implements C
     int numeroDeVecesBoton2Presionado = 2;
     int numeroDeVecesBoton3Presionado = 2;
     int numeroDeVecesBoton4Presionado = 2;
+    int puntos;
 
     private SensorManager sm;
     private float currentAcceleration;
@@ -72,6 +75,16 @@ public class Pregunta1ContrasenasActivity extends AppCompatActivity implements C
         botonContinuar = findViewById(R.id.boton_pregunta_1_continuar_contrasenas);
 
         elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("contrasenasPregunta1BotonSiguientePreguntaYaFuePresionado", false);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        puntos = 0;
+        preguntaCorrecta = false;
+        yaVioRespuesta = false;
 
     }
 
@@ -118,17 +131,17 @@ public class Pregunta1ContrasenasActivity extends AppCompatActivity implements C
 
         if (isConnected)
         {
-            if (alreadyVisitedActivity)
+            if (yaVisitoActividad)
             {
                 buildDialogInternetRestablished(Pregunta1ContrasenasActivity.this);
             }
 
-            alreadyVisitedActivity = true;
+            yaVisitoActividad = true;
         }
         else
         {
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
-            alreadyVisitedActivity = true;
+            yaVisitoActividad = true;
 
             buildDialog(Pregunta1ContrasenasActivity.this);
         }
@@ -263,6 +276,15 @@ public class Pregunta1ContrasenasActivity extends AppCompatActivity implements C
 
             if (shake > 12)
             {
+                boolean condicion1 = numeroDeVecesBoton4Presionado == 3;
+
+                if (condicion1 && !yaVioRespuesta)
+                {
+                    yaVioRespuesta = true;
+                    preguntaCorrecta = true;
+                    puntos = puntos + 1;
+                }
+
                 botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
                 botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -296,6 +318,7 @@ public class Pregunta1ContrasenasActivity extends AppCompatActivity implements C
         }
 
         Intent pregunta2ContrasenasIntent = new Intent(Pregunta1ContrasenasActivity.this, Pregunta2ContrasenasActivity.class);
+        pregunta2ContrasenasIntent.putExtra("PUNTOS", puntos);
         startActivity(pregunta2ContrasenasIntent);
     }
 

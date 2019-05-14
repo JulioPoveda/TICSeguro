@@ -9,8 +9,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,7 +20,9 @@ import com.japg.ticseguro.R;
 
 public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean alreadyVisitedActivity = false;
+    boolean yaVioActividad = false;
+    boolean preguntaCorrecta;
+    boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
 
     Button botonOpcion1;
@@ -34,13 +34,11 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
     int numeroDeVecesBoton2Presionado = 2;
     int numeroDeVecesBoton3Presionado = 2;
     int numeroDeVecesBoton4Presionado = 2;
+    int puntos;
 
     private SensorManager sm;
-
     private float currentAcceleration;
-
     private float lastAcceleration;
-
     private float shake;
 
     TextView tituloRespuesta;
@@ -73,6 +71,16 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
         botonContinuar = findViewById(R.id.boton_pregunta_3_continuar_redes_sociales);
 
         elBotonSiguientePreguntaYaFuePresionado = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("redesSocialesPregunta3BotonSiguientePreguntaYaFuePresionado", false);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        puntos = getIntent().getExtras().getInt("PUNTOS");
+        preguntaCorrecta = false;
+        yaVioRespuesta = false;
 
     }
 
@@ -119,17 +127,17 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
 
         if (isConnected)
         {
-            if (alreadyVisitedActivity)
+            if (yaVioActividad)
             {
                 buildDialogInternetRestablished(Pregunta3RedesSocialesActivity.this);
             }
 
-            alreadyVisitedActivity = true;
+            yaVioActividad = true;
         }
         else
         {
             // Se necesita para que se muestre el mensaje de reconexión si el usuario abrió la app sin conexión a Internet
-            alreadyVisitedActivity = true;
+            yaVioActividad = true;
 
             buildDialog(Pregunta3RedesSocialesActivity.this);
         }
@@ -264,6 +272,15 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
 
             if (shake > 12)
             {
+                boolean condicion1 = numeroDeVecesBoton3Presionado == 3;
+
+                if (condicion1 && !yaVioRespuesta)
+                {
+                    yaVioRespuesta = true;
+                    preguntaCorrecta = true;
+                    puntos = puntos + 1;
+                }
+
                 botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
                 botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
@@ -297,6 +314,7 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
         }
 
         Intent reportePreguntasRedesSocialesIntent = new Intent(Pregunta3RedesSocialesActivity.this, ReportePreguntasRedesSocialesActivity.class);
+        reportePreguntasRedesSocialesIntent.putExtra("PUNTOS", puntos);
         startActivity(reportePreguntasRedesSocialesIntent);
     }
 

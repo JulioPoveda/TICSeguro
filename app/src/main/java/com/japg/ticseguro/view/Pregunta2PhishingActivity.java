@@ -209,7 +209,6 @@ public class Pregunta2PhishingActivity extends AppCompatActivity implements Conn
 
             if (shake > 12)
             {
-
                 boolean condicion1 = numeroDeVecesBoton1Presionado == 3;
 
                 if (condicion1 && !yaVioRespuesta)
