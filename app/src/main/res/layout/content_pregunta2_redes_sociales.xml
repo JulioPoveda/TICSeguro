@@ -59,7 +59,7 @@
             android:layout_margin="10dp"
             android:background="@color/colorTarjetaModuloAprendizaje"
             android:onClick="seleccionarOpcion2"
-            android:text="@string/redes_sociales_pregunta_1_opcion_2"
+            android:text="@string/redes_sociales_pregunta_2_opcion_2"
             android:theme="@style/RaisedButtonDark"
             android:textColor="@color/editTextColorBlack"/>
 

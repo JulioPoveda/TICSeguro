@@ -264,9 +264,9 @@ public class Pregunta3InternetActivity extends AppCompatActivity implements Conn
 
             if (shake > 12)
             {
-                botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
+                botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
                 botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
-                botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+                botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
 
                 tituloRespuesta.setVisibility(View.VISIBLE);

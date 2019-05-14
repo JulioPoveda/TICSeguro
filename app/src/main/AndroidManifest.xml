@@ -145,7 +145,7 @@
         </activity>
         <activity
             android:name=".view.Pregunta1RedesSocialesActivity"
-            android:label="@string/title_activity_prueba_tus_conocimientos_redes_sociales"
+            android:label="@string/title_activity_pregunta1_redes_sociales"
             android:parentActivityName=".view.RedesSocialesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -181,7 +181,7 @@
         </activity>
         <activity
             android:name=".view.Pregunta1InternetActivity"
-            android:label="@string/title_activity_prueba_tus_conocimientos_internet"
+            android:label="@string/title_activity_pregunta1_internet"
             android:parentActivityName=".view.InternetActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -217,7 +217,7 @@
         </activity>
         <activity
             android:name=".view.Pregunta1ContrasenasActivity"
-            android:label="@string/title_activity_prueba_tus_conocimientos_contrasenas"
+            android:label="@string/title_activity_pregunta1_contrasenas"
             android:parentActivityName=".view.ContrasenasActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">

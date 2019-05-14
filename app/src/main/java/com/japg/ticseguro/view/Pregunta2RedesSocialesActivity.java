@@ -197,8 +197,8 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
 
             if (shake > 12)
             {
-                botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
-                botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
+                botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
+                botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
 
                 tituloRespuesta.setVisibility(View.VISIBLE);
                 respuestaPregunta2.setVisibility(View.VISIBLE);

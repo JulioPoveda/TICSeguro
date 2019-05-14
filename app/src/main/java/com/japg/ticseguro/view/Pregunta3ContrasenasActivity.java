@@ -261,10 +261,10 @@ public class Pregunta3ContrasenasActivity extends AppCompatActivity implements C
 
             if (shake > 12)
             {
-                botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
+                botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorOpcionCorrecta));
+                botonOpcion1.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion2.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
                 botonOpcion3.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
-                botonOpcion4.setBackgroundColor(getResources().getColor(R.color.colorTarjetaModuloAprendizaje));
 
                 tituloRespuesta.setVisibility(View.VISIBLE);
                 respuestaPregunta3.setVisibility(View.VISIBLE);

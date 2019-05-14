@@ -14,11 +14,7 @@
     <string name="bienvenida">¡Bienvenido a TICSeguro!</string>
     <string name="instruccion_phishing">Para comenzar, mira el siguiente vídeo:</string>
     <string name="titulo_phishing">¡Bienvenido a la lección Phishing!</string>
-    <string name="title_activity_phishing_quiz">¿Qué tanto aprendiste?</string>
     <string name="title_activity_aprende_mas_phishing">Más sobre Phishing</string>
-    <string name="title_activity_prueba_tus_conocimientos_phishing">
-        ¿Qué tanto aprendiste?
-    </string>
     <string name="phishing_explanatory_paragraph">Como viste en el vídeo, no seguir buenas prácticas puede poner en riesgo tu información.</string>
     <string name="boton_aprende_mas_sobre_phishing">Aprende más sobre Phishing</string>
     <string name="test_your_phishing_knowledge">¡Prueba tus conocimientos!</string>
@@ -27,17 +23,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_aprende_mas_redes_sociales">Más sobre Redes Sociales
     </string>
-    <string name="title_activity_prueba_tus_conocimientos_redes_sociales">
-        ¿Qué tanto aprendizte?
-    </string>
     <string name="title_activity_aprende_mas_internet">Más sobre Internet</string>
     <string name="title_activity_aprende_mas_contrasenas">Más sobre Contraseñas</string>
-    <string name="title_activity_prueba_tus_conocimientos_internet">
-        ¿Qué tanto aprendiste?
-    </string>
-    <string name="title_activity_prueba_tus_conocimientos_contrasenas">
-        ¿Qué tanto aprendiste?
-    </string>
     <string name="titulo_redes_sociales">¡Bienvenido a la lección sobre Redes Sociales!</string>
     <string name="parrafo_explanatorio_redes_sociales">Las redes sociales nos proveen muchas funcionalidades. Sin embargo, hay que tener cuidado con lo que publicamos en ellas.</string>
     <string name="instruccion_redes_sociales">¿Sabes qué significa usar responsablemente las redes sociales? Te invitamos a ver el siguiente vídeo:</string>
@@ -96,41 +83,29 @@
     <string name="link_contrasenas_1">https://www.youtube.com/watch?v=Ee_FJ1mNwqM</string>
     <string name="pagina_web_recomendada_contrasenas_2"><a href="https://www.youtube.com/watch?v=w3Sh4ooBc6s">2. [Vídeo] Cómo Crear una Contraseña Segura y Difícil. Por Dell Soporte.</a></string>
     <string name="link_contrasenas_2">https://www.youtube.com/watch?v=w3Sh4ooBc6s</string>
-    <string name="phishing_pregunta_1">Pregunta 1 - ¿Cuál de las siguientes afirmaciones es una recomendación para no ser víctima de Phishing?</string>
-    <string name="phishing_pregunta_1_opcion_1">No revisar el emisor del correo.</string>
-    <string name="phishing_pregunta_1_opcion_2">Darle click a los URL que tenga un correo.</string>
-    <string name="phishing_pregunta_1_opcion_3">Desconfiar de los documentos adjuntos.</string>
-    <string name="phishing_pregunta_1_opcion_4">Confiar en correos que piden actuar de inmediato.</string>
-    <string name="instruccion_mostrar_respuesta">Para ver la respuesta, agita tu celular.</string>
-    <string name="phishing_pregunta_1_respuesta">Los documentos adjuntos de un correo pueden contener software malicioso.</string>
     <string name="titulo_inicio">Lecciones</string>
     <string name="titulo_tips">Tips</string>
     <string name="titulo_ayudas">Ayudas</string>
     <string name="instruccion_fragment_tips">Protege tu información siguiendo estos tips:</string>
     <string name="titulo_respuesta">Explicación</string>
-    <string name="title_activity_pregunta2_phishing">Pregunta2PhishingActivity</string>
-    <string name="title_activity_pregunta3_phishing">Pregunta3PhishingActivity</string>
-    <string name="title_activity_pregunta2_redes_sociales">Pregunta2RedesSocialesActivity</string>
-    <string name="title_activity_pregunta3_redes_sociales">Pregunta3RedesSocialesActivity</string>
-    <string name="title_activity_pregunta2_internet">Pregunta2InternetActivity</string>
-    <string name="title_activity_pregunta3_internet">Pregunta3InternetActivity</string>
-    <string name="title_activity_pregunta2_contrasenas">Pregunta2ContrasenasActivity</string>
-    <string name="title_activity_pregunta3_contrasenas">Pregunta3ContrasenasActivity</string>
-    <string name="title_activity_reporte_preguntas_phishing">Tu Progreso
-    </string>
-    <string name="title_activity_reporte_preguntas_redes_sociales">
-        Tu Progreso
-    </string>
-    <string name="title_activity_reporte_preguntas_internet">Tu Progreso
-    </string>
-    <string name="title_activity_reporte_preguntas_contrasenas">
-        Tu Progreso
-    </string>
-    <string name="title_activity_centro_cibernetico_policial">Centro Cibernético Policial
-    </string>
-    <string name="title_activity_superintendencia_industria_comercio">
-        Superintendencia de Industria y Comercio
-    </string>
+    <string name="title_activity_pregunta1_phishing">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta2_phishing">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta3_phishing">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta1_redes_sociales">¿Qué tanto aprendizte?</string>
+    <string name="title_activity_pregunta2_redes_sociales">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta3_redes_sociales">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta1_internet">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta2_internet">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta3_internet">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta1_contrasenas">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta2_contrasenas">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_pregunta3_contrasenas">¿Qué tanto aprendiste?</string>
+    <string name="title_activity_reporte_preguntas_phishing">Tu Progreso</string>
+    <string name="title_activity_reporte_preguntas_redes_sociales">Tu Progreso</string>
+    <string name="title_activity_reporte_preguntas_internet">Tu Progreso</string>
+    <string name="title_activity_reporte_preguntas_contrasenas">Tu Progreso</string>
+    <string name="title_activity_centro_cibernetico_policial">Centro Cibernético Policial</string>
+    <string name="title_activity_superintendencia_industria_comercio">Superintendencia de Industria y Comercio</string>
     <string name="title_activity_min_tic">MinTIC</string>
     <string name="titulo_centro_cibernetico_policial">Centro Cibernético Policial</string>
     <string name="descripcion_centro_cibernetico_policial">Iniciativa de la Policía Nacional de Colombia. Es una página web donde los ciudadanos pueden hacer una denuncia, reportar incidentes informáticos, contactar a un CAI virtual, aprender sobre ciberseguridad entre otras funcionalidades.</string>
@@ -144,67 +119,75 @@
     <string name="descripcion_mintic">El Ministerio de Tecnologías de la Información y las Comunicaciones es una entidad que planea y promueve políticas, programas y proyectos del sector TIC.</string>
     <string name="link_min_tic">Para conocer sobre todas las iniciativas del MinTIC, haz click <a href="https://www.mintic.gov.co/portal/604/w3-channel.html">aquí.</a></string>
     <string name="boton_pregunta_continuar">Siguiente pregunta</string>
+    <string name="phishing_pregunta_1">Pregunta 1 - ¿Cuál de las siguientes afirmaciones es una recomendación para no ser víctima de Phishing?</string>
+    <string name="phishing_pregunta_1_opcion_1">No revisar el emisor del correo.</string>
+    <string name="phishing_pregunta_1_opcion_2">Darle click a los URL que tenga un correo.</string>
+    <string name="phishing_pregunta_1_opcion_3">Desconfiar de los documentos adjuntos.</string>
+    <string name="phishing_pregunta_1_opcion_4">Confiar en correos que piden actuar de inmediato.</string>
+    <string name="instruccion_mostrar_respuesta">Para ver la respuesta, agita tu celular.</string>
+    <string name="phishing_pregunta_1_respuesta">Los documentos adjuntos de un correo pueden contener software malicioso.</string>
     <string name="phishing_pregunta_2">Pregunta 2 - Pasar el cursor por encima de los links que tenga un correo (para verificar la página web a la que te llevará) es una buena práctica para evitar ser víctimas de Phishing</string>
     <string name="phishing_pregunta_2_opcion_1">Verdadero</string>
     <string name="phishing_pregunta_2_opcion_2">Falso</string>
+    <string name="phishing_pregunta_2_respuesta">Pueden haber correos que te muestren una URL, pero que te redireccionan a otra.</string>
     <string name="phishing_pregunta_3">Pregunta 3 - ¿Porqué muchas personas son víctimas de Phishing?</string>
     <string name="phishing_pregunta_3_opcion_1">No revisan el emisor del correo.</string>
     <string name="phishing_pregunta_3_opcion_2">Le dan click a los links que tienen los correos.</string>
     <string name="phishing_pregunta_3_opcion_3">Descargan los documentos adjuntos sin revisar el emisor del correo.</string>
     <string name="phishing_pregunta_3_opcion_4">Todas las anteriores.</string>
+    <string name="phishing_pregunta_3_respuesta">Para protegerse del Phishing, no es suficiente revisar el emisor del correo. Recuerda no darle clicks a los links que tienen los corrreos (es mejor que digites la URL tu mismo), desconfiar de los documentos adjuntos y de los correos que te piden actuar de inmediato.</string>
     <string name="boton_ultima_pregunta_continuar">Continuar</string>
-    <string name="redes_sociales_pregunta_2">Pregunta 2 - Redes Sociales</string>
+    <string name="redes_sociales_pregunta_1">Pregunta 1 - ¿Cuál de las siguientes es una recomendación para usar las redes sociales responsablemente?</string>
+    <string name="redes_sociales_pregunta_1_opcion_1">Opción Correcta</string>
+    <string name="redes_sociales_pregunta_1_opcion_2">Opcion Incorrecta</string>
+    <string name="redes_sociales_pregunta_1_opcion_3">Opción Incorrecta</string>
+    <string name="redes_sociales_pregunta_1_opcion_4">Opcion Incorrecta</string>
+    <string name="redes_sociales_pregunta_1_respuesta">Explicación respuesta</string>
+    <string name="redes_sociales_pregunta_2">Pregunta 2 - Redes sociales como Facebook y Twitter no cuentan con ajustes que permiten a los usuarios asegurar su cuenta.</string>
     <string name="redes_sociales_pregunta_2_opcion_1">Verdadero</string>
     <string name="redes_sociales_pregunta_2_opcion_2">Falso</string>
     <string name="redes_sociales_pregunta_2_respuesta">Explicación respuesta</string>
-    <string name="phishing_pregunta_2_respuesta">Pueden haber correos que te muestren una URL, pero que te redireccionan a otra.</string>
-    <string name="phishing_pregunta_3_respuesta">Para protegerse del Phishing, no es suficiente revisar el emisor del correo. Recuerda no darle clicks a los links que tienen los corrreos (es mejor que digites la URL tu mismo), desconfiar de los documentos adjuntos y de los correos que te piden actuar de inmediato.</string>
-    <string name="redes_sociales_pregunta_3">Pregunta 3 - Redes Sociales</string>
-    <string name="redes_sociales_pregunta_1">Pregunta 1 - Redes Sociales</string>
-    <string name="redes_sociales_pregunta_1_opcion_1">Opción 1</string>
-    <string name="redes_sociales_pregunta_1_opcion_3">Opción 3</string>
-    <string name="redes_sociales_pregunta_1_opcion_2">Pregunta 1 - ¿Cuál es una estrategia para usar las redes sociales responsablemente?</string>
-    <string name="redes_sociales_pregunta_1_opcion_4">Pregunta 4 - Redes Sociales</string>
-    <string name="redes_sociales_pregunta_1_respuesta">Explicación respuesta</string>
-    <string name="redes_sociales_pregunta_3_opcion_1">Opción 1</string>
-    <string name="redes_sociales_pregunta_3_opcion_2">Opción 2</string>
-    <string name="redes_sociales_pregunta_3_opcion_3">Opción 3</string>
-    <string name="redes_sociales_pregunta_3_opcion_4">Opción 4</string>
+    <string name="redes_sociales_pregunta_3">Pregunta 3 - ¿Cuál de las siguientes afirmaciones NO es una buena practica en las redes sociales?</string>
+    <string name="redes_sociales_pregunta_3_opcion_1">Opción Incorrecta</string>
+    <string name="redes_sociales_pregunta_3_opcion_2">Opción Incorrecta</string>
+    <string name="redes_sociales_pregunta_3_opcion_3">Opción Correcta</string>
+    <string name="redes_sociales_pregunta_3_opcion_4">Opción Incorrecta</string>
     <string name="redes_sociales_pregunta_3_respuesta">Explicación Pregunta 3 Redes Sociales</string>
-    <string name="internet_pregunta_1">Pregunta 1 - Internet</string>
-    <string name="internet_pregunta_1_opcion_1">Opción 1</string>
-    <string name="internet_pregunta_1_opcion_2">Opción 2</string>
-    <string name="internet_pregunta_1_opcion_3">Opción 3</string>
-    <string name="internet_pregunta_1_opcion_4">Opción 4</string>
+    <string name="internet_pregunta_1">Pregunta 1 - ¿Qué significa el candado verde que todas las páginas web deberían tener?</string>
+    <string name="internet_pregunta_1_opcion_1">Los datos estarán encriptados.</string>
+    <string name="internet_pregunta_1_opcion_2">Opción Incorrecta</string>
+    <string name="internet_pregunta_1_opcion_3">Opción Incorrecta</string>
+    <string name="internet_pregunta_1_opcion_4">Opción Incorrecta</string>
     <string name="internet_pregunta_1_respuesta">Explicación respuesta</string>
-    <string name="internet_pregunta_2">Pregunta 2 - Internet</string>
-    <string name="internet_pregunta_2_opcion_1">Opción 1</string>
-    <string name="internet_pregunta_2_opcion_2">Opción 2</string>
+    <string name="internet_pregunta_2">Pregunta 2 - No se deben descargar programas no oficiales porque pueden instalar viruses.</string>
+    <string name="internet_pregunta_2_opcion_1">Verdadero</string>
+    <string name="internet_pregunta_2_opcion_2">Falso</string>
     <string name="internet_pregunta_2_respuesta">Explicación respuesta</string>
-    <string name="internet_pregunta_3">Pregunta 3 - Internet</string>
-    <string name="internet_pregunta_3_opcion_1">Opción 1</string>
-    <string name="internet_pregunta_3_opcion_2">Opción 2</string>
-    <string name="internet_pregunta_3_opcion_3">Opción 3</string>
-    <string name="internet_pregunta_3_opcion_4">Opción 4</string>
+    <string name="internet_pregunta_3">Pregunta 3 - ¿Por qué no es recomendable usar redes Wi-Fi públicas?</string>
+    <string name="internet_pregunta_3_opcion_1">Opción Incorrecta</string>
+    <string name="internet_pregunta_3_opcion_2">Otras personas que estén contectadas podrían espiar tus datos.</string>
+    <string name="internet_pregunta_3_opcion_3">Opción Incorrecta</string>
+    <string name="internet_pregunta_3_opcion_4">Opción Incorrecta</string>
     <string name="internet_pregunta_3_respuesta">Explicación respuesta</string>
-    <string name="contrasenas_pregunta_1">Pregunta 1 - Contrasenas</string>
-    <string name="contrasenas_pregunta_1_opcion_1">Opción 1</string>
-    <string name="contrasenas_pregunta_1_opcion_2">Opción 2</string>
-    <string name="contrasenas_pregunta_1_opcion_3">Opción 3</string>
-    <string name="contrasenas_pregunta_1_opcion_4">Opción 4</string>
-    <string name="contrasenas_pregunta_1_respuesta">Explicación respuesta</string>
-    <string name="contrasenas_pregunta_2">Pregunta 2 - Contrasenas</string>
-    <string name="contrasenas_pregunta_2_opcion_1">Opción 1</string>
-    <string name="contrasenas_pregunta_2_opcion_2">Opción 2</string>
+    <string name="contrasenas_pregunta_1">Pregunta 1 - ¿Cuál de las siguientes contraseñas es más segura</string>
+    <string name="contrasenas_pregunta_1_opcion_1">abcde123</string>
+    <string name="contrasenas_pregunta_1_opcion_2">qwerty</string>
+    <string name="contrasenas_pregunta_1_opcion_3">libro</string>
+    <string name="contrasenas_pregunta_1_opcion_4">A@R2_VIK</string>
+    <string name="contrasenas_pregunta_1_respuesta">La contraseña A@R2_VIK no es una palabra de diccionario, incluye números y caracterees y utiliza un símbolo especial.</string>
+    <string name="contrasenas_pregunta_2">Pregunta 2 - Usar la autenticación a dos pasos fortalece la seguridad de tus cuentas</string>
+    <string name="contrasenas_pregunta_2_opcion_1">Verdadero</string>
+    <string name="contrasenas_pregunta_2_opcion_2">Falso</string>
     <string name="contrasenas_pregunta_2_respuesta">Explicación respuesta</string>
-    <string name="contrasenas_pregunta_3">Pregunta 3 - Contrasenas</string>
-    <string name="contrasenas_pregunta_3_opcion_1">Opción 1</string>
-    <string name="contrasenas_pregunta_3_opcion_2">Opción 2</string>
-    <string name="contrasenas_pregunta_3_opcion_3">Opción 3</string>
-    <string name="contrasenas_pregunta_3_opcion_4">Opción 4</string>
-    <string name="contrasenas_pregunta_3_respuesta">Explicación respuesta</string>
+    <string name="contrasenas_pregunta_3">Pregunta 3 - ¿Cuáles de las siguientes afirmaciones son recomendaciones para tener contraseñas más seguras?</string>
+    <string name="contrasenas_pregunta_3_opcion_1">Combinar letras con números y caracteres especiales</string>
+    <string name="contrasenas_pregunta_3_opcion_2">Cambiar las contraseñas cada mes</string>
+    <string name="contrasenas_pregunta_3_opcion_3">Tener contraseñas únicas para cada servicio</string>
+    <string name="contrasenas_pregunta_3_opcion_4">Todas las anteriores</string>
+    <string name="contrasenas_pregunta_3_respuesta">Tener contraseñas más fuertes protege tus datos.</string>
     <string name="titulo_reporte_preguntas_phishing">Título Reporte Preguntas Phishing</string>
     <string name="descripcion_reporte_preguntas_phishing">Descripción Reporte Preguntas Phishing</string>
     <string name="boton_volver_a_phishing_desde_reporte_phishing">Seguir Aprendiendo</string>
     <string name="boton_volver_a_inicio_desde_reporte_phishing">Volver a Inicio</string>
+    <string name="title_activity_prueba_tus_conocimientos_phishing">¿Qué tanto aprendiste?</string>
 </resources>
