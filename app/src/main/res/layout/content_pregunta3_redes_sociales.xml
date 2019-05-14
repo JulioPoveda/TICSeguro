@@ -111,6 +111,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
             android:text="@string/redes_sociales_pregunta_3_respuesta"
             android:textAlignment="center"
             android:textColor="@color/editTextColorBlack"
