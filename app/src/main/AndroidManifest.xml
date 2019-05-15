@@ -19,54 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.ReportePreguntasContrasenasActivity"
-            android:label="@string/title_activity_reporte_preguntas_contrasenas"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.ReportePreguntasInternetActivity"
-            android:label="@string/title_activity_reporte_preguntas_internet"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.ReportePreguntasRedesSocialesActivity"
-            android:label="@string/title_activity_reporte_preguntas_redes_sociales"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.ReportePreguntasPhishingActivity"
-            android:label="@string/title_activity_reporte_preguntas_phishing"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta3ContrasenasActivity"
-            android:label="@string/title_activity_pregunta3_contrasenas"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta2ContrasenasActivity"
-            android:label="@string/title_activity_pregunta2_contrasenas"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta3InternetActivity"
-            android:label="@string/title_activity_pregunta3_internet"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta2InternetActivity"
-            android:label="@string/title_activity_pregunta2_internet"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta3RedesSocialesActivity"
-            android:label="@string/title_activity_pregunta3_redes_sociales"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta2RedesSocialesActivity"
-            android:label="@string/title_activity_pregunta2_redes_sociales"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta3PhishingActivity"
-            android:label="@string/title_activity_pregunta3_phishing"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".view.Pregunta2PhishingActivity"
-            android:label="@string/title_activity_pregunta2_phishing"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".view.SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -260,6 +212,54 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainMenuActivity" />
         </activity>
+        <activity
+            android:name=".view.ReportePreguntasContrasenasActivity"
+            android:label="@string/title_activity_reporte_preguntas_contrasenas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.ReportePreguntasInternetActivity"
+            android:label="@string/title_activity_reporte_preguntas_internet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.ReportePreguntasRedesSocialesActivity"
+            android:label="@string/title_activity_reporte_preguntas_redes_sociales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.ReportePreguntasPhishingActivity"
+            android:label="@string/title_activity_reporte_preguntas_phishing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta3ContrasenasActivity"
+            android:label="@string/title_activity_pregunta3_contrasenas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta2ContrasenasActivity"
+            android:label="@string/title_activity_pregunta2_contrasenas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta3InternetActivity"
+            android:label="@string/title_activity_pregunta3_internet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta2InternetActivity"
+            android:label="@string/title_activity_pregunta2_internet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta3RedesSocialesActivity"
+            android:label="@string/title_activity_pregunta3_redes_sociales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta2RedesSocialesActivity"
+            android:label="@string/title_activity_pregunta2_redes_sociales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta3PhishingActivity"
+            android:label="@string/title_activity_pregunta3_phishing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Pregunta2PhishingActivity"
+            android:label="@string/title_activity_pregunta2_phishing"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver
             android:name=".view.ConnectivityReceiver"

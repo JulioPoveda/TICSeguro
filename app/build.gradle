@@ -38,6 +38,7 @@ dependencies {
     // Circle Image View
     implementation 'de.hdodenhof:circleimageview:3.0.0'
 
+    // Android Gif Drawable
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
 
     // Card View
