@@ -9,13 +9,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.japg.ticseguro.R;
 
 import java.util.ArrayList;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase RecyclerViewAyudasAdapter
+ *
+ * Gestiona la lista de Ayudas
+ */
 public class RecyclerViewAyudasAdapter extends RecyclerView.Adapter<RecyclerViewAyudasAdapter.ViewHolder> {
 
     private ArrayList<String> mImageNames = new ArrayList<>();

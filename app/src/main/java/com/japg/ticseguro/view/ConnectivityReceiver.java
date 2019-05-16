@@ -6,6 +6,18 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase ConnectivityReceiver
+ *
+ * Se requiere para determinar si hay cambios en la conectividad del usuario
+ */
 public class ConnectivityReceiver extends BroadcastReceiver
 {
 

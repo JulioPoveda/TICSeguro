@@ -15,6 +15,18 @@ import com.japg.ticseguro.R;
 
 import java.util.ArrayList;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase HomeFragment
+ *
+ * Representa el controlador de la vista fragment_home.xml
+ */
 public class HomeFragment extends Fragment {
 
     private ArrayList<String> mNames = new ArrayList<>();

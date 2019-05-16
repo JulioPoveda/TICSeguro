@@ -29,13 +29,20 @@ import com.japg.ticseguro.R;
  */
 public class AprendeMasContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
+    boolean linkContrasenas1YaFueAbierto;
+    boolean linkContrasenas2YaFueAbierto;
     boolean alreadyVisitedActivity = false;
 
     TextView linkContrasenas1;
     TextView linkContrasenas2;
 
-    boolean linkContrasenas1YaFueAbierto;
-    boolean linkContrasenas2YaFueAbierto;
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +63,17 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
         checkConnection();
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -114,13 +132,6 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
 
             buildDialog(AprendeMasContrasenasActivity.this);
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
     }
 
     @Override

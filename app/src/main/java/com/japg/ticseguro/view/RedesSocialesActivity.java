@@ -17,6 +17,18 @@ import android.widget.VideoView;
 
 import com.japg.ticseguro.R;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase RedesSocialesActivity
+ *
+ * Representa el controlador de la vista activity_redes_sociales.xml
+ */
 public class RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;

@@ -8,6 +8,18 @@ import com.japg.ticseguro.R;
 
 import android.content.Intent;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase SplashScreenActivity
+ *
+ * Representa el controlador de la vista activity_splash_screen.xml
+ */
 public class SplashScreenActivity extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 4000;

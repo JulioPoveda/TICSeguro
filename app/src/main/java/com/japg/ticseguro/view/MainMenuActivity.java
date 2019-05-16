@@ -13,6 +13,18 @@ import android.widget.Toast;
 
 import com.japg.ticseguro.R;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase MainMenuActivity
+ *
+ * Representa el controlador de la vista activity_main_menu.xml
+ */
 public class MainMenuActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     String userName;

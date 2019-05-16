@@ -14,6 +14,18 @@ import com.japg.ticseguro.R;
 
 import pl.droidsonroids.gif.GifImageView;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase ReportePreguntasPhishingActivity
+ *
+ * Representa el controlador de la vista activity_reporte_preguntas_phishing.xml
+ */
 public class ReportePreguntasPhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean alreadyVisitedActivity = false;

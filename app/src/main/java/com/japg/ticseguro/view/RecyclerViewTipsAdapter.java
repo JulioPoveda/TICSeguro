@@ -13,7 +13,18 @@ import com.japg.ticseguro.R;
 
 import java.util.ArrayList;
 
-
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase RecyclerViewTipsAdapter
+ *
+ * Gestiona la lista de Tips
+ */
 public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTipsAdapter.ViewHolder> {
 
     private ArrayList<String> tipsNames = new ArrayList<>();

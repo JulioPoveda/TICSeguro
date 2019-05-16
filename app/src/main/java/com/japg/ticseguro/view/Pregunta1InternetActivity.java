@@ -19,6 +19,18 @@ import android.widget.TextView;
 
 import com.japg.ticseguro.R;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase Pregunta1InternetActivity
+ *
+ * Representa el controlador de la vista activity_pregunta1_internet.xml
+ */
 public class Pregunta1InternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     boolean yaVisitoActividad = false;
