@@ -50,13 +50,13 @@
     <string name="boton_aprende_mas_sobre_internet">Aprende más sobre Internet</string>
     <string name="boton_aprende_mas_sobre_contrasenas">Aprende más sobre contraseñas</string>
     <string name="pregunta_aprende_mas_phishing">¿Te gustaría aprender más sobre Phishing?</string>
-    <string name="instruccion_aprende_mas_phishing">Te recomendamos visitar las siguientes páginas web para aprender más sobre Phishing:</string>
+    <string name="instruccion_aprende_mas_phishing">Te recomendamos visitar las siguientes páginas web para aprender más sobre Phishing. Estas páginas fueron desarrolladas por empresas reconocidas. Ten en cuenta que éste material no fue creado por nosotros:</string>
     <string name="pagina_web_recomendada_phishing_1"><a href="">1. [Vídeo] Phishing: Qué es Phishing y cómo evitar ser víctima. Por Dell Soporte.</a></string>
     <string name="link_phishing_1">https://www.youtube.com/watch?v=UtGZqltfBEs</string>
     <string name="pagina_web_recomendada_phishing_2"><a href="">2. [Vídeo] Phishing-Uso Responsable de tu Información. Por Grupo Bancolombia.</a></string>
     <string name="link_phishing_2">https://www.youtube.com/watch?v=KOcJUcZ39AE</string>
     <string name="pregunta_aprende_mas_redes_sociales">¿Te gustaría aprender más sobre un uso adecuado de Redes Sociales?</string>
-    <string name="instruccion_aprende_mas_redes_sociales">Te recomendamos visitar las siguientes páginas web para aprender cómo proteger tu información en redes sociales:</string>
+    <string name="instruccion_aprende_mas_redes_sociales">Te recomendamos visitar las siguientes páginas web para aprender cómo proteger tu información en redes sociales. Estas páginas fueron desarrolladas por empresas reconocidas. Ten en cuenta que éste material no fue creado por nosotros:</string>
     <string name="pagina_web_recomendada_redes_sociales_1"><a href="https://www.youtube.com/watch?v=WMEk-bua9vA">1. [Vídeo] ¿Hacemos buen uso de las redes sociales? Por OSIseguridad.</a></string>
     <string name="link_redes_sociales_1">https://www.youtube.com/watch?v=WMEk-bua9vA</string>
     <string name="pagina_web_recomendada_redes_sociales_2"><a href="https://www.osi.es/sites/default/files/images/concienciacion/c4_pdf_rp_muevete_seguro_rrss.pdf">2. [PDF] Muévete seguro por las redes sociales. Por OSIseguridad.</a></string>
@@ -74,11 +74,11 @@
     <string name="pagina_web_recomendada_redes_sociales_8"><a href="https://www.youtube.com/watch?v=H8D7BDnDL9E&amp;feature=youtu.be">8. [Vídeo] Privacidad y seguridad en Snapchat. Por OSIseguridad.</a></string>
     <string name="link_redes_sociales_8">https://www.youtube.com/watch?v=H8D7BDnDL9E&amp;feature=youtu.be</string>
     <string name="pregunta_aprende_mas_internet">¿Estás listo para aprender más sobre cómo navegar seguro en Internet?</string>
-    <string name="instruccion_aprende_mas_internet">Te recomendamos visitar las siguientes páginas web:</string>
+    <string name="instruccion_aprende_mas_internet">Te recomendamos visitar las siguientes páginas web. Estas páginas fueron desarrolladas por empresas reconocidas. Ten en cuenta que éste material no fue creado por nosotros:</string>
     <string name="pagina_web_recomendada_internet_1"><a href="https://www.youtube.com/watch?v=Feea-oDtQiQ">1. [Vídeo] Precauciones al conectarse a una red inalámbrica WiFi pública. Por Dell Soporte.</a></string>
     <string name="link_internet_1">https://www.youtube.com/watch?v=Feea-oDtQiQ</string>
     <string name="pregunta_aprende_mas_contrasenas">¿Quieres seguir aprendiendo sobre cómo fortalecer tus contraseñas?</string>
-    <string name="instruccion_aprende_mas_contrasenas">Te recomendamos visitar las siguientes páginas web:</string>
+    <string name="instruccion_aprende_mas_contrasenas">Te recomendamos visitar las siguientes páginas web. Estas páginas fueron desarrolladas por empresas reconocidas. Ten en cuenta que éste material no fue creado por nosotros:</string>
     <string name="pagina_web_recomendada_contrasenas_1"><a href="https://www.youtube.com/watch?v=Ee_FJ1mNwqM">1. [Vídeo] ¿Cuánto tardarían en averiguar mis contraseñas? Por OSIseguridad.</a></string>
     <string name="link_contrasenas_1">https://www.youtube.com/watch?v=Ee_FJ1mNwqM</string>
     <string name="pagina_web_recomendada_contrasenas_2"><a href="https://www.youtube.com/watch?v=w3Sh4ooBc6s">2. [Vídeo] Cómo Crear una Contraseña Segura y Difícil. Por Dell Soporte.</a></string>
@@ -110,7 +110,7 @@
     <string name="titulo_centro_cibernetico_policial">Centro Cibernético Policial</string>
     <string name="descripcion_centro_cibernetico_policial">Iniciativa de la Policía Nacional de Colombia. Es una página web donde los ciudadanos pueden hacer una denuncia, reportar incidentes informáticos, contactar a un CAI virtual, aprender sobre ciberseguridad entre otras funcionalidades.</string>
     <string name="link_centro_cibernetico_policial">Para acceder al Centro Cibernético Policial, haz click <a href="https://caivirtual.policia.gov.co">aquí.</a></string>
-    <string name="instruccion_fragment_ayudas">Hay muchas instituciones que pueden ayudarte:</string>
+    <string name="instruccion_fragment_ayudas">Hay muchas instituciones que pueden ayudarte con tu seguridad digital:</string>
     <string name="instruccion_fragment_home">Selecciona un tema para aprender sobre él:</string>
     <string name="titulo_superintendencia_industria_comercio">Superintendencia de Industria y Comercio - Delegatura de Protección de Datos Personales</string>
     <string name="descripcion_superintendencia_industria_comercio">La Superintendencia de Industria y Comercio tiene una delegatura que se llama Protección de Datos Personales. Esta es una autoridad que vigila y garantiza que entidades públicas y privadas cumplan el reglamiento de tratamiento de datos personales.</string>
@@ -216,4 +216,5 @@
     <string name="descripcion_sigue_esforzandote_redes_sociales">¡No te rindas! Aún hay mucho por aprender y mejorar.</string>
     <string name="descripcion_sigue_esforzandote_internet">¡No te rindas! Aún hay mucho por aprender y mejorar.</string>
     <string name="descripcion_sigue_esforzandote_contrasenas">¡No te rindas! Aún hay mucho por aprender y mejorar.</string>
+    <string name="title_activity_pregunta4_phishing">Pregunta4PhishingActivity</string>
 </resources>

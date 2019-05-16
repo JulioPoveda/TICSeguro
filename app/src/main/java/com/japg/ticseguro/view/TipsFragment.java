@@ -15,11 +15,31 @@ import com.japg.ticseguro.R;
 
 import java.util.ArrayList;
 
+/**
+ * ---------------------------------------------------------------------------------------
+ * TICSeguro
+ * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
+ * Por Julio Poveda
+ * Versión 1.0 - Mayo 2019
+ * ---------------------------------------------------------------------------------------
+ *
+ * Clase TipsFragment
+ *
+ * Representa el controlador de la vista fragment_tips.xml
+ */
 public class TipsFragment extends Fragment {
 
-    private ArrayList<String> tipsNames = new ArrayList<>();
-    private ArrayList<String> tipsCategories = new ArrayList<>();
-    private ArrayList<String> tipsContent = new ArrayList<>();
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
+    private ArrayList<String> nombresTips = new ArrayList<>();
+    private ArrayList<String> categoriasTips = new ArrayList<>();
+    private ArrayList<String> contenidosTips = new ArrayList<>();
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Nullable
     @Override
@@ -30,7 +50,7 @@ public class TipsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tips, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view_tips);
-        RecyclerViewTipsAdapter adapter = new RecyclerViewTipsAdapter(view.getContext(), tipsNames, tipsCategories, tipsContent);
+        RecyclerViewTipsAdapter adapter = new RecyclerViewTipsAdapter(view.getContext(), nombresTips, categoriasTips, contenidosTips);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
@@ -47,18 +67,22 @@ public class TipsFragment extends Fragment {
 
     }
 
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
+
     private void initTips()
     {
-        tipsNames.add("Tip 1");
-        tipsNames.add("Tip 2");
-        tipsNames.add("Tip 3");
+        nombresTips.add("Tip 1");
+        nombresTips.add("Tip 2");
+        nombresTips.add("Tip 3");
 
-        tipsCategories.add("Phishing");
-        tipsCategories.add("Redes Sociales");
-        tipsCategories.add("Internet");
+        categoriasTips.add("Phishing");
+        categoriasTips.add("Redes Sociales");
+        categoriasTips.add("Internet");
 
-        tipsContent.add("Siempre revisa quién es el emisor del correo.");
-        tipsContent.add("No añadas como amigos personas que no conoces.");
-        tipsContent.add("Siempre revisa que la página web que estás visitando tenga un candado verde en la parte superior.");
+        contenidosTips.add("Siempre revisa quién es el emisor del correo.");
+        contenidosTips.add("No añadas como amigos personas que no conoces.");
+        contenidosTips.add("Siempre revisa que la página web que estás visitando tenga un candado verde en la parte superior.");
     }
 }

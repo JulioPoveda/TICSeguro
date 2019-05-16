@@ -19,6 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".view.Pregunta4PhishingActivity"
+            android:label="@string/title_activity_pregunta4_phishing"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".view.SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -183,7 +187,7 @@
             android:name=".view.CentroCiberneticoPolicialActivity"
             android:label="@string/title_activity_centro_cibernetico_policial"
             android:parentActivityName=".view.MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -194,7 +198,7 @@
             android:name=".view.SuperintendenciaIndustriaComercioActivity"
             android:label="@string/title_activity_superintendencia_industria_comercio"
             android:parentActivityName=".view.MainMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
