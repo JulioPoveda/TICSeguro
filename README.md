@@ -14,4 +14,6 @@ Este es el menú principal:
 
 ## Licencia
 
-Este proyecto es open source, y tiene la licencia MIT.
+Esta es la licencia del proyecto:
+
+[![Licencia: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
