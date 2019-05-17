@@ -27,10 +27,18 @@ import java.util.ArrayList;
  */
 public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTipsAdapter.ViewHolder> {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     private ArrayList<String> tipsNames = new ArrayList<>();
     private ArrayList<String> tipsCategories = new ArrayList<>();
     private ArrayList<String> tipsContent = new ArrayList<>();
     private Context mContext;
+
+    //------------------------------------------------------------------------------------
+    // Constructores
+    //------------------------------------------------------------------------------------
 
     public RecyclerViewTipsAdapter(Context mContext, ArrayList<String> tipsNames, ArrayList<String> tipsCategories, ArrayList<String> tipsContent) {
         this.tipsNames = tipsNames;
@@ -39,12 +47,20 @@ public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTi
         this.mContext = mContext;
     }
 
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item_tips, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
@@ -76,4 +92,5 @@ public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTi
             parentLayout = itemView.findViewById(R.id.parent_layout_tips);
         }
     }
+
 }

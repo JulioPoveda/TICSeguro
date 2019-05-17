@@ -33,15 +33,14 @@ import com.japg.ticseguro.R;
  */
 public class Pregunta1PhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean yaVisitoActividad = false;
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean preguntaCorrecta;
     boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
-
-    Button botonOpcion1;
-    Button botonOpcion2;
-    Button botonOpcion3;
-    Button botonOpcion4;
+    boolean yaVisitoActividad = false;
 
     int numeroDeVecesBoton1Presionado = 2;
     int numeroDeVecesBoton2Presionado = 2;
@@ -54,9 +53,18 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     private float lastAcceleration;
     private float shake;
 
+    Button botonOpcion1;
+    Button botonOpcion2;
+    Button botonOpcion3;
+    Button botonOpcion4;
+    Button botonContinuar;
+
     TextView tituloRespuesta;
     TextView respuestaPregunta1;
-    Button botonContinuar;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Aplicación
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +107,17 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
         yaVioRespuesta = false;
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -160,16 +179,13 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
 
     public void seleccionarOpcion1(View view)
     {
@@ -271,6 +287,30 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
     }
 
+    public void continuar(View view)
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!elBotonSiguientePreguntaYaFuePresionado)
+        {
+            sharedPreferences.edit().putBoolean("phishingPregunta1BotonSiguientePreguntaYaFuePresionado", true).commit();
+
+            int progresoLeccionPhishingHastaElMomento = sharedPreferences.getInt("progresoLeccionPhishing", 0);
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+
+            // Aumentar progreso
+            sharedPreferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
+        }
+
+        Intent pregunta2PhishingIntent = new Intent(Pregunta1PhishingActivity.this, Pregunta2PhishingActivity.class);
+        pregunta2PhishingIntent.putExtra("PUNTOS", puntos);
+        startActivity(pregunta2PhishingIntent);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     private final SensorEventListener sensorListener = new SensorEventListener()
     {
 
@@ -313,25 +353,5 @@ public class Pregunta1PhishingActivity extends AppCompatActivity implements Conn
 
         }
     };
-
-    public void continuar(View view)
-    {
-        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
-
-        if (!elBotonSiguientePreguntaYaFuePresionado)
-        {
-            sharedPreferences.edit().putBoolean("phishingPregunta1BotonSiguientePreguntaYaFuePresionado", true).commit();
-
-            int progresoLeccionPhishingHastaElMomento = sharedPreferences.getInt("progresoLeccionPhishing", 0);
-            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
-
-            // Aumentar progreso
-            sharedPreferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
-        }
-
-        Intent pregunta2PhishingIntent = new Intent(Pregunta1PhishingActivity.this, Pregunta2PhishingActivity.class);
-        pregunta2PhishingIntent.putExtra("PUNTOS", puntos);
-        startActivity(pregunta2PhishingIntent);
-    }
 
 }

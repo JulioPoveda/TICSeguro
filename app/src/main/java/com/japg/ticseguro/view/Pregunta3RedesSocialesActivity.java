@@ -32,15 +32,14 @@ import com.japg.ticseguro.R;
  */
 public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean yaVioActividad = false;
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean preguntaCorrecta;
     boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
-
-    Button botonOpcion1;
-    Button botonOpcion2;
-    Button botonOpcion3;
-    Button botonOpcion4;
+    boolean yaVioActividad = false;
 
     int numeroDeVecesBoton1Presionado = 2;
     int numeroDeVecesBoton2Presionado = 2;
@@ -53,9 +52,18 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
     private float lastAcceleration;
     private float shake;
 
+    Button botonOpcion1;
+    Button botonOpcion2;
+    Button botonOpcion3;
+    Button botonOpcion4;
+    Button botonContinuar;
+
     TextView tituloRespuesta;
     TextView respuestaPregunta3;
-    Button botonContinuar;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +103,17 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
         yaVioRespuesta = false;
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -156,16 +175,13 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
 
     public void seleccionarOpcion1(View view)
     {
@@ -267,6 +283,30 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
 
     }
 
+    public void continuar(View view)
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!elBotonSiguientePreguntaYaFuePresionado)
+        {
+            sharedPreferences.edit().putBoolean("redesSocialesPregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
+
+            int progresoLeccionRedesSocialesHastaElMomento = sharedPreferences.getInt("progresoLeccionRedesSociales", 0);
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+
+            // Aumentar progreso
+            sharedPreferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
+        }
+
+        Intent reportePreguntasRedesSocialesIntent = new Intent(Pregunta3RedesSocialesActivity.this, ReportePreguntasRedesSocialesActivity.class);
+        reportePreguntasRedesSocialesIntent.putExtra("PUNTOS", puntos);
+        startActivity(reportePreguntasRedesSocialesIntent);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Sensor Event Listener
+    //------------------------------------------------------------------------------------
+
     private final SensorEventListener sensorListener = new SensorEventListener()
     {
 
@@ -309,25 +349,5 @@ public class Pregunta3RedesSocialesActivity extends AppCompatActivity implements
 
         }
     };
-
-    public void continuar(View view)
-    {
-        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
-
-        if (!elBotonSiguientePreguntaYaFuePresionado)
-        {
-            sharedPreferences.edit().putBoolean("redesSocialesPregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
-
-            int progresoLeccionRedesSocialesHastaElMomento = sharedPreferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
-
-            // Aumentar progreso
-            sharedPreferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
-        }
-
-        Intent reportePreguntasRedesSocialesIntent = new Intent(Pregunta3RedesSocialesActivity.this, ReportePreguntasRedesSocialesActivity.class);
-        reportePreguntasRedesSocialesIntent.putExtra("PUNTOS", puntos);
-        startActivity(reportePreguntasRedesSocialesIntent);
-    }
 
 }

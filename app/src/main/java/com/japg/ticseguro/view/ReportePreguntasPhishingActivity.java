@@ -28,14 +28,20 @@ import pl.droidsonroids.gif.GifImageView;
  */
 public class ReportePreguntasPhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean alreadyVisitedActivity = false;
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
 
+    boolean alreadyVisitedActivity = false;
     int puntos;
 
     TextView tituloReporte;
     GifImageView gifReporte;
     TextView descripcionReporte;
 
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,19 +85,16 @@ public class ReportePreguntasPhishingActivity extends AppCompatActivity implemen
 
     }
 
-    public void seguirAprendiendo(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        Intent seguirAprendiendoIntent = new Intent(ReportePreguntasPhishingActivity.this, PhishingActivity.class);
-        startActivity(seguirAprendiendoIntent);
-
+        MyApplication.getInstance().setConnectivityListener(this);
     }
 
-    public void volverAInicio(View view) {
-
-        Intent volverAInicioIntent = new Intent(ReportePreguntasPhishingActivity.this, MainMenuActivity.class);
-        startActivity(volverAInicioIntent);
-
-    }
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -153,15 +156,26 @@ public class ReportePreguntasPhishingActivity extends AppCompatActivity implemen
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
+
+    public void seguirAprendiendo(View view) {
+
+        Intent seguirAprendiendoIntent = new Intent(ReportePreguntasPhishingActivity.this, PhishingActivity.class);
+        startActivity(seguirAprendiendoIntent);
+
+    }
+
+    public void volverAInicio(View view) {
+
+        Intent volverAInicioIntent = new Intent(ReportePreguntasPhishingActivity.this, MainMenuActivity.class);
+        startActivity(volverAInicioIntent);
+
     }
 
 }

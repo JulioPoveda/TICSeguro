@@ -31,7 +31,15 @@ import com.japg.ticseguro.R;
  */
 public class PhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,19 +70,16 @@ public class PhishingActivity extends AppCompatActivity implements ConnectivityR
 
     }
 
-    public void aprendeMasSobrePhishing(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        Intent aprendeMasSobrePhishingIntent = new Intent(PhishingActivity.this, AprendeMasPhishingActivity.class);
-        startActivity(aprendeMasSobrePhishingIntent);
-
+        MyApplication.getInstance().setConnectivityListener(this);
     }
 
-    public void pruebaTusConocimientosSobrePhishing(View view) {
-
-        Intent pruebaTusConocimientosSobrePhishingIntent = new Intent(PhishingActivity.this, Pregunta1PhishingActivity.class);
-        startActivity(pruebaTusConocimientosSobrePhishingIntent);
-
-    }
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -136,15 +141,26 @@ public class PhishingActivity extends AppCompatActivity implements ConnectivityR
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
+
+    public void aprendeMasSobrePhishing(View view) {
+
+        Intent aprendeMasSobrePhishingIntent = new Intent(PhishingActivity.this, AprendeMasPhishingActivity.class);
+        startActivity(aprendeMasSobrePhishingIntent);
+
+    }
+
+    public void pruebaTusConocimientosSobrePhishing(View view) {
+
+        Intent pruebaTusConocimientosSobrePhishingIntent = new Intent(PhishingActivity.this, Pregunta1PhishingActivity.class);
+        startActivity(pruebaTusConocimientosSobrePhishingIntent);
+
     }
 
 }

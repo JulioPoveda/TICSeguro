@@ -29,10 +29,18 @@ import com.japg.ticseguro.R;
  */
 public class RegistroActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
 
     private EditText apodoEditText;
     private Button registrarseButton;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,38 +60,16 @@ public class RegistroActivity extends AppCompatActivity implements ConnectivityR
 
     }
 
-    private TextWatcher registerTextWatcher = new TextWatcher() {
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            String apodoInput = apodoEditText.getText().toString().trim();
-
-            registrarseButton.setEnabled(!apodoInput.isEmpty());
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-    };
-
-    public void registrateClick(View view) {
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("userRegistered", true).commit();
-
-        String userName = apodoEditText.getText().toString();
-
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putString("userName", userName).commit();
-
-        Intent mainMenuIntent = new Intent(RegistroActivity.this, MainMenuActivity.class);
-        startActivity(mainMenuIntent);
+        MyApplication.getInstance().setConnectivityListener(this);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -145,15 +131,49 @@ public class RegistroActivity extends AppCompatActivity implements ConnectivityR
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
+
+    public void registrateClick(View view) {
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putBoolean("userRegistered", true).commit();
+
+        String userName = apodoEditText.getText().toString();
+
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
+                .putString("userName", userName).commit();
+
+        Intent mainMenuIntent = new Intent(RegistroActivity.this, MainMenuActivity.class);
+        startActivity(mainMenuIntent);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Text Watcher
+    //------------------------------------------------------------------------------------
+
+    private TextWatcher registerTextWatcher = new TextWatcher() {
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String apodoInput = apodoEditText.getText().toString().trim();
+
+            registrarseButton.setEnabled(!apodoInput.isEmpty());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 
 }

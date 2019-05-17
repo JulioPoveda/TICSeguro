@@ -18,14 +18,25 @@ import android.net.NetworkInfo;
  *
  * Se requiere para determinar si hay cambios en la conectividad del usuario
  */
-public class ConnectivityReceiver extends BroadcastReceiver
-{
+public class ConnectivityReceiver extends BroadcastReceiver {
+
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
 
     public static ConnectivityReceiverListener connectivityReceiverListener;
+
+    //------------------------------------------------------------------------------------
+    // Constructores
+    //------------------------------------------------------------------------------------
 
     public ConnectivityReceiver() {
         super();
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -48,7 +59,6 @@ public class ConnectivityReceiver extends BroadcastReceiver
         return activeNetwork != null
                 && activeNetwork.isConnectedOrConnecting();
     }
-
 
     public interface ConnectivityReceiverListener {
         void onNetworkConnectionChanged(boolean isConnected);

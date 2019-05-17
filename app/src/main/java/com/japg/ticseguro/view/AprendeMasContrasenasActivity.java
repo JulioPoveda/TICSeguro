@@ -72,7 +72,7 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
     }
 
     //------------------------------------------------------------------------------------
-    // Métodos
+    // Métodos Conectividad Eventual
     //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
@@ -138,6 +138,10 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en enlaces
+    //------------------------------------------------------------------------------------
 
     public void irALinkContrasenas1(View view)
     {

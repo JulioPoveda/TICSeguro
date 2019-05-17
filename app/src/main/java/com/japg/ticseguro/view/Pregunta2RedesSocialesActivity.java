@@ -32,13 +32,14 @@ import com.japg.ticseguro.R;
  */
 public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean yaVisitoActividad = false;
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean preguntaCorrecta;
     boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
-
-    Button botonOpcion1;
-    Button botonOpcion2;
+    boolean yaVisitoActividad = false;
 
     int numeroDeVecesBoton1Presionado = 2;
     int numeroDeVecesBoton2Presionado = 2;
@@ -49,9 +50,16 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
     private float lastAcceleration;
     private float shake;
 
+    Button botonOpcion1;
+    Button botonOpcion2;
+    Button botonContinuar;
+
     TextView tituloRespuesta;
     TextView respuestaPregunta2;
-    Button botonContinuar;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +97,17 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
         yaVioRespuesta = false;
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -150,16 +169,13 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
 
     public void seleccionarOpcion1(View view)
     {
@@ -203,6 +219,30 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
 
     }
 
+    public void continuar(View view)
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!elBotonSiguientePreguntaYaFuePresionado)
+        {
+            sharedPreferences.edit().putBoolean("redesSocialesPregunta2BotonSiguientePreguntaYaFuePresionado", true).commit();
+
+            int progresoLeccionRedesSocialesHastaElMomento = sharedPreferences.getInt("progresoLeccionRedesSociales", 0);
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+
+            // Aumentar progreso
+            sharedPreferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
+        }
+
+        Intent pregunta3RedesSocialesIntent = new Intent(Pregunta2RedesSocialesActivity.this, Pregunta3RedesSocialesActivity.class);
+        pregunta3RedesSocialesIntent.putExtra("PUNTOS", puntos);
+        startActivity(pregunta3RedesSocialesIntent);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Sensor Event Listener
+    //------------------------------------------------------------------------------------
+
     private final SensorEventListener sensorListener = new SensorEventListener()
     {
 
@@ -243,25 +283,5 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
 
         }
     };
-
-    public void continuar(View view)
-    {
-        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
-
-        if (!elBotonSiguientePreguntaYaFuePresionado)
-        {
-            sharedPreferences.edit().putBoolean("redesSocialesPregunta2BotonSiguientePreguntaYaFuePresionado", true).commit();
-
-            int progresoLeccionRedesSocialesHastaElMomento = sharedPreferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
-
-            // Aumentar progreso
-            sharedPreferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
-        }
-
-        Intent pregunta3RedesSocialesIntent = new Intent(Pregunta2RedesSocialesActivity.this, Pregunta3RedesSocialesActivity.class);
-        pregunta3RedesSocialesIntent.putExtra("PUNTOS", puntos);
-        startActivity(pregunta3RedesSocialesIntent);
-    }
 
 }

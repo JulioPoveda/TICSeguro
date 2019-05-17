@@ -31,7 +31,15 @@ import com.japg.ticseguro.R;
  */
 public class RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,19 +70,16 @@ public class RedesSocialesActivity extends AppCompatActivity implements Connecti
 
     }
 
-    public void aprendeMasSobreRedesSociales(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        Intent aprendeMasIntent = new Intent(RedesSocialesActivity.this, AprendeMasRedesSocialesActivity.class);
-        startActivity(aprendeMasIntent);
-
+        MyApplication.getInstance().setConnectivityListener(this);
     }
 
-    public void pruebaTusConocimientosSobreRedesSociales(View view) {
-
-        Intent pruebaTusConocimientosIntent = new Intent(RedesSocialesActivity.this, Pregunta1RedesSocialesActivity.class);
-        startActivity(pruebaTusConocimientosIntent);
-
-    }
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -136,15 +141,26 @@ public class RedesSocialesActivity extends AppCompatActivity implements Connecti
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
+
+    public void aprendeMasSobreRedesSociales(View view) {
+
+        Intent aprendeMasIntent = new Intent(RedesSocialesActivity.this, AprendeMasRedesSocialesActivity.class);
+        startActivity(aprendeMasIntent);
+
+    }
+
+    public void pruebaTusConocimientosSobreRedesSociales(View view) {
+
+        Intent pruebaTusConocimientosIntent = new Intent(RedesSocialesActivity.this, Pregunta1RedesSocialesActivity.class);
+        startActivity(pruebaTusConocimientosIntent);
+
     }
 
 }

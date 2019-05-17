@@ -31,7 +31,15 @@ import com.japg.ticseguro.R;
  */
 public class ContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,19 +78,16 @@ public class ContrasenasActivity extends AppCompatActivity implements Connectivi
         scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
     }
 
-    public void aprendeMasSobreContrasenas(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        Intent aprendeMasSobreContrasenasIntent = new Intent(ContrasenasActivity.this, AprendeMasContrasenasActivity.class);
-        startActivity(aprendeMasSobreContrasenasIntent);
-
+        MyApplication.getInstance().setConnectivityListener(this);
     }
 
-    public void pruebaTusConocimientosSobreContrasenas(View view) {
-
-        Intent pruebaTusConocimientosSobreContrasenasIntent = new Intent(ContrasenasActivity.this, Pregunta1ContrasenasActivity.class);
-        startActivity(pruebaTusConocimientosSobreContrasenasIntent);
-
-    }
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -144,15 +149,26 @@ public class ContrasenasActivity extends AppCompatActivity implements Connectivi
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
+
+    public void aprendeMasSobreContrasenas(View view) {
+
+        Intent aprendeMasSobreContrasenasIntent = new Intent(ContrasenasActivity.this, AprendeMasContrasenasActivity.class);
+        startActivity(aprendeMasSobreContrasenasIntent);
+
+    }
+
+    public void pruebaTusConocimientosSobreContrasenas(View view) {
+
+        Intent pruebaTusConocimientosSobreContrasenasIntent = new Intent(ContrasenasActivity.this, Pregunta1ContrasenasActivity.class);
+        startActivity(pruebaTusConocimientosSobreContrasenasIntent);
+
     }
 
 }

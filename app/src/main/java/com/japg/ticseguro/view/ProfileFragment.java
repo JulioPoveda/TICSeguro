@@ -42,7 +42,15 @@ import static android.content.Context.MODE_PRIVATE;
  */
 public class ProfileFragment extends Fragment {
 
+    //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
     public static final int PICK_IMAGE = 1;
+
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
 
     TextView userNameTextView;
     ImageView userAvatar;
@@ -51,6 +59,10 @@ public class ProfileFragment extends Fragment {
     ProgressBar leccionRedesSocialesProgressBar;
     ProgressBar leccionInternetProgressBar;
     ProgressBar leccionContrasenasProgressBar;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -153,6 +165,10 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
+
     public static String encodeToBase64(Bitmap image) {
         Bitmap immage = image;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -167,4 +183,5 @@ public class ProfileFragment extends Fragment {
         byte[] decodedByte = Base64.decode(input, 0);
         return BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
     }
+
 }

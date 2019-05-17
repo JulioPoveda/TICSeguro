@@ -29,6 +29,18 @@ import com.japg.ticseguro.R;
  */
 public class AprendeMasRedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
+    boolean linkRedesSociales1YaFueAbierto;
+    boolean linkRedesSociales2YaFueAbierto;
+    boolean linkRedesSociales3YaFueAbierto;
+    boolean linkRedesSociales4YaFueAbierto;
+    boolean linkRedesSociales5YaFueAbierto;
+    boolean linkRedesSociales6YaFueAbierto;
+    boolean linkRedesSociales7YaFueAbierto;
+    boolean linkRedesSociales8YaFueAbierto;
     boolean alreadyVisitedActivity = false;
 
     TextView linkRedesSociales1;
@@ -40,14 +52,9 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
     TextView linkRedesSociales7;
     TextView linkRedesSociales8;
 
-    boolean linkRedesSociales1YaFueAbierto;
-    boolean linkRedesSociales2YaFueAbierto;
-    boolean linkRedesSociales3YaFueAbierto;
-    boolean linkRedesSociales4YaFueAbierto;
-    boolean linkRedesSociales5YaFueAbierto;
-    boolean linkRedesSociales6YaFueAbierto;
-    boolean linkRedesSociales7YaFueAbierto;
-    boolean linkRedesSociales8YaFueAbierto;
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +87,17 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
         checkConnection();
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -141,16 +159,13 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en enlaces
+    //------------------------------------------------------------------------------------
 
     public void irALinkRedesSociales1(View view)
     {

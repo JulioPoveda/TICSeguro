@@ -31,7 +31,15 @@ import com.japg.ticseguro.R;
  */
 public class InternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,21 +76,19 @@ public class InternetActivity extends AppCompatActivity implements ConnectivityR
         ScrollView scrollView = (ScrollView) findViewById(R.id.internet_scroll_view);
         scrollView.setFocusableInTouchMode(true);
         scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
-    }
-
-    public void aprendeMasSobreInternet(View view) {
-
-        Intent aprendeMasSobreInternetIntent = new Intent(InternetActivity.this, AprendeMasInternetActivity.class);
-        startActivity(aprendeMasSobreInternetIntent);
 
     }
 
-    public void pruebaTusConocimientosSobreInternet(View view) {
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        Intent pruebaTusConocimientosSobreInternetIntent = new Intent(InternetActivity.this, Pregunta1InternetActivity.class);
-        startActivity(pruebaTusConocimientosSobreInternetIntent);
-
+        MyApplication.getInstance().setConnectivityListener(this);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -144,15 +150,26 @@ public class InternetActivity extends AppCompatActivity implements ConnectivityR
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
+
+    public void aprendeMasSobreInternet(View view) {
+
+        Intent aprendeMasSobreInternetIntent = new Intent(InternetActivity.this, AprendeMasInternetActivity.class);
+        startActivity(aprendeMasSobreInternetIntent);
+
+    }
+
+    public void pruebaTusConocimientosSobreInternet(View view) {
+
+        Intent pruebaTusConocimientosSobreInternetIntent = new Intent(InternetActivity.this, Pregunta1InternetActivity.class);
+        startActivity(pruebaTusConocimientosSobreInternetIntent);
+
     }
 
 }

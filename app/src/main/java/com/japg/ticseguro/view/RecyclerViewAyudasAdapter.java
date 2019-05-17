@@ -29,17 +29,27 @@ import java.util.ArrayList;
  */
 public class RecyclerViewAyudasAdapter extends RecyclerView.Adapter<RecyclerViewAyudasAdapter.ViewHolder> {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
-    private int[] images = {};
 
-    public RecyclerViewAyudasAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages, int[] images) {
+    //------------------------------------------------------------------------------------
+    // Constructores
+    //------------------------------------------------------------------------------------
+
+    public RecyclerViewAyudasAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mContext = mContext;
-        this.images = images;
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @NonNull
     @Override
@@ -48,6 +58,10 @@ public class RecyclerViewAyudasAdapter extends RecyclerView.Adapter<RecyclerView
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {

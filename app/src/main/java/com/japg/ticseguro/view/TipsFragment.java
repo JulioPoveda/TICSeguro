@@ -85,4 +85,5 @@ public class TipsFragment extends Fragment {
         contenidosTips.add("No añadas como amigos personas que no conoces.");
         contenidosTips.add("Siempre revisa que la página web que estás visitando tenga un candado verde en la parte superior.");
     }
+
 }

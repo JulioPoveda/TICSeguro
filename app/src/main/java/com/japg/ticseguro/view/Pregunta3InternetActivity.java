@@ -32,15 +32,14 @@ import com.japg.ticseguro.R;
  */
 public class Pregunta3InternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    boolean yaVioActividad = false;
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean preguntaCorrecta;
     boolean yaVioRespuesta;
     boolean elBotonSiguientePreguntaYaFuePresionado;
-
-    Button botonOpcion1;
-    Button botonOpcion2;
-    Button botonOpcion3;
-    Button botonOpcion4;
+    boolean yaVioActividad = false;
 
     int numeroDeVecesBoton1Presionado = 2;
     int numeroDeVecesBoton2Presionado = 2;
@@ -53,9 +52,18 @@ public class Pregunta3InternetActivity extends AppCompatActivity implements Conn
     private float lastAcceleration;
     private float shake;
 
+    Button botonOpcion1;
+    Button botonOpcion2;
+    Button botonOpcion3;
+    Button botonOpcion4;
+    Button botonContinuar;
+
     TextView tituloRespuesta;
     TextView respuestaPregunta3;
-    Button botonContinuar;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +103,17 @@ public class Pregunta3InternetActivity extends AppCompatActivity implements Conn
         yaVioRespuesta = false;
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -156,16 +175,13 @@ public class Pregunta3InternetActivity extends AppCompatActivity implements Conn
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en botones
+    //------------------------------------------------------------------------------------
 
     public void seleccionarOpcion1(View view)
     {
@@ -267,6 +283,30 @@ public class Pregunta3InternetActivity extends AppCompatActivity implements Conn
 
     }
 
+    public void continuar(View view)
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if (!elBotonSiguientePreguntaYaFuePresionado)
+        {
+            sharedPreferences.edit().putBoolean("internetPregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
+
+            int progresoLeccionInternetHastaElMomento = sharedPreferences.getInt("progresoLeccionInternet", 0);
+            int nuevoProgresoLeccionInternet = progresoLeccionInternetHastaElMomento + 25;
+
+            // Aumentar progreso
+            sharedPreferences.edit().putInt("progresoLeccionInternet", nuevoProgresoLeccionInternet).commit();
+        }
+
+        Intent reportePreguntasInternetIntent = new Intent(Pregunta3InternetActivity.this, ReportePreguntasInternetActivity.class);
+        reportePreguntasInternetIntent.putExtra("PUNTOS", puntos);
+        startActivity(reportePreguntasInternetIntent);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Sensor Event Listener
+    //------------------------------------------------------------------------------------
+
     private final SensorEventListener sensorListener = new SensorEventListener()
     {
 
@@ -309,25 +349,5 @@ public class Pregunta3InternetActivity extends AppCompatActivity implements Conn
 
         }
     };
-
-    public void continuar(View view)
-    {
-        SharedPreferences sharedPreferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
-
-        if (!elBotonSiguientePreguntaYaFuePresionado)
-        {
-            sharedPreferences.edit().putBoolean("internetPregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
-
-            int progresoLeccionInternetHastaElMomento = sharedPreferences.getInt("progresoLeccionInternet", 0);
-            int nuevoProgresoLeccionInternet = progresoLeccionInternetHastaElMomento + 25;
-
-            // Aumentar progreso
-            sharedPreferences.edit().putInt("progresoLeccionInternet", nuevoProgresoLeccionInternet).commit();
-        }
-
-        Intent reportePreguntasInternetIntent = new Intent(Pregunta3InternetActivity.this, ReportePreguntasInternetActivity.class);
-        reportePreguntasInternetIntent.putExtra("PUNTOS", puntos);
-        startActivity(reportePreguntasInternetIntent);
-    }
 
 }

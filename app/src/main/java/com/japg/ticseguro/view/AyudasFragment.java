@@ -29,9 +29,16 @@ import java.util.ArrayList;
  */
 public class AyudasFragment extends Fragment {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
-    private int[] images = {R.drawable.phishing, R.drawable.redes_sociales, R.drawable.internet, R.drawable.contrasenas};
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Nullable
     @Override
@@ -42,7 +49,7 @@ public class AyudasFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_ayudas, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view_ayudas);
-        RecyclerViewAyudasAdapter adapter = new RecyclerViewAyudasAdapter(view.getContext(), mNames, mImageUrls, images);
+        RecyclerViewAyudasAdapter adapter = new RecyclerViewAyudasAdapter(view.getContext(), mNames, mImageUrls);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
@@ -58,6 +65,10 @@ public class AyudasFragment extends Fragment {
         scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
 
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
 
     private void initImageBitmaps() {
 

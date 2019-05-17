@@ -14,10 +14,25 @@ import android.app.Application;
  *
  * Se requiere para determinar si hay cambios en la conectividad del usuario
  */
-public class MyApplication extends Application
-{
+public class MyApplication extends Application {
+
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
 
     private static MyApplication mInstance;
+
+    //------------------------------------------------------------------------------------
+    // Constructores
+    //------------------------------------------------------------------------------------
+
+    public static synchronized MyApplication getInstance() {
+        return mInstance;
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     public void onCreate() {
@@ -26,11 +41,12 @@ public class MyApplication extends Application
         mInstance = this;
     }
 
-    public static synchronized MyApplication getInstance() {
-        return mInstance;
-    }
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
 
     public void setConnectivityListener(ConnectivityReceiver.ConnectivityReceiverListener listener) {
         ConnectivityReceiver.connectivityReceiverListener = listener;
     }
+
 }

@@ -27,8 +27,16 @@ import com.japg.ticseguro.R;
  */
 public class MainMenuActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
-    String userName;
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+    String userName;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Aplicación
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,34 +65,16 @@ public class MainMenuActivity extends AppCompatActivity implements ConnectivityR
         toast.show();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-            switch (item.getItemId()) {
-                case R.id.nav_home:
-                    selectedFragment = new HomeFragment();
-                    break;
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
 
-                case R.id.nav_tips:
-                    selectedFragment = new TipsFragment();
-                    break;
-
-                case R.id.nav_ayudas:
-                    selectedFragment = new AyudasFragment();
-                    break;
-
-                case R.id.nav_perfil:
-                    selectedFragment = new ProfileFragment();
-                    break;
-            }
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
-            return true;
-        }
-    };
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -146,14 +136,41 @@ public class MainMenuActivity extends AppCompatActivity implements ConnectivityR
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos
+    //------------------------------------------------------------------------------------
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment selectedFragment = null;
+
+            switch (item.getItemId()) {
+                case R.id.nav_home:
+                    selectedFragment = new HomeFragment();
+                    break;
+
+                case R.id.nav_tips:
+                    selectedFragment = new TipsFragment();
+                    break;
+
+                case R.id.nav_ayudas:
+                    selectedFragment = new AyudasFragment();
+                    break;
+
+                case R.id.nav_perfil:
+                    selectedFragment = new ProfileFragment();
+                    break;
+            }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
+            return true;
+        }
+    };
+
 }

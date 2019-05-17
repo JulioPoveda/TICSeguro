@@ -32,11 +32,18 @@ import com.japg.ticseguro.R;
  */
 public class AprendeMasInternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
+    boolean linkInternet1YaFueAbierto;
     boolean alreadyVisitedActivity = false;
 
     TextView linkInternet1;
 
-    boolean linkInternet1YaFueAbierto;
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +62,17 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
         checkConnection();
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -116,16 +134,13 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
-    }
-
-    @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
         showInternetConnectionMessage(isConnected);
     }
+
+    //------------------------------------------------------------------------------------
+    // Métodos que responden a clicks en enlaces
+    //------------------------------------------------------------------------------------
 
     public void irALinkInternet1(View view)
     {

@@ -26,7 +26,15 @@ import com.japg.ticseguro.R;
  */
 public class MinTICActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +51,17 @@ public class MinTICActivity extends AppCompatActivity implements ConnectivityRec
 
         checkConnection();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -101,13 +120,6 @@ public class MinTICActivity extends AppCompatActivity implements ConnectivityRec
 
             buildDialog(MinTICActivity.this);
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
     }
 
     @Override

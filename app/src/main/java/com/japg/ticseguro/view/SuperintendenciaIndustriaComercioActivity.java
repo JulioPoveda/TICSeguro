@@ -26,7 +26,15 @@ import com.japg.ticseguro.R;
  */
 public class SuperintendenciaIndustriaComercioActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     boolean alreadyVisitedActivity = false;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,17 @@ public class SuperintendenciaIndustriaComercioActivity extends AppCompatActivity
         checkConnection();
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        MyApplication.getInstance().setConnectivityListener(this);
+    }
+
+    //------------------------------------------------------------------------------------
+    // Métodos Conectividad Eventual
+    //------------------------------------------------------------------------------------
 
     public void buildDialog(Context c) {
 
@@ -102,13 +121,6 @@ public class SuperintendenciaIndustriaComercioActivity extends AppCompatActivity
 
             buildDialog(SuperintendenciaIndustriaComercioActivity.this);
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        MyApplication.getInstance().setConnectivityListener(this);
     }
 
     @Override

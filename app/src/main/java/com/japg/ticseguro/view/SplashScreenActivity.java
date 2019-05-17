@@ -22,7 +22,15 @@ import android.content.Intent;
  */
 public class SplashScreenActivity extends AppCompatActivity {
 
+    //------------------------------------------------------------------------------------
+    // Atributos
+    //------------------------------------------------------------------------------------
+
     private static int SPLASH_TIME_OUT = 4000;
+
+    //------------------------------------------------------------------------------------
+    // Métodos Ciclo de Vida de la Actividad
+    //------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,4 +69,5 @@ public class SplashScreenActivity extends AppCompatActivity {
             }, SPLASH_TIME_OUT);
         }
     }
+
 }
