@@ -1,0 +1,13 @@
+Hola. Para instalar TICSeguro sigue los siguientes pasos:
+
+1. Descarga el repositorio de GitHub TICSeguro.
+
+Haz click en el botón verde "Clone or download" en el repositorio de GitHub TICSeguro y luego haz click en "Download ZIP".
+
+2. Descomprime el archivo .zip.
+
+3. Abre Android Studio (si no lo tienes, puedes descargarlo en https://developer.android.com/studio).
+
+4. Ve a File > Open, luego selecciona el archivo que descomprimiste (se llama TICSeguro) y haz click en "Open".
+
+5. Haz build y corre la aplicación haciendo click en el botón Run (es un triángulo verde rotado 45 grados a la derecha en la barra de herramientas que se encuentra en la parte superior de Android Studio).
