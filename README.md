@@ -12,8 +12,16 @@ Este es el menú principal:
 
 ![TICSeguro main menu](https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_main_menu.png?raw=true)
 
+## Versión
+
+Versión 1.0 - Mayo 2019
+
+## Autor
+
+Julio Poveda
+
 ## Licencia
 
 Esta es la licencia del proyecto:
 
-[![Licencia: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
