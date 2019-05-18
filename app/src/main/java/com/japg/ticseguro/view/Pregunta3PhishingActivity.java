@@ -33,6 +33,12 @@ import com.japg.ticseguro.R;
 public class Pregunta3PhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_PHISHING = 20;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -292,7 +298,7 @@ public class Pregunta3PhishingActivity extends AppCompatActivity implements Conn
             sharedPreferences.edit().putBoolean("phishingPregunta3BotonSiguientePreguntaYaFuePresionado", true).commit();
 
             int progresoLeccionPhishingHastaElMomento = sharedPreferences.getInt("progresoLeccionPhishing", 0);
-            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + PROGRESO_UNITARIO_PHISHING;
 
             // Aumentar progreso
             sharedPreferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();

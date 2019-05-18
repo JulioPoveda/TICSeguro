@@ -19,10 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.Pregunta4PhishingActivity"
-            android:label="@string/title_activity_pregunta4_phishing"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
             android:name=".view.SplashScreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>

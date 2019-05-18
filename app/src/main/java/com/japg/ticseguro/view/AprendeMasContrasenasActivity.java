@@ -30,6 +30,12 @@ import com.japg.ticseguro.R;
 public class AprendeMasContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_CONTRASENAS = 20;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -152,7 +158,7 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
             preferences.edit().putBoolean("linkContrasenas1YaFueAbierto", true).commit();
 
             int progresoLeccionContrasenasHastaElMomento = preferences.getInt("progresoLeccionContrasenas", 0);
-            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + 20;
+            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + PROGRESO_UNITARIO_CONTRASENAS;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionContrasenas", nuevoProgresoLeccionContrasenas).commit();
@@ -173,7 +179,7 @@ public class AprendeMasContrasenasActivity extends AppCompatActivity implements 
             preferences.edit().putBoolean("linkContrasenas2YaFueAbierto", true).commit();
 
             int progresoLeccionContrasenasHastaElMomento = preferences.getInt("progresoLeccionContrasenas", 0);
-            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + 20;
+            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + PROGRESO_UNITARIO_CONTRASENAS;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionContrasenas", nuevoProgresoLeccionContrasenas).commit();

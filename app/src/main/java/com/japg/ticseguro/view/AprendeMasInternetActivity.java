@@ -33,6 +33,12 @@ import com.japg.ticseguro.R;
 public class AprendeMasInternetActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_INTERNET = 25;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -151,7 +157,7 @@ public class AprendeMasInternetActivity extends AppCompatActivity implements Con
             preferences.edit().putBoolean("linkInternet1YaFueAbierto", true).commit();
 
             int progresoLeccionInternetHastaElMomento = preferences.getInt("progresoLeccionInternet", 0);
-            int nuevoProgresoLeccionInternet = progresoLeccionInternetHastaElMomento + 25;
+            int nuevoProgresoLeccionInternet = progresoLeccionInternetHastaElMomento + PROGRESO_UNITARIO_INTERNET;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionInternet", nuevoProgresoLeccionInternet).commit();

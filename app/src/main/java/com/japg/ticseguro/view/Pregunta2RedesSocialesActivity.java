@@ -33,6 +33,12 @@ import com.japg.ticseguro.R;
 public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_REDES_SOCIALES = 9;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -228,7 +234,7 @@ public class Pregunta2RedesSocialesActivity extends AppCompatActivity implements
             sharedPreferences.edit().putBoolean("redesSocialesPregunta2BotonSiguientePreguntaYaFuePresionado", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = sharedPreferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             sharedPreferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();

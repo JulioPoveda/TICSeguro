@@ -33,6 +33,12 @@ import com.japg.ticseguro.R;
 public class Pregunta2ContrasenasActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_CONTRASENAS = 20;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -214,7 +220,7 @@ public class Pregunta2ContrasenasActivity extends AppCompatActivity implements C
             sharedPreferences.edit().putBoolean("contrasenasPregunta2BotonSiguientePreguntaYaFuePresionado", true).commit();
 
             int progresoLeccionContrasenasHastaElMomento = sharedPreferences.getInt("progresoLeccionContrasenas", 0);
-            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + 20;
+            int nuevoProgresoLeccionContrasenas = progresoLeccionContrasenasHastaElMomento + PROGRESO_UNITARIO_CONTRASENAS;
 
             // Aumentar progreso
             sharedPreferences.edit().putInt("progresoLeccionContrasenas", nuevoProgresoLeccionContrasenas).commit();

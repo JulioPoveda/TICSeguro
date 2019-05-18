@@ -30,6 +30,12 @@ import com.japg.ticseguro.R;
 public class AprendeMasRedesSocialesActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_REDES_SOCIALES = 9;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -176,7 +182,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales1YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -197,7 +203,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales2YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -218,7 +224,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales3YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -239,7 +245,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales4YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -260,7 +266,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales5YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -281,7 +287,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales6YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -302,7 +308,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales7YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();
@@ -323,7 +329,7 @@ public class AprendeMasRedesSocialesActivity extends AppCompatActivity implement
             preferences.edit().putBoolean("linkRedesSociales8YaFueAbierto", true).commit();
 
             int progresoLeccionRedesSocialesHastaElMomento = preferences.getInt("progresoLeccionRedesSociales", 0);
-            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + 9;
+            int nuevoProgresoLeccionRedesSociales = progresoLeccionRedesSocialesHastaElMomento + PROGRESO_UNITARIO_REDES_SOCIALES;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionRedesSociales", nuevoProgresoLeccionRedesSociales).commit();

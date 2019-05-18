@@ -30,6 +30,12 @@ import com.japg.ticseguro.R;
 public class AprendeMasPhishingActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     //------------------------------------------------------------------------------------
+    // Constantes
+    //------------------------------------------------------------------------------------
+
+    final private static int PROGRESO_UNITARIO_PHISHING = 20;
+
+    //------------------------------------------------------------------------------------
     // Atributos
     //------------------------------------------------------------------------------------
 
@@ -152,7 +158,7 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
             preferences.edit().putBoolean("linkPhishing1YaFueAbierto", true).commit();
 
             int progresoLeccionPhishingHastaElMomento = preferences.getInt("progresoLeccionPhishing", 0);
-            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + PROGRESO_UNITARIO_PHISHING;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
@@ -173,7 +179,7 @@ public class AprendeMasPhishingActivity extends AppCompatActivity implements Con
             preferences.edit().putBoolean("linkPhishing2YaFueAbierto", true).commit();
 
             int progresoLeccionPhishingHastaElMomento = preferences.getInt("progresoLeccionPhishing", 0);
-            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + 20;
+            int nuevoProgresoLeccionPhishing = progresoLeccionPhishingHastaElMomento + PROGRESO_UNITARIO_PHISHING;
 
             // Aumentar progreso
             preferences.edit().putInt("progresoLeccionPhishing", nuevoProgresoLeccionPhishing).commit();
