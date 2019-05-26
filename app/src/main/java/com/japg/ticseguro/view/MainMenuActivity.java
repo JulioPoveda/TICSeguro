@@ -5,11 +5,12 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
 
 import com.japg.ticseguro.R;
 
@@ -53,16 +54,14 @@ public class MainMenuActivity extends AppCompatActivity implements ConnectivityR
 
         checkConnection();
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
+        // Mostrar saludo al usuario
         CharSequence text = "¡Bienvenido/a " + userName + "!";
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(getApplicationContext(), text, duration);
-        toast.show();
+
+        View contextView = findViewById(R.id.fragment_container);
+
+        Snackbar.make(contextView, text, Snackbar.LENGTH_SHORT)
+                .show();
+
     }
 
     @Override
