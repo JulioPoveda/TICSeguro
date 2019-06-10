@@ -12,6 +12,12 @@ Este es el menú principal:
 
 ![TICSeguro main menu](https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_main_menu.png?raw=true)
 
+Este es el patrón arquitectural que sigue TICSeguro:
+
+POR PUBLICAR
+
+
+
 ## Versión
 
 Versión 1.0 - Mayo 2019
