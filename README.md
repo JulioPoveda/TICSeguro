@@ -6,17 +6,15 @@ TICSeguro es una aplicación móvil educativa para dispositivos móviles con sis
 
 Este es el splash screen:
 
-![TICSeguro splash screen](https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_splash_screen.png?raw=true)
+<img alt="TICSeguro splash screen" src="https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_splash_screen.png?raw=true" height="500" width="300">
 
 Este es el menú principal:
 
-![TICSeguro main menu](https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_main_menu.png?raw=true)
+<img alt="TICSeguro menú principal" src="https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_main_menu.png?raw=true" height="500" width="300">
 
 Este es el patrón arquitectural que sigue TICSeguro:
 
-POR PUBLICAR
-
-
+![TICSeguro Model View Controller Architectural Pattern](https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/ARCHITECTURAL_PATTERN.png)
 
 ## Versión
 
