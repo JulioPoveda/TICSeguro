@@ -14,7 +14,7 @@ Este es el menú principal:
 
 Este es el patrón arquitectural que sigue TICSeguro:
 
-![TICSeguro Model View Controller Architectural Pattern](https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/ARCHITECTURAL_PATTERN.png)
+![TICSeguro Model View Controller Architectural Pattern](https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/ARCHITECTURAL_PATTERN.png)
 
 Si quieres usar la aplicación, descarga el archivo app-debug.apk e instálalo en tu celular Android. Otra opción que tienes es descargar el repositorio, abrirlo en Android Studio y correr la aplicación en un simulador.
 
