@@ -1,8 +1,6 @@
-# Pasos para expandir TICSeguro
+# Pasos para Añadir una Nueva Lección
 
-## (1) Añadir una nueva lección
-
-### 1.	Crea una nueva actividad (vista)
+## 1.	Crea una nueva actividad (vista)
 
 Para esto, haz click derecho sobre app en el menú en la parte izquierda de **Android Studio**, en el menú que se abre haz click en `New > Activity > Basic Activity`. <br>
 
@@ -14,7 +12,7 @@ Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pa
 
 <br>
 
-### 2.	Edita los archivos creados con el contenido de la nueva lección.
+## 2.	Edita los archivos creados con el contenido de la nueva lección.
 
 Usa como referencia los archivos de la lección **Phishing**: ```PhishingActivity```, ```activity_phishing.xml``` y ```content_phishing.xml```. <br>
 
@@ -22,9 +20,9 @@ Recuerda que **PhishingActivity** (```app/java/com/japg/ticseguro/view/PhishingA
 
 <br>
 
-### 3.	Conecta la nueva lección con la aplicación.
+## 3.	Conecta la nueva lección con la aplicación.
 
-#### 3.1 Ve a **RecyclerViewLeccionesAdapter**. 
+### 3.1 Ve a **RecyclerViewLeccionesAdapter**. 
 
 Lo encuentras en ```app/java/com/japg/ticseguro/view/RecyclerViewLeccionesAdapter```. <br> 
 
@@ -41,7 +39,7 @@ else if (nextActivity.equals(“<Nueva Leccion>”))
 }
 ```
 
-#### 3.2 Ve a **HomeFragment**. 
+### 3.2 Ve a **HomeFragment**. 
 
 Lo encuentras en ```app/java/com/japg/ticseguro/view/HomeFragment```. En el método ```initImageBitmaps()``` añade dos instrucciones. 
 
