@@ -1,33 +1,33 @@
 # TICSeguro
 
-## Descripción del Trabajo
+## What is it?
 
-TICSeguro es una aplicación móvil educativa para dispositivos móviles con sistema operativo Android 6.0 (nivel de API 23) o superior, dirigida a Usuarios Regulares para que puedan fortalecer sus conocimientos de Seguridad Informática.
+TICSeguro is an educational mobile application that teaches Information Security concepts to regular users (people who have no background in Computer Science).
 
-Este es el splash screen:
+This is TICSeguro's splash screen:
 
 <img alt="TICSeguro splash screen" src="https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_splash_screen.png?raw=true" height="500" width="300">
 
-Este es el menú principal:
+This is the main menu:
 
 <img alt="TICSeguro menú principal" src="https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_main_menu.png?raw=true" height="500" width="300">
 
-Este es el patrón arquitectural que sigue TICSeguro:
+This is the architectural pattern TICSeguro follows:
 
 ![TICSeguro Model View Controller Architectural Pattern](https://raw.githubusercontent.com/japoveda10/TICSeguro/master/images/ARCHITECTURAL_PATTERN.png)
 
-Si quieres usar la aplicación, descarga el archivo app-debug.apk e instálalo en tu celular Android. Otra opción que tienes es descargar el repositorio, abrirlo en Android Studio y correr la aplicación en un simulador.
+If you want to use the app, download the app-debug.apk file and install it on your Android phone (Android 6.0 or above is required). You can also download this repository, open it using Android Studio and run the app using a simulator.
 
-## Versión
+## Version
 
-Versión 1.0 - Mayo 2019
+Version 1.0 - May 2019
 
-## Autor
+## Author
 
 Julio Poveda
 
-## Licencia
+## License
 
-Esta es la licencia del proyecto:
+This is the project's license:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
