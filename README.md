@@ -10,7 +10,7 @@ This is **TICSeguro**'s splash screen:
   <img alt="TICSeguro splash screen" src="https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_splash_screen.png?raw=true" height="500" width="300">
 </p>
 
-This is the main menu:
+This is **TICSeguro**'s main menu:
 
 <p align="center">
   <img alt="TICSeguro menú principal" src="https://github.com/JulioPoveda/TICSeguro/blob/master/images/TICSeguro_main_menu.png?raw=true" height="500" width="300">
