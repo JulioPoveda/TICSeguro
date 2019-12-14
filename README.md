@@ -19,7 +19,7 @@ This is the main menu:
 This is the architectural pattern TICSeguro follows:
 
 <p align="center">
-  <img alt="TICSeguro's Model View Controller Architecturar Pattern" src="https://raw.githubusercontent.com/japoveda10/TICSeguro/master/images/ARCHITECTURAL_PATTERN.png">
+  <img alt="TICSeguro's Model View Controller Architecturar Pattern" src="">
 </p>
 
 If you want to use the app, download the app-debug.apk file and install it on your Android phone (Android 6.0 or above is required). You can also download this repository, open it using Android Studio and run the app using a simulator.
