@@ -30,6 +30,11 @@ This app was built using Android Studio, Java, and XML
 
 If you want to use the app, download the app-debug.apk file and install it on your Android phone (Android 6.0 or above is required). You can also download this repository, open it using Android Studio and run the app using a simulator.
 
+## Why is it named like that?
+
+* ```TIC``` stands for Tecnologías de la Información y Comunicación (Information and Communications Tecnologies)
+* ```Seguro``` means "safe"
+
 ## Questions and Suggestions
 
 If you have questions or suggestions about this project, please contact [japoveda10](https://github.com/japoveda10)
