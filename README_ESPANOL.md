@@ -19,7 +19,7 @@ Este es el menú principal de **TICSeguro**:
 Este es el patrón arquitectónico que **TICSeguro** sigue:
 
 <p align="center">
-  <img alt="Patrón Arquitectónico Modelo Vista Controlador de TICSeguro" src="">
+  <img alt="Patrón Arquitectónico Modelo Vista Controlador de TICSeguro" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PATRON_ARQUITECTONICO.png">
 </p>
 
 ## ¿Cómo fue construido?
