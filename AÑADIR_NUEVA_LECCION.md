@@ -5,13 +5,13 @@
 Para esto, haz click derecho sobre app en el menú en la parte izquierda de **Android Studio**, en el menú que se abre haz click en `New > Activity > Basic Activity`. <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 1" src="" height="500" width="300">
+  <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CREAR_NUEVA_ACTIVIDAD_1.png" height="500" width="300">
 </p>
 
 Cambia el **Activity Name** por ```<NuevaLeccion>Activity```. Asegúrate que **Package name** diga ```com.japg.ticseguro.view``` y luego haz click en **Finish**. <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 2" src="" height="500" width="300">
+  <img alt="Crear nueva actividad 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CREAR_NUEVA_ACTIVIDAD_2.png" height="500" width="300">
 </p>
 
 Se van a crear 3 archivos: ```<NuevaLeccion>Activity``` en ```app/java/com/japg/ticseguro/view```, ```activity_<nombre_nueva_leccion.xml``` en ```app/res/layout``` y ```content_nueva_leccion.xml```. <br>
@@ -19,7 +19,7 @@ Se van a crear 3 archivos: ```<NuevaLeccion>Activity``` en ```app/java/com/japg/
 Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pantalla preguntándote si quieres añadir los nuevos archivos a **Git**. Presiona **Add**.
 
 <p align="center">
-  <img alt="Crear nueva actividad 3" src="" height="500" width="300">
+  <img alt="Crear nueva actividad 3" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CREAR_NUEVA_ACTIVIDAD_3.png" height="500" width="300">
 </p>
 
 <br>
@@ -52,7 +52,7 @@ else if (nextActivity.equals(“<Nueva Leccion>”))
 ```
 
 <p align="center">
-  <img alt="Conectar nueva lección 1" src="" height="500" width="300">
+  <img alt="Conectar nueva lección 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CONECTAR_NUEVA_LECCION_1.png" height="500" width="300">
 </p>
 
 ### 3.2 Ve a **HomeFragment**. 
@@ -62,7 +62,7 @@ Lo encuentras en ```app/java/com/japg/ticseguro/view/HomeFragment```. En el mét
 La primera es la URL de la foto de la nueva lección (te recomiendo usar **Pexels** (https://www.pexels.com) por que las fotos de **Pexels** son gratis para uso comercial y no se requiere atribución) y el título de la lección.
 
 <p align="center">
-  <img alt="Conectar nueva lección 2" src="" height="500" width="300">
+  <img alt="Conectar nueva lección 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CONECTAR_NUEVA_LECCION_2.png" height="500" width="300">
 </p>
 
 <br>
@@ -72,23 +72,23 @@ La primera es la URL de la foto de la nueva lección (te recomiendo usar **Pexel
 Dale click al botón **Run** (triángulo verde rotado 45 grados a la derecha en el menú superior de **Android Studio**), selecciona el dispositivo en el que quieres correr la aplicación (si no aparece ninguno crea uno haciendo click en **Create New Virtual Device**) y espera a que cargue la aplicación. Revisa que la nueva lección aparezca en la lista de lecciones.
 
 <p align="center">
-  <img alt="Prueba nueva lección 1" src="" height="500" width="300">
+  <img alt="Prueba nueva lección 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PRUEBA_NUEVA_LECCION_1.png" height="500" width="300">
 </p>
 
 Haz tap sobre la lección. Te debe aparecer el contenido de ```activity_nueva_leccion.xml``` y ```content_nueva_leccion.xml``` (en la siguiente imagen sólo sale un **Floating Action Button** y el título es **NuevaLeccionActivity** porque no añadí contenido a esos dos archivos y eso es lo que **Android Studio** crea por defecto).
 
 <p align="center">
-  <img alt="Prueba lección 2" src="" height="500" width="300">
+  <img alt="Prueba lección 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PRUEBA_NUEVA_LECCION_2.png" height="500" width="300">
 </p>
 
 Para cambiar el título de la parte superior, ve a ```app/res/values/strings.xml``` y busca el string con nombre ```title_activity_nueva_leccion```. Edita el contenido entre las etiquetas ```<string></string>```
 
 <p align="center">
-  <img alt="Prueba lección 3" src="" height="500" width="300">
+  <img alt="Prueba lección 3" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PRUEBA_NUEVA_LECCION_3.png" height="500" width="300">
 </p>
 
 <p align="center">
-  <img alt="Prueba lección 4" src="" height="500" width="300">
+  <img alt="Prueba lección 4" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PRUEBA_NUEVA_LECCION_4.png" height="500" width="300">
 </p>
 
  
