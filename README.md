@@ -33,7 +33,7 @@ If you want to use the app, download the `app-debug.apk` file and install it on 
 ## Why is it named like that?
 
 * ```TIC``` stands for Tecnologías de la Información y Comunicación (Information and Communications Tecnologies)
-* ```Seguro``` means "safe"
+* ```Seguro``` means "safe", symbolizing the importance of protecting our digital assets.
 
 ## Questions and Suggestions
 
