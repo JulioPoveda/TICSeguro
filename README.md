@@ -24,7 +24,7 @@ This is the architectural pattern **TICSeguro** follows:
 
 ## How was it built?
 
-This app was built using Android Studio, Java, and XML
+This app was built using Android Studio, Java, and XML.
 
 ## How can I run it?
 
