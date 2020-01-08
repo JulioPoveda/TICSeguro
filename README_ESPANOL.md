@@ -39,7 +39,7 @@ Próximamente, la app también estará disponible en el Google Play Store.
 
 ## Preguntas y Sugerencias
 
-Si tienes alguna pregunta o sugerencia acerca de éste proyecto, por favor contacta a [japoveda10](ja.poveda10@uniandes.edu.co)
+Si tienes alguna pregunta o sugerencia acerca de éste proyecto, por favor contacta a [japoveda10](mailto:ja.poveda10@uniandes.edu.co)
 
 ## Versión
 
