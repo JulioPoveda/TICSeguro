@@ -19,7 +19,7 @@ Este es el menú principal de **TICSeguro**:
 Este es el patrón arquitectónico que **TICSeguro** sigue:
 
 <p align="center">
-  <img alt="Patrón Arquitectónico Modelo Vista Controlador de TICSeguro" src="https://raw.githubusercontent.com/japoveda10/TICSeguro/master/images/ARCHITECTURAL_PATTERN.png">
+  <img alt="Patrón Arquitectónico Modelo Vista Controlador de TICSeguro" src="">
 </p>
 
 ## ¿Cómo fue construido?
@@ -37,7 +37,7 @@ Si quieres usar la app, descarga el archivo app-debug.apk e instálalo en tu cel
 
 ## Preguntas y Sugerencias
 
-If you have questions or suggestions about this project, please contact [japoveda10](https://github.com/japoveda10)
+Si tienes alguna pregunta o sugerencia acerca de éste proyecto, por favor contacta a [japoveda10](https://github.com/japoveda10)
 
 ## Versión
 
