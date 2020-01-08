@@ -37,7 +37,7 @@ If you want to use the app, download the app-debug.apk file and install it on yo
 
 ## Questions and Suggestions
 
-If you have questions or suggestions about this project, please contact [japoveda10](https://github.com/japoveda10)
+If you have questions or suggestions about this project, please contact [japoveda10](mailto:ja.poveda10@uniandes.edu.co)
 
 ## Version
 
