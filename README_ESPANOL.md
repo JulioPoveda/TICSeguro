@@ -28,7 +28,9 @@ Esta app se construyó usando Android Studio, Java y XML.
 
 ## ¿Cómo puedo correrlo?
 
-Si quieres usar la app, descarga el archivo app-debug.apk e instálalo en tu celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior). También puedes descargas éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
+Si quieres usar la app, descarga el archivo `app-debug.apk` e instálalo en tu celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior). También puedes descargar éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
+
+Próximamente, la app también estará disponible en el Google Play Store.
 
 ## ¿Porqué se llama así?
 
@@ -41,7 +43,7 @@ Si tienes alguna pregunta o sugerencia acerca de éste proyecto, por favor conta
 
 ## Versión
 
-Versión 1.0 - May 2019
+Versión 1.0 - Mayo de 2019
 
 ## Autor
 
