@@ -28,7 +28,7 @@ This app was built using Android Studio, Java, and XML.
 
 ## How can I run it?
 
-If you want to use the app, download `the app-debug.apk` file and install it on your Android phone (Android 6.0 or above is required). You can also download this project, open it using Android Studio and run the app using a simulator.
+If you want to use the app, download the `app-debug.apk` file and install it on your Android phone (Android 6.0 or above is required). You can also download this project, open it using Android Studio and run the app using a simulator.
 
 ## Why is it named like that?
 
