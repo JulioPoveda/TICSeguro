@@ -43,7 +43,7 @@ Si tienes alguna pregunta o sugerencia acerca de éste proyecto, por favor conta
 
 ## Versión
 
-Versión 1.0 - Mayo de 2019
+Versión 1.0 - Enero de 2020
 
 ## Autor
 
