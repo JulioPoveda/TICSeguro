@@ -59,7 +59,7 @@ else if (nextActivity.equals(“<Nueva Leccion>”))
 
 Lo encuentras en ```app/java/com/japg/ticseguro/view/HomeFragment```. En el método ```initImageBitmaps()``` añade dos instrucciones. 
 
-La primera es la URL de la foto de la nueva lección (te recomiendo usar **Pexels** (https://www.pexels.com) por que las fotos de **Pexels** son gratis para uso comercial y no se requiere atribución) y el título de la lección.
+La primera es la URL de la foto de la nueva lección (te recomiendo usar [Pexels](https://www.pexels.com) por que las fotos de **Pexels** son gratis para uso comercial y no se requiere atribución) y el título de la lección.
 
 <p align="center">
   <img alt="Conectar nueva lección 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CONECTAR_NUEVA_LECCION_2.png">
