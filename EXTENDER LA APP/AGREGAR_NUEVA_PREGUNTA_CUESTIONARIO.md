@@ -53,7 +53,7 @@ En ```ReportePreguntasPhishingActivity.java``` hay un bloque de instrucciones `i
 
 ## 3.	Conecta la nueva pregunta con el cuestionario correspondiente
 
-Luego de actualizar el progreso de la lección, conecta la nueva pregunta con el cuestionario (puedes agregarla en la posición que quieras, lo importante es que actualices qué pasa cuando se presiona el botón **Siguiente Pregunta** en la vista de una pregunta). Es importante resaltar que cada pregunta es un **Activity**, y que para pasar de un Activity a otro se usan **Intents**. Los **Intents** en **Prueba tus Conocimientos** se llaman en los métodos que responden a taps en botones. 
+Luego de actualizar el progreso de la lección, conecta la nueva pregunta con el cuestionario (puedes agregarla en la posición que quieras, lo importante es que actualices qué pasa cuando se presiona el botón **Siguiente Pregunta** en la vista de una pregunta). Es importante resaltar que cada pregunta es un **Activity**, y que para pasar de un **Activity** a otro se usan **Intents**. Los **Intents** en **Prueba tus Conocimientos** se llaman en los métodos que responden a taps en botones. 
 
 Por ejemplo, en ```Pregunta1PhishingActivity.java``` hay un método que se llama `continuar(View view)`, este método se ejecuta cuando el usuario hace tap en el botón **Siguiente Pregunta** de la vista **Pregunta 1 Phishing**(`app/res/layout/activity_pregunta1_phishing.xml`). 
 
