@@ -11,7 +11,7 @@ Para esto, haz click derecho sobre `app` en el menú en la parte izquierda de **
 Cambia el **Activity Name** por ```<NuevaLeccion>Activity```. Asegúrate que **Package name** diga ```com.educationalappsdev.ticseguro.view``` y luego haz click en **Finish**. <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CREAR_NUEVA_ACTIVIDAD_2.png">
+  <img alt="Crear nueva actividad 2" src="">
 </p>
 
 Se van a crear 3 archivos: ```<NuevaLeccion>Activity``` en ```app/java/com/educationalappsdev/ticseguro/view```, ```activity_nombre_nueva_leccion.xml``` en ```app/res/layout``` y ```content_nueva_leccion.xml```. <br>
@@ -19,7 +19,7 @@ Se van a crear 3 archivos: ```<NuevaLeccion>Activity``` en ```app/java/com/educa
 Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pantalla preguntándote si quieres añadir los nuevos archivos a **Git**. Presiona **Add**.
 
 <p align="center">
-  <img alt="Crear nueva actividad 3" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CREAR_NUEVA_ACTIVIDAD_3.png">
+  <img alt="Crear nueva actividad 3" src="">
 </p>
 
 <br>
@@ -62,7 +62,7 @@ Lo encuentras en ```app/java/com/educationalappsdev/ticseguro/view/HomeFragment`
 La primera es la URL de la foto de la nueva lección (te recomiendo usar [Pexels](https://www.pexels.com) por que las fotos de **Pexels** son gratis para uso comercial y no se requiere atribución) y el título de la lección.
 
 <p align="center">
-  <img alt="Conectar nueva lección 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CONECTAR_NUEVA_LECCION_2.png">
+  <img alt="Conectar nueva lección 2" src="">
 </p>
 
 <br>
