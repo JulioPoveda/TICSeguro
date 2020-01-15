@@ -9,7 +9,7 @@ Ve a `app/java/com/educationalappsdev/ticseguro/view/TipsFragment`. En la funci√
 * La tercera para a√±adir el contenido del tip: <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 1" src="">
+  <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20TIP/AGREGAR_TIP_1.png">
 </p>
 
 <br>
@@ -17,7 +17,7 @@ Ve a `app/java/com/educationalappsdev/ticseguro/view/TipsFragment`. En la funci√
 ## 2.	Revisa que el tip nuevo aparezca en la aplicaci√≥n
 
 <p align="center">
-  <img alt="Crear nueva actividad 1" src="">
+  <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20TIP/AGREGAR_TIP_2.png">
 </p>
 
 <br>
