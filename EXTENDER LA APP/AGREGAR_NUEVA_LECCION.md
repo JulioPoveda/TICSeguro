@@ -14,7 +14,7 @@ Cambia el **Activity Name** por ```<NuevaLeccion>Activity```. Asegúrate que **P
   <img alt="Crear nueva actividad 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CREAR_NUEVA_ACTIVIDAD_2.png">
 </p>
 
-Se van a crear 3 archivos: ```<NuevaLeccion>Activity``` en ```app/java/com/japg/ticseguro/view```, ```activity_nombre_nueva_leccion.xml``` en ```app/res/layout``` y ```content_nueva_leccion.xml```. <br>
+Se van a crear 3 archivos: ```<NuevaLeccion>Activity``` en ```app/java/com/educationalappsdev/ticseguro/view```, ```activity_nombre_nueva_leccion.xml``` en ```app/res/layout``` y ```content_nueva_leccion.xml```. <br>
 
 Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pantalla preguntándote si quieres añadir los nuevos archivos a **Git**. Presiona **Add**.
 
@@ -28,7 +28,7 @@ Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pa
 
 Usa como referencia los archivos de la lección **Phishing**: ```PhishingActivity```, ```activity_phishing.xml``` y ```content_phishing.xml```. <br>
 
-Recuerda que **PhishingActivity** (```app/java/com/japg/ticseguro/view/PhishingActivity```) es el controlador de la vista ```activity_phishing.xml```, la cual tiene una instrucción XML que incluye el contenido de ```content_phishing.xml```.
+Recuerda que **PhishingActivity** (```app/java/com/educationalappsdev/ticseguro/view/PhishingActivity```) es el controlador de la vista ```activity_phishing.xml```, la cual tiene una instrucción XML que incluye el contenido de ```content_phishing.xml```.
 
 <br>
 
@@ -36,7 +36,7 @@ Recuerda que **PhishingActivity** (```app/java/com/japg/ticseguro/view/PhishingA
 
 ### 3.1 Ve a **RecyclerViewLeccionesAdapter**. 
 
-Lo encuentras en ```app/java/com/japg/ticseguro/view/RecyclerViewLeccionesAdapter```. <br> 
+Lo encuentras en ```app/java/com/educationalappsdev/ticseguro/view/RecyclerViewLeccionesAdapter```. <br> 
 
 En el método ```onBindViewHolder``` encontrarás un bloque de instrucciones ```if```. Después del bloque de código 
 ```java
@@ -57,7 +57,7 @@ else if (nextActivity.equals(“<Nueva Leccion>”))
 
 ### 3.2 Ve a **HomeFragment**. 
 
-Lo encuentras en ```app/java/com/japg/ticseguro/view/HomeFragment```. En el método ```initImageBitmaps()``` añade dos instrucciones. 
+Lo encuentras en ```app/java/com/educationalappsdev/ticseguro/view/HomeFragment```. En el método ```initImageBitmaps()``` añade dos instrucciones. 
 
 La primera es la URL de la foto de la nueva lección (te recomiendo usar [Pexels](https://www.pexels.com) por que las fotos de **Pexels** son gratis para uso comercial y no se requiere atribución) y el título de la lección.
 
