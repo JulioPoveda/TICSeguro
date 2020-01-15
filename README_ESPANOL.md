@@ -41,7 +41,7 @@ Próximamente, la app también estará disponible en el Google Play Store.
 
 Las siguientes guías te ayudarán a entender cómo extender **TICSeguro**:
 
-* [Añadir nueva lección]()
+* [Añadir nueva lección](https://github.com/JulioPoveda/TICSeguro/blob/master/EXTENDER%20LA%20APP/AÑADIR_NUEVA_LECCION.md)
 
 ## Preguntas y Sugerencias
 
