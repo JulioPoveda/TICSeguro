@@ -49,7 +49,7 @@ Con la nueva pregunta, tienes que calcular de nuevo el **progreso unitario** de 
 
 En ```AprendeMasPhishingActivity.java```, ```Pregunta1PhishingActivity.java```, ```Pregunta2PhishingActivity.java``` y ```Pregunta3PhishingActivity.java``` hay una constante que se llama **PROGRESO_UNITARIO_PHISHING**. Si añades una nueva pregunta, el **progreso unitario** de la lección Phishing dejará de ser 20 y se convertiría en 16 (100 / 6), por lo que tienes que cambiar el valor de la constante **PROGRESO_UNITARIO_PHISHING** de 20 a 16.
 
-En ```ReportePreguntasPhishingActivity.java``` hay un bloque de instrucciones `if` en el método `onStart()` que, dependiendo de las preguntas correctas del usuario, le muestran los mensajes “¡Muy Bien!”, “¡Vas por buen camino!” o “¡Sigue esforzándote!”. Al añadir una nueva pregunta, el mensaje “¡Muy Bien!” debería salir cuando el usuario tenga 4 puntos, y el mensaje “¡Vas por buen camino!” saldría cuando el usuario tiene 3 o 2 puntos. Esto tienes que actualizarlo.
+En ```ReportePreguntasPhishingActivity.java``` hay un bloque de instrucciones `if` en el método `onStart()` que, dependiendo de las preguntas correctas del usuario, le muestran los mensajes *¡Muy Bien!*, *¡Vas por buen camino!* o *¡Sigue esforzándote!*. Al añadir una nueva pregunta, el mensaje *¡Muy Bien!* debería salir cuando el usuario tenga 4 puntos, y el mensaje *¡Vas por buen camino!* saldría cuando el usuario tiene 3 o 2 puntos. Esto tienes que actualizarlo.
 
 ## 3.	Conecta la nueva pregunta con el cuestionario correspondiente
 
