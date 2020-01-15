@@ -8,7 +8,7 @@ Para esto, haz click derecho sobre `app` en el menú en la parte izquierda de **
   <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CREAR_NUEVA_ACTIVIDAD_1.png">
 </p>
 
-Cambia el **Activity Name** por ```<NuevaLeccion>Activity```. Asegúrate que **Package name** diga ```com.japg.ticseguro.view``` y luego haz click en **Finish**. <br>
+Cambia el **Activity Name** por ```<NuevaLeccion>Activity```. Asegúrate que **Package name** diga ```com.educationalappsdev.ticseguro.view``` y luego haz click en **Finish**. <br>
 
 <p align="center">
   <img alt="Crear nueva actividad 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CREAR_NUEVA_ACTIVIDAD_2.png">
