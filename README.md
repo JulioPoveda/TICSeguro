@@ -41,7 +41,7 @@ If you have questions or suggestions about this project, please contact [japoved
 
 ## Version
 
-Version 1.0 - January 2020
+Version 1.1 - January 2020
 
 ## Author
 

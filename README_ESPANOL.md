@@ -51,7 +51,7 @@ Si tienes alguna pregunta o sugerencia acerca de éste proyecto, por favor conta
 
 ## Versión
 
-Versión 1.0 - Enero de 2020
+Versión 1.1 - Enero de 2020
 
 ## Autor
 
