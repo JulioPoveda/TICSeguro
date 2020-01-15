@@ -22,11 +22,11 @@ Este es el patrón arquitectónico que **TICSeguro** sigue:
   <img alt="Patrón Arquitectónico Modelo Vista Controlador de TICSeguro" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PATRON_ARQUITECTONICO.png">
 </p>
 
-## ¿Cómo fue construido?
+## ¿Cómo fue construida?
 
 Esta app se construyó usando Android Studio, Java y XML.
 
-## ¿Cómo puedo correrlo?
+## ¿Cómo puedo correrla?
 
 Si quieres usar la app, descarga el archivo `app-debug.apk` e instálalo en tu celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior). También puedes descargar éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
 
@@ -36,6 +36,12 @@ Próximamente, la app también estará disponible en el Google Play Store.
 
 * ```TIC``` son las siglas de Tecnologías de la Información y Comunicación
 * ```Seguro``` simboliza la importancia de proteger nuestros activos informáticos
+
+## ¿Cómo se puede extender?
+
+Las siguientes guías te ayudarán a entender cómo extender **TICSeguro**:
+
+* [Añadir nueva lección]()
 
 ## Preguntas y Sugerencias
 
