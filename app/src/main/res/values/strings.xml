@@ -5,8 +5,8 @@
     <string name="title_inicio">Inicio</string>
     <string name="title_tips">Tips</string>
     <string name="title_mi_perfil">Mi Perfil</string>
-    <string name="hint_apodo">Apodo</string>
-    <string name="instruccion_registro">Para comenzar, ingresa un apodo:</string>
+    <string name="hint_nombre_usuario">Nombre de usuario</string>
+    <string name="instruccion_registro">Para comenzar, ingresa un nombre de usuario:</string>
     <string name="title_activity_phishing">Phishing</string>
     <string name="title_activity_social_networks">Redes Sociales</string>
     <string name="title_activity_internet">Internet</string>

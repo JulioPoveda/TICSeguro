@@ -24,7 +24,7 @@ import com.educationalappsdev.ticseguro.R;
  * TICSeguro
  * App de Enseñanza de Conceptos de Seguridad Informática para Usuarios Regulares
  * Por Julio Poveda
- * Versión 1.0 - Mayo 2019
+ * Versión 1.1 - Enero 2020
  * ---------------------------------------------------------------------------------------
  *
  * Clase Pregunta1RedesSocialesActivity
