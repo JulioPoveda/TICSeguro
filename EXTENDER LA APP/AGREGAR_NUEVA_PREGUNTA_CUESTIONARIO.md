@@ -37,13 +37,13 @@ Recuerda que **Pregunta1PhishingActivity** (```app/java/com/educationalappsdev/t
 ***Importante*** <br>
 *Cuando se agrega un nuevo enlace a **Aprende Más** o una nueva pregunta a **Prueba tus Conocimientos**, hay que hacer un ajuste para que el progreso de la lección se calcule correctamente y se muestre en **Mi Perfil**.*
 
-El **progreso unitario** de cada lección se calcula dividiendo 100 por el número de enlaces (**Aprende Más**) y preguntas (**Prueba tus Conocimientos**) de una lección. Por ejemplo, la lección Phishing tiene dos enlaces en **Aprende Más** y 3 preguntas en **Prueba tus Conocimientos**, por lo que se divide 100 entre 5. 
+El **progreso unitario** de cada lección se calcula dividiendo 100 por el número de enlaces (**Aprende Más**) y preguntas (**Prueba tus Conocimientos**) de una lección. Por ejemplo, la lección **Phishing** tiene dos enlaces en **Aprende Más** y 3 preguntas en **Prueba tus Conocimientos**, por lo que se divide 100 entre 5. 
 
-El **progreso unitario** de la lección Phishing es 20. Esto significa que por cada enlace visitado en **Aprende Más Phishing** y por cada pregunta resuelta en **Prueba tus Conocimientos**, se añade 20% al progreso del usuario en la lección Phishing.
+El **progreso unitario** de la lección **Phishing** es 20. Esto significa que por cada enlace visitado en **Aprende Más Phishing** y por cada pregunta resuelta en **Prueba tus Conocimientos**, se añade 20% al progreso del usuario en la lección Phishing.
 
 Con la nueva pregunta, tienes que calcular de nuevo el **progreso unitario** de la lección donde vas a poner la pregunta, y actualizar el **progreso unitario** que se suma al progreso de esa lección cuando el usuario visita un enlace en **Aprende Más** y responde una pregunta en **Prueba tus Conocimientos**. 
 
-Por ejemplo, si vas a añadir una nueva pregunta para la lección Phishing, tienes que hacer ajustes en:
+Por ejemplo, si vas a añadir una nueva pregunta para la lección **Phishing**, tienes que hacer ajustes en:
 
 * ```AprendeMasPhishingActivity.java```
 * ```Pregunta1PhishingActivity.java```
@@ -53,7 +53,7 @@ Por ejemplo, si vas a añadir una nueva pregunta para la lección Phishing, tien
 
 En ```AprendeMasPhishingActivity.java```, ```Pregunta1PhishingActivity.java```, ```Pregunta2PhishingActivity.java``` y ```Pregunta3PhishingActivity.java``` hay una constante que se llama **PROGRESO_UNITARIO_PHISHING**. 
 
-Si añades una nueva pregunta, el **progreso unitario** de la lección Phishing dejará de ser 20 y se convertiría en 16 (100 / 6), por lo que tienes que cambiar el valor de la constante **PROGRESO_UNITARIO_PHISHING** de 20 a 16.
+Si añades una nueva pregunta, el **progreso unitario** de la lección **Phishing** dejará de ser 20 y se convertiría en 16 (100 / 6), por lo que tienes que cambiar el valor de la constante **PROGRESO_UNITARIO_PHISHING** de 20 a 16.
 
 En ```ReportePreguntasPhishingActivity.java``` hay un bloque de instrucciones `if` en el método `onStart()` que, dependiendo de las preguntas correctas del usuario, le muestran los mensajes *¡Muy Bien!*, *¡Vas por buen camino!* o *¡Sigue esforzándote!*. 
 
