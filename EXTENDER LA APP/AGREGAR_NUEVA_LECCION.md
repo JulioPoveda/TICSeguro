@@ -1,4 +1,4 @@
-# Pasos para Añadir una Nueva Lección
+# Pasos para Agregar una Nueva Lección
 
 ## 1.	Crea una nueva actividad (vista)
 
@@ -24,7 +24,7 @@ Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pa
 
 <br>
 
-## 2.	Edita los archivos creados con el contenido de la nueva lección.
+## 2.	Edita los archivos creados con el contenido de la nueva lección
 
 Usa como referencia los archivos de la lección **Phishing**: ```PhishingActivity```, ```activity_phishing.xml``` y ```content_phishing.xml```. <br>
 
@@ -90,9 +90,3 @@ Para cambiar el título de la parte superior, ve a ```app/res/values/strings.xml
 <p align="center">
   <img alt="Prueba lección 4" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/PRUEBA_NUEVA_LECCION_4.png">
 </p>
-
- 
-
- 
-
-
