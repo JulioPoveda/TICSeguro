@@ -35,7 +35,7 @@ Recuerda que **Pregunta1PhishingActivity** (```app/java/com/educationalappsdev/t
 ## 3.	Actualiza el progreso unitario de la lección
 
 ***Importante*** <br>
-Cuando se agrega un nuevo enlace a **Aprende Más** o una nueva pregunta a **Prueba tus Conocimientos**, hay que hacer un ajuste para que el progreso de la lección se calcule correctamente y se muestre en **Mi Perfil**.
+*Cuando se agrega un nuevo enlace a **Aprende Más** o una nueva pregunta a **Prueba tus Conocimientos**, hay que hacer un ajuste para que el progreso de la lección se calcule correctamente y se muestre en **Mi Perfil**.*
 
 El **progreso unitario** de cada lección se calcula dividiendo 100 por el número de enlaces (**Aprende Más**) y preguntas (**Prueba tus Conocimientos**) de una lección. Por ejemplo, la lección Phishing tiene dos enlaces en **Aprende Más** y 3 preguntas en **Prueba tus Conocimientos**, por lo que se divide 100 entre 5. El **progreso unitario** de la lección Phishing es 20. Esto significa que por cada enlace visitado en **Aprende Más Phishing** y por cada pregunta resuelta en **Prueba tus Conocimientos**, se añade 20% al progreso del usuario en la lección Phishing.
 
@@ -55,7 +55,9 @@ En ```ReportePreguntasPhishingActivity.java``` hay un bloque de instrucciones `i
 
 Luego de actualizar el progreso de la lección, conecta la nueva pregunta con el cuestionario (puedes agregarla en la posición que quieras, lo importante es que actualices qué pasa cuando se presiona el botón **Siguiente Pregunta** en la vista de una pregunta). Es importante resaltar que cada pregunta es un **Activity**, y que para pasar de un Activity a otro se usan **Intents**. Los **Intents** en **Prueba tus Conocimientos** se llaman en los métodos que responden a taps en botones. 
 
-Por ejemplo, en ```Pregunta1PhishingActivity.java``` hay un método que se llama `continuar(View view)`, este método se ejecuta cuando el usuario hace tap en el botón **Siguiente Pregunta** de la vista **Pregunta 1 Phishing**(`app/res/layout/activity_pregunta1_phishing.xml`). Al final de ese método hay unas instrucciones que crean un **Intent** desde ```Pregunta1PhishingActivity``` hasta ```Pregunta2PhishingActivity```, le agregan un “Extra” que es el número de puntos del usuario, e inician la nueva actividad:
+Por ejemplo, en ```Pregunta1PhishingActivity.java``` hay un método que se llama `continuar(View view)`, este método se ejecuta cuando el usuario hace tap en el botón **Siguiente Pregunta** de la vista **Pregunta 1 Phishing**(`app/res/layout/activity_pregunta1_phishing.xml`). 
+
+Al final de ese método hay unas instrucciones que crean un **Intent** desde ```Pregunta1PhishingActivity``` hasta ```Pregunta2PhishingActivity```, le agregan un “Extra” que es el número de puntos del usuario, e inician la nueva actividad:
 
 <p align="center">
   <img alt="Uso de intents para conectar la nueva pregunta con el cuestionario" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20PREGUNTA%20A%20UN%20CUESTIONARIO/AGREGAR_PREGUNTA_4.png">
