@@ -11,7 +11,7 @@ Para esto, haz click derecho sobre `app` en el menú en la parte izquierda de **
 Cambia el **Activity Name** por ```<Pregunta#Leccion>Activity```. Asegúrate de que **Package name** diga ```com.educationalappsdev.ticseguro.view``` y luego haz click en **Finish**. <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20PREGUNTA%20A%20UN%20CUESTIONARIO/AGREGAR_PREGUNTA_2.png">
+  <img alt="Crear nueva actividad 2" src="">
 </p>
 
 Se van a crear 3 archivos: ```<Pregunta#Leccion>Activity``` en ```app/java/com/educationalappsdev/ticseguro/view```, ```activity_pregunta#_leccion.xml``` en ```app/res/layout``` y ```content_pregunta#_leccion.xml```. <br>
@@ -19,7 +19,7 @@ Se van a crear 3 archivos: ```<Pregunta#Leccion>Activity``` en ```app/java/com/e
 Si usas un sistema de control de versiones como **Git**, te saldrá una nueva pantalla preguntándote si quieres añadir los nuevos archivos a **Git**. Presiona **Add**.
 
 <p align="center">
-  <img alt="Crear nueva actividad 3" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20PREGUNTA%20A%20UN%20CUESTIONARIO/AGREGAR_PREGUNTA_3.png">
+  <img alt="Crear nueva actividad 3" src="">
 </p>
 
 <br>
