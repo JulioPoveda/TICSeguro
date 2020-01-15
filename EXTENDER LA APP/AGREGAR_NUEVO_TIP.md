@@ -2,10 +2,14 @@
 
 ## 1.	Crea el nuevo tip
 
-Ve a `app/java/com/educationalappsdev/ticseguro/view/TipsFragment`. En la función `initTips()` añade 3 instrucciones, una para añadir el nombre del tip, otra para añadir la categoría del tip y otra para añadir el contenido del tip: <br>
+Ve a `app/java/com/educationalappsdev/ticseguro/view/TipsFragment`. En la función `initTips()` añade 3 instrucciones: 
+
+* La primera para añadir el nombre del tip
+* La segunda para añadir la categoría del tip
+* La tercera para añadir el contenido del tip: <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CREAR_NUEVA_ACTIVIDAD_1.png">
+  <img alt="Crear nueva actividad 1" src="">
 </p>
 
 <br>
@@ -13,7 +17,7 @@ Ve a `app/java/com/educationalappsdev/ticseguro/view/TipsFragment`. En la funci�
 ## 2.	Revisa que el tip nuevo aparezca en la aplicación
 
 <p align="center">
-  <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/CREAR_NUEVA_ACTIVIDAD_1.png">
+  <img alt="Crear nueva actividad 1" src="">
 </p>
 
 <br>
