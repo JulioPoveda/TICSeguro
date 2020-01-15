@@ -5,7 +5,7 @@
 Para esto, haz click derecho sobre `app` en el menú en la parte izquierda de **Android Studio**, en el menú que se abre haz click en `New > Activity > Basic Activity`. <br>
 
 <p align="center">
-  <img alt="Crear nueva actividad 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CREAR_NUEVA_ACTIVIDAD_1.png">
+  <img alt="Crear nueva actividad 1" src="">
 </p>
 
 Cambia el **Activity Name** por ```<NuevaLeccion>Activity```. Asegúrate que **Package name** diga ```com.educationalappsdev.ticseguro.view``` y luego haz click en **Finish**. <br>
@@ -52,7 +52,7 @@ else if (nextActivity.equals(“<Nueva Leccion>”))
 ```
 
 <p align="center">
-  <img alt="Conectar nueva lección 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/CONECTAR_NUEVA_LECCION_1.png">
+  <img alt="Conectar nueva lección 1" src="">
 </p>
 
 ### 3.2 Ve a **HomeFragment**. 
@@ -72,21 +72,21 @@ La primera es la URL de la foto de la nueva lección (te recomiendo usar [Pexels
 Dale click al botón **Run** (triángulo verde rotado 45 grados a la derecha en el menú superior de **Android Studio**), selecciona el dispositivo en el que quieres correr la aplicación (si no aparece ninguno crea uno haciendo click en **Create New Virtual Device**) y espera a que cargue la aplicación. Revisa que la nueva lección aparezca en la lista de lecciones.
 
 <p align="center">
-  <img alt="Prueba nueva lección 1" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/PRUEBA_NUEVA_LECCION_1.png" height="500" width="300">
+  <img alt="Prueba nueva lección 1" src="" height="500" width="300">
 </p>
 
 Haz tap sobre la lección. Te debe aparecer el contenido de ```activity_nueva_leccion.xml``` y ```content_nueva_leccion.xml``` (en la siguiente imagen sólo sale un **Floating Action Button** y el título es **NuevaLeccionActivity** porque no añadí contenido a esos dos archivos y eso es lo que **Android Studio** crea por defecto).
 
 <p align="center">
-  <img alt="Prueba lección 2" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/PRUEBA_NUEVA_LECCION_2.png" height="500" width="300">
+  <img alt="Prueba lección 2" src="" height="500" width="300">
 </p>
 
 Para cambiar el título de la parte superior, ve a ```app/res/values/strings.xml``` y busca el string con nombre ```title_activity_nueva_leccion```. Edita el contenido entre las etiquetas ```<string></string>```
 
 <p align="center">
-  <img alt="Prueba lección 3" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/PRUEBA_NUEVA_LECCION_3.png">
+  <img alt="Prueba lección 3" src="">
 </p>
 
 <p align="center">
-  <img alt="Prueba lección 4" src="https://raw.githubusercontent.com/JulioPoveda/TICSeguro/master/images/EXTENDER%20LA%20APP/AGREGAR%20LECCIÓN/PRUEBA_NUEVA_LECCION_4.png">
+  <img alt="Prueba lección 4" src="">
 </p>
