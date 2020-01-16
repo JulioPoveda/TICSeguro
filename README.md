@@ -28,11 +28,11 @@ This app was built using Android Studio, Java, and XML.
 
 ## How can I run it?
 
-**TICSeguro is now available in the Google Play Store**! 
+**TICSeguro is now available in the Google Play Store!** 
 
-Click [here](https://play.google.com/store/apps/details?id=com.educationalappsdev.ticseguro&hl=en) to go to the Google Play Store, read the app's profile, and install it.
+Click [here](https://play.google.com/store/apps/details?id=com.educationalappsdev.ticseguro&hl=en) to go to the **Google Play Store**, read the app's profile, and install it.
 
-Also, you can download the `app-debug.apk` file and install it on your Android phone (Android 6.0 or above is required), or you can download this project, open it using **Android Studio** and run the app using a simulator.
+Another way of running the app is to download the `app-debug.apk` file and install it on an Android phone (Android 6.0 or above is required), or you can download this project, open it using **Android Studio** and run the app using a simulator.
 
 ## Why is it named like that?
 
