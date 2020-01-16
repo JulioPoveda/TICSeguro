@@ -28,9 +28,11 @@ Esta app se construyó usando Android Studio, Java y XML.
 
 ## ¿Cómo puedo correrla?
 
-Si quieres usar la app, descarga el archivo `app-debug.apk` e instálalo en tu celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior). También puedes descargar éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
+**¡TICSeguro ya está disponible en el Google Play Store!** 
 
-Próximamente, la app también estará disponible en el Google Play Store.
+Haz click [aquí](https://play.google.com/store/apps/details?id=com.educationalappsdev.ticseguro&hl=es_419) para ir al **Google Play Store**, leer el perfil de la app e instalarla.
+
+Adicionalmente, puedes descargar el archivo `app-debug.apk` e instalarlo en tu celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior). También puedes descargar éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
 
 ## ¿Porqué se llama así?
 
