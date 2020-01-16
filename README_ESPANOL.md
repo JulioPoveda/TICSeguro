@@ -32,7 +32,7 @@ Esta app se construyó usando Android Studio, Java y XML.
 
 Haz click [aquí](https://play.google.com/store/apps/details?id=com.educationalappsdev.ticseguro&hl=es_419) para ir al **Google Play Store**, leer el perfil de la app e instalarla.
 
-Adicionalmente, puedes descargar el archivo `app-debug.apk` e instalarlo en tu celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior). También puedes descargar éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
+Otra forma de correr la app es descargando el archivo `app-debug.apk` e instalarlo en un celular Android (se requiere que el sistema operativo del celular sea Android 6.0 o superior) o puedes descargar éste proyecto, abrirlo en Android Studio y correr la app usando un simulador.
 
 ## ¿Porqué se llama así?
 
