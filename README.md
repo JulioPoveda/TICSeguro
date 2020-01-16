@@ -2,7 +2,7 @@
 
 ## What is it?
 
-**TICSeguro** is an educational mobile application that teaches Information Security concepts to regular users (people who have no background in Computer Science).
+**TICSeguro** is an educational mobile application that teaches Information Security concepts to regular users (people who have no background in Computer Science or related fields).
 
 This is **TICSeguro**'s splash screen:
 
